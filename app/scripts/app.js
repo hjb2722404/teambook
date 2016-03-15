@@ -1,21 +1,35 @@
 'use strict';
 
-angular.module('mytodoApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ngRoute',
-  'ui.sortable',
-  'LocalStorageModule'
-])
-  .config(['localStorageServiceProvider', '$routeProvider', function(localStorageServiceProvider, $routeProvider){
-    localStorageServiceProvider.setPrefix('ls');
+/**
+ * @ngdoc overview
+ * @name myNgAppApp
+ * @description
+ * # myNgAppApp
+ *
+ * Main module of the application.
+ */
+angular
+  .module('myNgAppApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch'
+  ])
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
       })
       .otherwise({
         redirectTo: '/'
       });
-  }]);
+  });
