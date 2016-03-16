@@ -6,16 +6,20 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController(user,$location,$log) {
+  function LoginController(user, $location) {
     var vm = this;
 
     vm.login = login;
 
     function login() {
 
-      user.login(function(){
+      var userForm = {
+        username: vm.username,
+        password: vm.password
+      };
+      user.login(userForm, function () {
 
-        if($location.pre == "/login"){
+        if ($location.pre == "/login") {
           $location.pre = "/home";
         }
 

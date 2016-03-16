@@ -22,11 +22,10 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment,$state,$log) {
+    function NavbarController(moment,$state) {
       var vm = this;
 
       vm.$state = $state;
-      console.log($state.current);
       // "vm.creation" is avaible by directive option "bindToController: true"
       vm.relativeDate = moment(vm.creationDate).fromNow();
     }
