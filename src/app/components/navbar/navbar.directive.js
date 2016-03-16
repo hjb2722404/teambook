@@ -5,6 +5,7 @@
     .module('teambookWww')
     .directive('acmeNavbar', acmeNavbar);
 
+
   /** @ngInject */
   function acmeNavbar() {
     var directive = {
@@ -21,9 +22,11 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment) {
+    function NavbarController(moment,$state,$log) {
       var vm = this;
 
+      vm.$state = $state;
+      console.log($state.current);
       // "vm.creation" is avaible by directive option "bindToController: true"
       vm.relativeDate = moment(vm.creationDate).fromNow();
     }

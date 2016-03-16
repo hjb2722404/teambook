@@ -6,9 +6,14 @@
     .run(runBlock);
 
   /** @ngInject */
-  function runBlock($log) {
+  function runBlock(user,$location) {
 
-    $log.debug('runBlock end');
+    $location.pre = angular.copy($location.path());
+
+    if($.isEmptyObject(user.getUser())){
+      $location.path("/login");
+    }
+
   }
 
 })();
