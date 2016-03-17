@@ -6,7 +6,7 @@
     .factory('user', User);
 
   /** @ngInject */
-  function User($cookies, $http, teambookConfig, toastr) {
+  function User($cookies, $http, $q, teambookConfig) {
 
     var COOKIE_USER_NAME = "user";
 
@@ -21,32 +21,29 @@
 
     /**
      * 提供登陆操作
-     * @param cb
+     * @param username
+     * @param password
      */
-    function login(user, cb) {
+    function login(username, password) {
 
-      function loginSuccessFun(res) {
-        user = angular.extend(user, res);
+      var login_url = teambookConfig.apiBaseUrl + "/admin/user/login";
+
+      return $http.post(login_url, {userName: username, password: password})
+        .then(loginComplete)
+        .catch(loginFailed);
+
+      function loginComplete(res) {
+
+        var user = res.data;
         $cookies.put(COOKIE_USER_NAME, user);
-        cb && cb();
+        return user;
       }
 
-      function loginErrorFun(res) {
-        switch (res.status) {
-          case 401:
-            toastr.error("用户名或者密码错误");
-            break;
-          case 403:
-            toastr.error("没有权限执行该操作");
-            break;
-          default:
-            toastr.error("系统错误");
-            break;
-        }
-
+      function loginFailed(res) {
+        return $q.reject(res);
       }
 
-      $http.post(teambookConfig.apiBaseUrl + "/admin/user/login", user).then(loginSuccessFun, loginErrorFun);
+
     }
 
     /**
