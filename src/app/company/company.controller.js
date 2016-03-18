@@ -1,5 +1,6 @@
 /**
  * Created by xiaolin.dai on 16/3/16.
+ * Refactoring by hjb2722404 on 16/3/17
  */
 
 (function() {
