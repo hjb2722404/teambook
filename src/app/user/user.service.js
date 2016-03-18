@@ -21,7 +21,7 @@
 
     /**
      * 提供登陆操作
-     * @param cb
+     * @param cb 回调函数
      */
     function login(user, cb) {
 
