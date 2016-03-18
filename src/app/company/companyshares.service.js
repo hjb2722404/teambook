@@ -1,25 +1,43 @@
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  angular
-      .module('teambookWww')
-      .service('companyinfos', CompanyInfos);
+    angular
+        .module('teambookWww')
+        .service('companyshares', CompanyShares);
 
-  /** @ngInject */
-  function CompanyInfos() {
-    var data = {
-        'companyName': '南京旭强信息科技有限公司',
-        'companyId': 'c001',
-        'description': '这里是企业的简单介绍，由企业的HR在Web控制台添加，主要介绍企业的一些概况，文化等内容',
-        'logo': 'angular.png',
-        'bgPic' : 'gulp.png'
-    };
+    /** @ngInject */
+    function CompanyShares($http) {
 
-    this.getCompanyInfos = getCompanyInfos;
+        this.getCompanyShares = getCompanyShares;
 
-    function getCompanyInfos() {
-      return data;
+        function getCompanyShares(companyId,page,size,sort) {
+
+            if (!size) {
+                size = 8;
+            }
+
+            if(!page){
+                page = 1;
+            }
+
+            if(!sort){
+                sort = 'lasttime,asc'
+            }
+
+            var apiHost = teambookConfig.apiHost;
+
+            return $http.get(apiHost + '/aip/shares?type=company&id=' + companyId + '&page=' + page + '&size=' + size + '&sort=' + sort)
+                .then(getCompanySharesComplete)
+                .catch(getCompanySharesFailed);
+
+            function getCompanySharesComplete(response) {
+                return response.data;
+            }
+
+            function getCompanySharesFailed(error) {
+                $log.error('XHR Failed for getContributors.\n' + angular.toJson(error.data, true));
+            }
+        }
     }
-  }
 
 })();

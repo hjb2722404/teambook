@@ -21,8 +21,12 @@
 
     /**
      * 提供登陆操作
+<<<<<<< HEAD
+     * @param cb 回调函数
+=======
      * @param username
      * @param password
+>>>>>>> 5e72d77dfed0eac294463fdbfc2447f14d657bf3
      */
     function login(username, password) {
 

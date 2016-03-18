@@ -30,7 +30,8 @@
   angular.module('teambookWww')
     .constant('teambookConfig', {
 
-      apiBaseUrl: "http://localhost:8080"
+      apiBaseUrl: "http://localhost:8080",
+      apiHost : 'http://api.supermary2.com'
 
     });
 
