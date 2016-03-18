@@ -39,8 +39,8 @@
         return user;
       }
 
-      function loginFailed(res) {
-        return $q.reject(res);
+      function loginFailed(error) {
+        return $q.reject(error);
       }
 
 
