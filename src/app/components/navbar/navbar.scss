@@ -1,3 +1,35 @@
 .acme-navbar-text{
-  color: white;
+  color: black;
+}
+
+.navbar-inverse {
+  background-color: #FFFFFF;
+  border: none;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
+  color:blue;
+  background-color: #00b3ee;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color:black;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: blue;
+}
+
+.navbar-inverse .navbar-brand {
+  color: black;
+}
+
+.navbar-inverse a.navbar-brand:hover {
+  color:black;
+}
+
+.search-btn {
+  width:40px;
+  height: 40px;
+  background-color: #0000ee;
 }

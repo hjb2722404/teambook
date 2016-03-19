@@ -6,7 +6,7 @@
         .service('companyfans', CompanyFans);
 
     /** @ngInject */
-    function CompanyFans($http) {
+    function CompanyFans($http,$log,teambookConfig) {
 
         this.getCompanyFans = getCompanyFans;
 

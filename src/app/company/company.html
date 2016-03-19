@@ -4,21 +4,11 @@
     <acme-navbar creation-date="company.creationDate"></acme-navbar>
   </div>
 
-    <div class="row">
-
-        <div class="col-ms-12">
-            <img src="../assets/images/{{company.companyInfos.bgPic}}" alt=""/>
-        </div>
-    </div>
-    <div class="row">
-        <div class="main">
-            <img src="../assets/images/{{company.companyInfos.logo}}" alt="" class="company-logo"/>
-            <h2> {{ company.companyInfos.companyName }} </h2>
-
-        </div>
-    </div>
-    <div class="row shares"></div>
-    <div class="row sidebar"></div>
+  <div class="row">
+      <div class="main">
+            <company-info></company-info>
+      </div>
+  </div>
 
 
 

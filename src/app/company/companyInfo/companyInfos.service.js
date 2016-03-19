@@ -6,7 +6,7 @@
         .service('companyinfos', CompanyInfos);
 
     /** @ngInject */
-    function CompanyInfos($http) {
+    function CompanyInfos($http,$log,teambookConfig) {
 
         this.getCompanyInfos = getCompanyInfos;
 
