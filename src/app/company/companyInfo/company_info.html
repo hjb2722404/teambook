@@ -1,7 +1,7 @@
 <div class="banner">
 
     <div class="company-logo-box">
-        <img src="{{vm.companyInfos.companyLogo}}" alt="" class="company-logo"/>
+        <img src="{{vm.companyInfos.companyLogo}}" alt="" class="company-logo" ng-mouseover="isShowCard = !isShowCard"/>
         <div class="identity">
             <img src="assets/images/vip.png" alt="" ng-show="{{vm.companyInfos.companyIsVip}}"/>
             <img src="assets/images/no-vip.png" alt="" ng-show="!{{vm.companyInfos.companyIsVip}}"/>
@@ -26,9 +26,9 @@
         </ul>
     </div>
 
-    <div class="card" ng-show="isShowCard">
+    <div class="card" ng-show="isShowCard" ng-mouseleave="isShowCard = !isShowCard">
         <div class="company-logo-box">
-            <img src="{{vm.companyInfos.companyLogo}}" alt="" class="company-logo"/>
+            <img src="{{vm.companyInfos.companyLogo}}" alt="" class="company-logo" />
             <div class="identity">
                 <img src="assets/images/vip.png" alt="" ng-show="{{vm.companyInfos.companyIsVip}}"/>
                 <img src="assets/images/no-vip.png" alt="" ng-show="!{{vm.companyInfos.companyIsVip}}"/>
