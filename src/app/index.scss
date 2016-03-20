@@ -12,10 +12,13 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 // bower:scss
 // endbower
 body {
-  background-color: #00b3ee;
+  background-color: #f2f2f5;
+  background-image: url("../../assets/images/bodybg.png");
+  background-repeat: repeat-x;
 }
 
 .main {
+  width: 98%;
   max-width: 980px;
   margin-left: auto;
   margin-right: auto;
@@ -24,6 +27,8 @@ body {
 .banner {
   height: 300px;
   background-image: url("../../assets/images/banner.png");
+  text-align: center;
+  position: relative;
 }
 
 .browsehappy {

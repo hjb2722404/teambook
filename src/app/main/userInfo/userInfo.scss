@@ -1,0 +1,131 @@
+.user-logo-box {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-top: 25px;
+}
+.user-logo
+{
+  border: 3px solid #fff;
+  border-radius: 145px;
+}
+
+.identity{
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  height:26px;
+  padding: 1px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  text-align: left;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+}
+
+.level {
+  float: right;
+  text-align: right;
+  margin-right: 10px;
+  font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  font-weight: bolder;
+  font-size: 1.6rem;
+  color: #ffa200;
+  vertical-align: middle;
+}
+
+.user-name h4 {
+  color: #ffffff;
+  font-weight: bolder;
+  font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
+}
+.user-dec p {
+  color:#ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
+}
+
+
+
+.tools {
+  position: absolute;
+  top:15px;
+  left:15px;
+}
+
+.tools ul {
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tools li {
+  width: 100%;
+  padding: 10px;
+  background: rgba(112,180,236,0.6);
+//  background-color: #70b4ec;
+//  opacity: 0.4;
+//  filter: alpha(opacity=40);
+  float: left;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.tools a {
+  color:#ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.card {
+  background-color: #ffffff;
+  width: 40%;
+  max-width: 420px;
+  position: absolute;
+  left: 30%;
+  top: -10px;
+  z-index: 3;
+  background-image: url("../../assets/images/cardbg.png");
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
+
+}
+
+.user-name-card h4 {
+  color: #333333;
+  font-weight: bolder;
+}
+.user-dec-card p {
+  color:#333333;
+  text-align: left;
+  padding: 20px;
+}
+
+.contact{
+  margin-bottom: 20px;
+  text-align: center;
+}
+.sex, .website, .email , .zhiwei {
+  padding: 10px;
+}
+
+.sex span, .website span, .email span , .zhiwei span{
+  padding: 5px;
+}
+.sex , .email {
+  text-align: right;
+}
+
+.website ,.zhiwei {
+  text-align: left;
+}
+
+.contact a{
+  color: #333333;
+  font-weight: bolder;
+  text-decoration: none;
+}

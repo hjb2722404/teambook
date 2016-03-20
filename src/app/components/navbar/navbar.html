@@ -1,35 +1,42 @@
-<nav class="navbar navbar-static-top navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">
-        <span><img src="assets/images/logo.png" alt=""></span> Teambook
-      </a>
-    </div>
+<div class="main">
+    <nav class="navbar navbar-static-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">
+                    <span><img src="assets/images/logo.png" alt=""></span> Teambook
+                </a>
+            </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-      <ul class="nav navbar-nav">
-        <li ng-class="{active:vm.$state.current.name == 'home'}"><a ng-href="#/">我的主页</a></li>
-        <li ng-class="{active:vm.$state.current.name == 'company'}"><a ng-href="#/company">我的企业</a></li>
-        <li ng-class="{active:vm.$state.current.name == 'college'}"><a ng-href="#/college">企业大学</a></li>
-      </ul>
-       <div class="search input-group">
-           <form action="#" class="searchForm">
-               <div class="form-inline">
-                   <select name="type" id="">
-                       <option value="people">找人</option>
-                       <option value="company">找公司</option>
-                       <option value="lesson">找资源</option>
-                   </select>
-                   <input type="text" placeholder="请输入关键词">
-                   <span class="search-btn"><img src="assets/images/search.png" alt=""></span>
-               </div>
-           </form>
-       </div>
-      <ul class="nav navbar-nav navbar-right acme-navbar-text">
-        <li><a ng-href="#/logout">登出</a></li>
-      </ul>
-    </div>
-  </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{active:vm.$state.current.name == 'home'}"><a ng-href="#/">我的主页</a></li>
+                    <li ng-class="{active:vm.$state.current.name == 'company'}"><a ng-href="#/company">我的企业</a></li>
+                    <li ng-class="{active:vm.$state.current.name == 'college'}"><a ng-href="#/college">企业大学</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right acme-navbar-text setting-btn">
+                    <li><img src="assets/images/setting.png" alt="" ng-click="vm.isHide = !vm.isHide"/></li>
+                </ul>
+                <ul class="setting-menu" ng-hide="vm.isHide">
+                    <li><a href="#">使用帮助</a></li>
+                    <li><a href="#">退出登录</a></li>
+                </ul>
+                <div class="search input-group">
+                    <form action="#" class="searchForm">
+                        <div class="form-inline">
+                            <select name="type" id="" class="form-control search-type">
+                                <option value="people">找人</option>
+                                <option value="company">找公司</option>
+                                <option value="lesson">找资源</option>
+                            </select>
+                            <input type="text" placeholder="请输入关键词" class="form-control search-input">
+                            <span class="search-btn" ng-click="vm.search()"><img src="assets/images/search.png" alt=""></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
 
-</nav>
+    </nav>
+</div>
+

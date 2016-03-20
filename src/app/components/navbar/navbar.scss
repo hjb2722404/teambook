@@ -8,8 +8,9 @@
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
-  color:blue;
-  background-color: #00b3ee;
+  color: #188eee;
+  font-weight: bolder;
+  background-color: #cde9ff;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -17,7 +18,8 @@
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-  color: blue;
+  color: #188eee;
+  font-weight: bolder;
 }
 
 .navbar-inverse .navbar-brand {
@@ -28,8 +30,49 @@
   color:black;
 }
 
-.search-btn {
-  width:40px;
-  height: 40px;
-  background-color: #0000ee;
+.search{
+  float: right;
+  width: 50%;
+  margin-top: 10px;
 }
+
+.search-type.form-control {
+  width: 20%;
+}
+
+.search-input.form-control {
+  width: 70%;
+}
+.search-btn {
+  width:34px;
+  height: 34px;
+  background-color: #188eee;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.search-btn img{
+  margin-top: 9px;
+}
+
+.setting-btn li{
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+.setting-menu {
+  width: 120px;
+  background: #ffffff;
+  position: absolute;
+  right: 0;
+  top:50px;
+  list-style: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.setting-menu a{
+  color: #188eee;
+}
+

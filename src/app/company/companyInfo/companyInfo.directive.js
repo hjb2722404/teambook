@@ -28,6 +28,8 @@
         vm.companyInfos = [];
         getCompanyInfo(companyId);
 
+        vm.isShowCard = false;
+
         function getCompanyInfo(companyId) {
             vm.companyInfos =  companyinfos.getCompanyInfos(companyId);
         }

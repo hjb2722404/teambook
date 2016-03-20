@@ -22,12 +22,16 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment,$state) {
+    function NavbarController(moment,$state,$scope) {
       var vm = this;
-
       vm.$state = $state;
+        vm.isHide = true;
       // "vm.creation" is avaible by directive option "bindToController: true"
       vm.relativeDate = moment(vm.creationDate).fromNow();
+
+        vm.search = function(){
+            alert("ok");
+        }
     }
   }
 

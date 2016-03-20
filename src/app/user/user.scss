@@ -1,32 +1,71 @@
+
 .tb-body {
   background: #cccccc;
   position: absolute;
+  background-image: url("../../assets/images/wallpaper.png");
+  background-size: cover;
   width: 100%;
   height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
 
-  .header {
-    margin: 20px;
-
-    .header-title{
-      font-size: 2.4rem;
-    }
-
-    .header-subtitle {
-      font-size: 0.4rem;
-      color: #ffffff;
-    }
   }
+  .login-box {
+    margin-top: 5%;
+
+    .header {
+      margin: 20px;
+
+      .header-title{
+        font-size: 5.6rem;
+        color : #188eee;
+        font-weight: bold;
+      }
+
+      .header-subtitle {
+        font-size: 2rem;
+        color: #ffffff;
+        margin-left: 10px;
+        font-weight: bold;
+      }
+  }
+}
+.login-sub-box {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 
   .login-form {
 
     .form-title {
-      text-align: center;
-      color: #ffffff;
-    }
-    .checkbox,.forget-link {
-      display: inline;
+      text-align: left;
+      color: #666666;
     }
 
+    .welcome , label {
+      color :#999999;
+    }
+
+    .checkbox{
+      float: left;
+    }
+
+    .forget-link {
+      float: right;
+    }
+    .form-group {
+      width: 100%;
+      float: left;
+    }
+    
+    .login-submit-btn {
+      width: 155px;
+      height: 76px;
+      display: block;
+      border: none;
+      background-image: url("../../assets/images/button.png");
+    }
   }
-
 }
