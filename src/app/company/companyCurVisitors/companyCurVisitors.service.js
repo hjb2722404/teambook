@@ -6,7 +6,7 @@
         .service('companycurvistors', CompanyCurVistors);
 
     /** @ngInject */
-    function CompanyCurVistors($http) {
+    function CompanyCurVistors($http,$log,teambookConfig) {
 
         this.getCompanyCurVistors = getCompanyCurVistors;
 

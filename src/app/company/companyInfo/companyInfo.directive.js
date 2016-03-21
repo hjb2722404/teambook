@@ -14,7 +14,8 @@
       scope: {},
       controller: CompanyInfoController,
       controllerAs: 'vm',
-      bindToController: true
+      bindToController: true,
+      replace:true
     };
 
     return directive;
@@ -26,6 +27,8 @@
 
         vm.companyInfos = [];
         getCompanyInfo(companyId);
+
+        vm.isShowCard = false;
 
         function getCompanyInfo(companyId) {
             vm.companyInfos =  companyinfos.getCompanyInfos(companyId);

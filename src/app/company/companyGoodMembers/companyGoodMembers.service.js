@@ -6,7 +6,7 @@
         .service('companygoodmembers', CompanyGoodMembers);
 
     /** @ngInject */
-    function CompanyGoodMembers($http) {
+    function CompanyGoodMembers($http,$log,teambookConfig) {
 
         this.getCompanyGoodMembers = getCompanyGoodMembers;
 

@@ -6,7 +6,7 @@
         .service('companyshares', CompanyShares);
 
     /** @ngInject */
-    function CompanyShares($http) {
+    function CompanyShares($http,$log,teambookConfig) {
 
         this.getCompanyShares = getCompanyShares;
 
