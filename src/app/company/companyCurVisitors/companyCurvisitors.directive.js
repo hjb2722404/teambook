@@ -15,21 +15,22 @@
       controller: CompanyCurVisitorsController,
       controllerAs: 'vm',
       bindToController: true,
-        replace:true
+      replace:true
     };
 
     return directive;
 
     /** @ngInject */
-    function CompanyCurVisitorsController($location,companycurvistors) {
+    function CompanyCurVisitorsController($location,companycurvisitors) {
         var vm = this;
         var companyId = $location.search().companyId;
 
-        vm.companyCurVistors = [];
-        getCompanyCurVistors(companyId);
+        vm.companyCurVisitors = [];
+        getCompanyCurVisitors(companyId);
 
-        function getCompanyCurVistors(companyId) {
-            vm.companyCurVistors =  companycurvistors.getCompanyCurVistors(companyId);
+        function getCompanyCurVisitors(companyId) {
+            vm.companyCurVisitors =  companycurvisitors.getCompanyCurVisitors(companyId);
+            //console.log(vm.companyCurVisitors);
         }
 
     }

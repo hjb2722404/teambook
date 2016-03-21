@@ -3,28 +3,69 @@
 
     angular
         .module('teambookWww')
-        .service('companycurvistors', CompanyCurVistors);
+        .service('companycurvisitors', CompanyCurVisitors);
 
     /** @ngInject */
-    function CompanyCurVistors($http,$log,teambookConfig) {
+    function CompanyCurVisitors($http,$log,teambookConfig) {
 
-        this.getCompanyCurVistors = getCompanyCurVistors;
+        this.getCompanyCurVisitors = getCompanyCurVisitors;
 
-        function getCompanyCurVistors(companyId) {
+        function getCompanyCurVisitors(companyId) {
 
-            var apiHost = teambookConfig.apiHost;
+            var response = {
+                "size" : 6,
+                "info" : "visitor",
+                "data" : [
+                    {
+                        "userName" : "用户一" ,
+                        "visitTime" : "3月17日" ,
+                        "userLogo" : "./assets/images/user2.png"
+                    },
 
-            return $http.get(apiHost + '/aip/Vistors?type=company&id='+companyId)
-                .then(getCompanyCurVistorsComplete)
-                .catch(getCompanyCurVistorsFailed);
+                    {
+                        "userName" : "用户二" ,
+                        "visitTime" : "3月17日" ,
+                        "userLogo" : "./assets/images/user3.png"
+                    },
 
-              function getCompanyCurVistorsComplete(response) {
+                    {
+                        "userName" : "用户三" ,
+                        "visitTime" : "3月17日" ,
+                        "userLogo" : "./assets/images/user4.png"
+                    },
+
+                    {
+                        "userName" : "用户四" ,
+                        "visitTime" : "3月17日" ,
+                        "userLogo" : "./assets/images/user5.png"
+                    },
+
+                    {
+                        "userName" : "用户五" ,
+                        "visitTime" : "3月17日" ,
+                        "userLogo" : "./assets/images/user.png"
+                    },
+
+                    {
+                        "userName" : "用户六" ,
+                        "visitTime" : "3月17日" ,
+                        "userLogo" : "./assets/images/user1.png"
+                    }
+                ]
+            };
+            //var apiHost = teambookConfig.apiHost;
+            //
+            //return $http.get(apiHost + '/aip/Visitors?type=company&id='+companyId)
+            //    .then(getCompanyCurVisitorsComplete)
+            //    .catch(getCompanyCurVisitorsFailed);
+            //
+            //  function getCompanyCurVisitorsComplete(response) {
                   return response.data;
-              }
-
-              function getCompanyCurVistorsFailed(error) {
-                  $log.error('XHR Failed for getCompanyCurVistors.\n' + angular.toJson(error.data, true));
-              }
+            //  }
+            //
+            //  function getCompanyCurVisitorsFailed(error) {
+            //      $log.error('XHR Failed for getCompanyCurVisitors.\n' + angular.toJson(error.data, true));
+            //  }
         }
     }
 

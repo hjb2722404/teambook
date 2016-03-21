@@ -13,9 +13,9 @@
     //});
     $location.pre = angular.copy($location.path());
 
-    if(angular.isUndefined(user.getUser())){
-      $location.path("/login");
-    }
+    //if(angular.isUndefined(user.getUser())){
+    //  $location.path("/login");
+    //}
 
   }
 

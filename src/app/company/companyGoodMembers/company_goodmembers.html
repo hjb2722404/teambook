@@ -1,0 +1,26 @@
+<div class="good-member">
+
+    <div class="gm-title">
+        <h4>分享达人<span><a href="#">更多</a></span></h4>
+        <hr/>
+    </div>
+    <div class="gm-list">
+        <ul>
+            <li ng-repeat="gm in vm.companyGoodMembers">
+                <div class="gm-info">
+                    <img src="{{gm.userLogo}}" alt=""/>
+                    <h5>{{gm.userName}}</h5>
+                </div>
+                <div class="gm-data">
+                    <h6>本周共分享{{gm.weekShare}}条</h6>
+                    <h6>本周供学习{{gm.weekLearn}}条</h6>
+                    <h6>职位：{{gm.userZhiwei}}</h6>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="clear-fix"></div>
+</div>
