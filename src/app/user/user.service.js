@@ -27,9 +27,9 @@
      */
     function login(username, password) {
 
-      var login_url = teambookConfig.apiHost + "/admin/user/login";
+      var login_url = teambookConfig.apiHost + "/api/user/login";
 
-      return $http.post(login_url, {userName: username, password: password})
+      return $http.post(login_url, {username: username, password: password})
         .then(loginComplete)
         .catch(loginFailed);
 
