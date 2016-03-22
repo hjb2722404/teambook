@@ -1,0 +1,85 @@
+<div class="row">
+    <div class="col-md-12 shares">
+        <div class="s-tabs">
+            <ul>
+                <li><a ng-class="{active:isNew == true}" href="javascript:void(0)" ng-click="isNew = true; isHot = false">最新推荐</a></li>
+                <li><a ng-class="{active:isHot == true}" href="javascript:void(0)" ng-click="isHot = true; isNew = false">我的分享</a></li>
+            </ul>
+
+            <div class="clear-fix"></div>
+        </div>
+        <div class="s-cons">
+            <div class="new-share" ng-show="isNew" ng-init="isNew =true;">
+                <ul>
+                    <li ng-repeat="shares in vm.userShares | filter: query : 5 | orderBy:'shareId'">
+                        <div class="litpic">
+                            <img src="{{shares.shareLitpic}}" alt=""/>
+                            <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
+                        </div>
+                        <div class="s-title">
+                            <h5>{{shares.shareShotTitle}}</h5>
+                        </div>
+                        <div class="s-info">
+                            <div class="s-tag">
+                                <ul>
+                                    <li ng-repeat="tag in shares.shareTagsArr">
+                                        <img src="./assets/images/tag.png" alt=""/><span>{{tag}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="s-views">
+                                <img src="./assets/images/views.png" alt=""/><span>{{shares.shareViews}}</span>
+                            </div>
+                        </div>
+                        <div class="s-user">
+                            <img src="{{shares.shareUserLogo}}" alt=""/><span class="s-user-name">{{shares.shareUserName}}</span><span class="s-user-company">{{shares.shareUserCompanyNameShot}}</span>
+                        </div>
+                    </li>
+
+                    <div class="clear-fix"></div>
+                </ul>
+                <div class="more-shares-btn" ng-click="vm.showMore('shareId')"  ng-init="isMoreNew = false">
+                    <h5>查看更多分享...</h5>
+                </div>
+
+                <div class="clear-fix"></div>
+            </div>
+            <div class="hot-share" ng-show="isHot" ng-init="isHot = false">
+                <ul>
+                    <li ng-repeat="shares in vm.userShares | filter: query | orderBy:'shareUserName'">
+                        <div class="litpic">
+                            <img src="{{shares.shareLitpic}}" alt=""/>
+                            <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
+                        </div>
+                        <div class="s-title">
+                            <h5>{{shares.shareShotTitle}}</h5>
+                        </div>
+                        <div class="s-info">
+                            <div class="s-tag">
+                                <ul>
+                                    <li ng-repeat="tag in shares.shareTagsArr">
+                                        <img src="./assets/images/tag.png" alt=""/><span>{{tag}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="s-views">
+                                <img src="./assets/images/views.png" alt=""/><span>{{shares.shareViews}}</span>
+                            </div>
+                        </div>
+                        <div class="s-user">
+                            <img src="{{shares.shareUserLogo}}" alt=""/><span class="s-user-name">{{shares.shareUserName}}</span><span class="s-user-company">{{shares.shareUserCompanyNameShot}}</span>
+                        </div>
+                    </li>
+                    <div class="clear-fix"></div>
+                </ul>
+                <div class="more-shares-btn" ng-click="vm.showMore('shareUserName')"  ng-init="isMoreHot = false">
+                    <h5>查看更多分享...</h5>
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+            <div class="clear-fix"></div>
+        </div>
+
+        <div class="clear-fix"></div>
+    </div>
+</div>

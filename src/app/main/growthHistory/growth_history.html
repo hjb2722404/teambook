@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-12 good-member">
+        <div class="gm-title">
+            <h4>成长轨迹<span><a href="#">更多</a></span></h4>
+            <hr/>
+        </div>
+        <div class="gm-list">
+            <ul>
+                <li ng-repeat="gh in vm.growthHistory">
+                    <div class="gm-info">
+                        <img src="{{gh.userLogo}}" alt=""/>
+                        <h5>{{gh.userName}}</h5>
+                    </div>
+                    <div class="gm-data">
+                        <h6>本周共分享{{gh.weekShare}}条</h6>
+                        <h6>本周供学习{{gh.weekLearn}}条</h6>
+                        <h6>职位：{{gh.userZhiwei}}</h6>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="clear-fix"></div>
+    </div>
+</div>

@@ -1,0 +1,137 @@
+.c-cat {
+  padding: 5px;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
+  color : #ffffff;
+  
+  .short-intro {
+    background-image: url("../../assets/images/cat-s-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    line-height: 1.4rem;
+  }
+
+  h3 {
+    line-height: 1.4rem;
+  }
+
+  h5 {
+    color :#aaaaaa;
+  }
+}
+
+.cat1 {
+  background-color:#27ae60 ;
+
+    .short-intro {
+      color:#27ae60;
+    }
+}
+.cat2 {
+  background-color :#8e44ad ;
+
+    .short-intro {
+      color:#8e44ad;
+    }
+}
+.cat3 {
+  background-color:#16a085 ;
+
+    .short-intro {
+      color:#16a085;
+    }
+}
+.cat4 {
+  background-color:#2980b9 ;
+
+    .short-intro {
+      color:#2980b9;
+    }
+}
+
+.course-list {
+  margin-top: 30px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 20px;
+
+      .couser-Litpic {
+
+        img {
+          width: 100%;
+        }
+
+        .play-btn {
+          width: 50px;
+          height: 42px;
+          background-image: url("../../assets/images/play-btn.png");
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -25px;
+          margin-top: -21px;
+        }
+      }
+
+      .course-title {
+
+        h4 {
+          color:#000;
+          font-weight: bolder;
+          font-size: 2.5rem;
+
+          span {
+            font-size: 1.2rem;
+            font-weight: normal;
+            float: right;
+            color : #666666;
+          }
+        }
+      }
+      .course-dec {
+        width: 80%;
+        padding: 15px;
+      }
+
+      .course-info {
+        .s-tag {
+
+          ul {
+
+            margin: 0;
+            padding: 0;
+
+            li {
+              width: 100px;
+              display: inline-block;
+              border: none;
+              padding: 0;
+              margin: 0;
+            }
+          }
+
+        }
+        .s-views {
+          text-align: right;
+        }
+      }
+      .course-user {
+        padding: 15px;
+
+        .course-user-company{
+          margin-left: 30px;
+        }
+      }
+
+    }
+  }
+
+}

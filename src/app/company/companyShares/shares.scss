@@ -48,6 +48,19 @@
     margin-top: 15px;
 
     .new-share , .hot-share {
+
+      .more-shares-btn {
+        width: 100%;
+        padding: 5px;
+        background-color: #ffffff;
+        margin-bottom: 10px;
+
+        h5 {
+          text-align: center;
+          color :#999999;
+        }
+      }
+
       ul{
         margin: 0;
         padding: 0;

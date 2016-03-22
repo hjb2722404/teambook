@@ -10,7 +10,7 @@
     <div class="s-cons">
         <div class="new-share" ng-show="isNew" ng-init="isNew =true;">
             <ul>
-                <li ng-repeat="shares in vm.companyShares | filter: query | orderBy:'shareId'">
+                <li ng-repeat="shares in vm.companyShares | filter: query : 5 | orderBy:'shareId'">
                     <div class="litpic">
                         <img src="{{shares.shareLitpic}}" alt=""/>
                         <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
@@ -34,8 +34,13 @@
                         <img src="{{shares.shareUserLogo}}" alt=""/><span class="s-user-name">{{shares.shareUserName}}</span><span class="s-user-company">{{shares.shareCompanyNameShot}}</span>
                     </div>
                 </li>
+
                 <div class="clear-fix"></div>
             </ul>
+            <div class="more-shares-btn" ng-click="vm.showMore('shareId')"  ng-init="isMoreNew = false">
+                <h5>查看更多分享...</h5>
+            </div>
+
             <div class="clear-fix"></div>
         </div>
         <div class="hot-share" ng-show="isHot" ng-init="isHot = false">
@@ -66,6 +71,9 @@
                 </li>
                 <div class="clear-fix"></div>
             </ul>
+            <div class="more-shares-btn" ng-click="vm.showMore('shareUserName')"  ng-init="isMoreHot = false">
+                <h5>查看更多分享...</h5>
+            </div>
             <div class="clear-fix"></div>
         </div>
         <div class="clear-fix"></div>

@@ -24,6 +24,14 @@
       });
 
     $stateProvider
+      .state('college', {
+          url: '/college',
+          templateUrl: 'app/college/college.html',
+          controller: 'CollegeController',
+          controllerAs: 'college'
+      });
+
+    $stateProvider
       .state('login', {
         url: '/login',
         templateUrl: 'app/user/login.html',

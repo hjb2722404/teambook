@@ -3,16 +3,16 @@
 
   angular
     .module('teambookWww')
-    .directive('companyShares', companyShares);
+    .directive('userShares', userShares);
 
 
   /** @ngInject */
-  function companyShares() {
+  function userShares() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/company/companyShares/company_shares.html',
+      templateUrl: 'app/main/userShares/user_shares.html',
       scope: {},
-      controller: CompanySharesController,
+      controller: UserSharesController,
       controllerAs: 'vm',
       bindToController: true
     };
@@ -20,18 +20,18 @@
     return directive;
 
     /** @ngInject */
-    function CompanySharesController($location,companyshares) {
+    function UserSharesController($location,usershares) {
         var vm = this;
-        var companyId = $location.search().companyId;
-        vm.companyShares = [];
+        var userId = $location.search().userId;
+        vm.userShares = [];
         vm.shareTags = [];
-        vm.companyShares = getCompanyShares(companyId);
+        vm.userShares = getUserShares(userId);
         vm.showMore = showMore;
         vm.page =1;
 
         function showMore(order){
             vm.page++;
-            vm.moreShares = getCompanyShares(companyId,vm.page,6);
+            vm.moreShares = getUserShares(userId,vm.page,6);
             var li = '<li ng-repeat="share in vm.moreShares | filter :query | orderBy : \''+order+'\'">';
             li += '<div class="litpic">';
             li += '<img src="{{share.shareLitpic}}" alt=""/>';
@@ -53,7 +53,7 @@
             li += '</div>';
             li += '</div>';
             li += '<div class="s-user">';
-            li += '<img src="{{share.shareUserLogo}}" alt=""/><span class="s-user-name">{{share.shareUserName}}</span><span class="s-user-company">{{share.shareCompanyNameShot}}</span>';
+            li += '<img src="{{share.shareUserLogo}}" alt=""/><span class="s-user-name">{{share.shareUserName}}</span><span class="s-user-cp">{{share.shareUserCompanyNameShot}}</span>';
             li += '</div>';
             li += '</li>';
             if(order == "shareId"){
@@ -63,30 +63,30 @@
             }
         }
 
-        function getCompanyShares(companyId) {
-            var results = companyshares.getCompanyShares(companyId);
+        function getUserShares(userId) {
+            var results = usershares.getUserShares(userId);
 
-            angular.forEach(results,function(c,index){
-                var title = c.shareTitle;
+            angular.forEach(results,function(u,index){
+                var title = u.shareTitle;
                 var tags = [];
-                var cn = c.shareCompanyName;
+                var un = u.shareUserCompanyName;
 
                 if(title.length >13){
-                    c.shareShotTitle = c.shareTitle.substr(0,13) + '...';
+                    u.shareShotTitle = u.shareTitle.substr(0,13) + '...';
                 }else {
-                    c.shareShotTitle = c.shareTitle;
+                    u.shareShotTitle = u.shareTitle;
                 }
 
-                if(cn.length>8){
-                    c.shareCompanyNameShot = c.shareCompanyName.substr(0,8)+'...'
+                if(un.length>8){
+                    u.shareUserCompanyNameShot = u.shareUserCompanyName.substr(0,8)+'...'
                 }else{
-                    c.shareCompanyNameShot = c.shareCompanyName;
+                    u.shareUserCompanyNameShot = u.shareUserCompanyName;
                 }
 
-                 tags = c.shareTags.split(',');
-                 c.shareTagsArr = [];
-                c.shareTagsArr[0] = tags[0];
-                c.shareTagsArr[1] = tags[1];
+                 tags = u.shareTags.split(',');
+                 u.shareTagsArr = [];
+                u.shareTagsArr[0] = tags[0];
+                u.shareTagsArr[1] = tags[1];
 
             });
 
