@@ -21,16 +21,13 @@
 
     /**
      * 提供登陆操作
-<<<<<<< HEAD
      * @param cb 回调函数
-=======
      * @param username
      * @param password
->>>>>>> 5e72d77dfed0eac294463fdbfc2447f14d657bf3
      */
     function login(username, password) {
 
-      var login_url = teambookConfig.apiBaseUrl + "/admin/user/login";
+      var login_url = teambookConfig.apiHost + "/admin/user/login";
 
       return $http.post(login_url, {userName: username, password: password})
         .then(loginComplete)
@@ -43,8 +40,8 @@
         return user;
       }
 
-      function loginFailed(res) {
-        return $q.reject(res);
+      function loginFailed(error) {
+        return $q.reject(error);
       }
 
 

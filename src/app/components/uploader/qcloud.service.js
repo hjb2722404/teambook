@@ -6,10 +6,10 @@
 
   angular
     .module('teambookWww')
-    .service('qcloud', QCloud);
+    .service('qcloud', QCloudService);
 
   /** @ngInject */
-  function QCloud($http, $cookies, teambookConfig) {
+  function QCloudService($q, $http, $cookies, $log, Upload,teambookConfig) {
 
     var COOKIE_QCLOUD_COS = "qcloud_cos";
 
@@ -31,129 +31,104 @@
     /**
      * 获取签名,如果本地缓存有,则直接callback,否则
      * 从业务服务器上获取签名,然后根据有效期缓存
-     * @param cb
      */
-    function getAppSign(success, error) {
-
-      function successFn(res) {
-        $cookies.put(COOKIE_QCLOUD_COS, res);
-        success && success(res.sign);
-      }
-
-      function errorFn(res) {
-        error && error(res);
-      }
+    function getAppSign() {
 
       var qcloud = $cookies.get(COOKIE_QCLOUD_COS);
       if (qcloud && qcloud.sign) {
-        success(qcloud);
+        return {
+          then: function () {
+
+          }
+        };
       } else {
-        $http.get(teambookConfig.apiBaseUrl + "/api/qcloud/getSign").then(successFn, errorFn);
+        var getSignUrl = teambookConfig.apiHost + "/api/qcloud/getSign";
+        return $http.get(getSignUrl)
+          .then(getSignComplete)
+          .catch(getSignFailed);
+      }
+
+
+      function getSignComplete(res) {
+        if (res.data.code == 200) {
+          $cookies.put(COOKIE_QCLOUD_COS, res.data.data);
+          return res.data.data;
+        }
+        $log.error('XHR Failed for get Sign.\n' + res.msg);
+        return $q.reject(res);
+      }
+
+      function getSignFailed(error) {
+        $log.error('XHR Failed for getSign.\n' + angular.toJson(error.data, true));
+        return $q.reject(error);
       }
 
     }
 
     function updateFolder(files, cb) {
 
-      getAppSign(function (qcloud) {
-        var upload_url = teambookConfig.cosapi_cgi_url + qcloud.appId + "/" + qcloud.buketName + encodeURI(remotePath)
-      });
-
-
     }
 
-    function updateFile(fileContent, success,error) {
-
-      function uploadFileSuccessFn(res){
-        success && success(res);
-      }
-
-      function uploadFileErrorFn(res){
-        error && error(res);
-      }
-
-      getAppSign(function (qcloud) {
-
-        var remotePath = md5(fileContent);
-        var upload_url = teambookConfig.cosapi_cgi_url
-          + qcloud.appId + "/" + qcloud.buketName + encodeURI(remotePath)
-          + "?sign=" + encodeURIComponent(qcloud.sign);
-
-        var formData = new FormData();
-        formData.append('op', 'upload');
-        formData.append('fileContent', fileContent);
-
-        $http.post(upload_url).then(uploadFileSuccessFn,uploadFileErrorFn);
-
-      });
+    function updateFile(fileContent) {
 
 
     }
 
     function deleteFolder(files, cb) {
 
-      getAppSign(function (sign) {
-
-      });
-
-
     }
 
     function deleteFile(files, cb) {
-
-      getAppSign(function (sign) {
-
-      });
-
 
     }
 
     function getFolderStat(files, cb) {
 
-      getAppSign(function (sign) {
-
-      });
-
-
     }
 
     function getFileStat(files, cb) {
-
-      getAppSign(function (sign) {
-
-      });
-
 
     }
 
     function createFolder(files, cb) {
 
-      getAppSign(function (sign) {
+    }
 
-      });
-
+    function getFolderList() {
 
     }
 
-    function getFolderList(files, cb) {
+    function uploadFile(file) {
 
-      getAppSign(function (sign) {
+      return getAppSign()
+        .then(function (qcloud) {
+          var remotePath = generatorFilename(file.name);
+          var upload_url = teambookConfig.cosapi_cgi_url + "/"
+            + qcloud.appId + "/" + qcloud.bucketName + encodeURI(remotePath)
+            + "?sign=" + encodeURIComponent(qcloud.sign);
 
-      });
 
+          return Upload.upload({
+            url: upload_url,
+            data: {op: 'upload', 'fileContent': file}
+          });
 
+        })
+        .catch(function (res) {
+          return $q.reject(res);
+        });
     }
 
-    function uploadFile(files, cb) {
+    /**
+     * 当前时间戳 + 4位随机数
+     * @returns {*}
+     */
+    function generatorFilename(filename) {
+      var filenameSplits = filename.split("."),
+          suffix = filenameSplits[filenameSplits.length -1];
 
-      getAppSign(function (sign) {
-
-      });
-
-
+      return new Date().getTime() + parseInt(Math.random() * 1000) + "." + suffix;
     }
-
-
   }
 
 })();
