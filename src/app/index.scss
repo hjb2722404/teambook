@@ -17,6 +17,11 @@ body {
   background-repeat: repeat-x;
 }
 
+.clear-fix{
+  height: 0;
+  clear: both;
+}
+
 .main {
   width: 98%;
   max-width: 980px;

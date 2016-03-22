@@ -1,0 +1,40 @@
+.visitors {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 15px;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
+  color: #000000;
+  text-align: center;
+
+  .v-title {
+    text-align: left;
+  }
+
+  .v-list {
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        width: 30%;
+        float: left;
+        margin-left: 5px;
+
+        img {
+          width: 90%;
+          border-radius: 100px;
+        }
+
+        h6 {
+          color :#999999;
+        }
+      }
+
+    }
+  }
+}
+
