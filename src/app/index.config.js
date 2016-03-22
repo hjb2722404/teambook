@@ -29,10 +29,8 @@
 
   angular.module('teambookWww')
     .constant('teambookConfig', {
-
       apiHost: 'http://api.supermary2.com',
       cosapi_cgi_url: "http://web.file.myqcloud.com/files/v1"
-
     });
 
 })();

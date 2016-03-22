@@ -1,8 +1,9 @@
-node_modules/
-bower_components/
-coverage/
-.sass-cache/
-.idea/
-.tmp/
-dist/
-.DS_Store
+!dist
+.tmp
+app
+bower_components
+gulp
+node_modules
+src
+test
+.*
