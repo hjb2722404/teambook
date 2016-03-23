@@ -58,10 +58,15 @@
     margin: 0;
     padding: 0;
 
+
     li {
       width: 100%;
       display: inline-block;
-      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #CCCCCC;
+      padding-top: 15px;
+
+
 
       .couser-Litpic {
 
@@ -126,6 +131,11 @@
       .course-user {
         padding: 15px;
 
+        img {
+          border-radius: 50px;
+          margin-right: 3px;
+        }
+
         .course-user-company{
           margin-left: 30px;
         }
@@ -135,3 +145,4 @@
   }
 
 }
+

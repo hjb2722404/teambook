@@ -21,11 +21,15 @@
       return directive;
 
       /** @ngInject */
-      function CourseListController($location,courses) {
+      function CourseListController($location,courses,$scope) {
           var vm = this;
           var userId = $location.search().userId;
           vm.courses = [];
           vm.courses = getCourse();
+
+          $scope.$on('changeCat',function(e,data){
+              vm.catFilter = data;
+          });
 
           function getCourse(){
               var results = courses.getCourses();

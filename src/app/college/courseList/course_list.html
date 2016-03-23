@@ -1,7 +1,7 @@
 
     <div class="col-md-12 course-list">
         <ul>
-            <li ng-repeat="c in vm.courses" class="row">
+            <li ng-repeat="c in vm.courses | filter : vm.catFilter " class="row">
                 <div class="col-md-4 couser-Litpic">
                     <img src="{{c.courseLitpic}}" alt=""/>
                     <div class="play-btn"></div>
