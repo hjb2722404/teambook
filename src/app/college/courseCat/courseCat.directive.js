@@ -21,9 +21,32 @@
       return directive;
 
       /** @ngInject */
-      function CourseCatController($location) {
+      function CourseCatController($location,$scope) {
           var vm = this;
           var userId = $location.search().userId;
+
+          vm.showCourse = showCourse;
+
+          function showCourse(cat) {
+              //console.log($scope.$parent.catFilter);
+              switch (cat) {
+                  case "cat1":
+                      $scope.$emit('catClick','行政');
+                      break;
+                  case "cat2":
+                      $scope.$emit('catClick','技术');
+
+                      break;
+                  case "cat3":
+                      $scope.$emit('catClick','财务');
+
+                      break;
+                  case "cat4":
+                      $scope.$emit('catClick','市场');
+
+                      break;
+              }
+          }
       }
   }
 

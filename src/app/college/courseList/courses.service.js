@@ -26,7 +26,7 @@
                         "courseTeacher" : "刘娜",
                         "courseCompany" : "南京市旭强信息科技有限公司",
                         "courseCat" : "行政",
-                        "teacherLogo " : "assets/images/user-small.png",
+                        "teacherLogo" : "./assets/images/user-small.png",
                         "courseViews" : 300
                     },
 
@@ -40,7 +40,7 @@
                         "courseTeacher" : "刘娜",
                         "courseCompany" : "南京市旭强信息科技有限公司",
                         "courseCat" : "行政",
-                        "teacherLogo " : "./assets/images/user1-small.png",
+                        "teacherLogo" : "./assets/images/user1-small.png",
                         "courseViews" : 300
                     },
 
@@ -55,7 +55,7 @@
                         "courseTeacher" : "刘娜",
                         "courseCompany" : "南京市旭强信息科技有限公司",
                         "courseCat" : "财务",
-                        "teacherLogo " : "./assets/images/user1-small.png",
+                        "teacherLogo" : "./assets/images/user1-small.png",
                         "courseViews" : 300
                     },
 
@@ -70,7 +70,7 @@
                         "courseTeacher" : "刘娜",
                         "courseCompany" : "南京市旭强信息科技有限公司",
                         "courseCat" : "财务",
-                        "teacherLogo " : "./assets/images/user1-small.png",
+                        "teacherLogo" : "./assets/images/user1-small.png",
                         "courseViews" : 300
                     },
 
@@ -85,7 +85,7 @@
                         "courseTeacher" : "刘娜",
                         "courseCompany" : "南京市旭强信息科技有限公司",
                         "courseCat" : "财务",
-                        "teacherLogo " : "./assets/images/user1-small.png",
+                        "teacherLogo" : "./assets/images/user1-small.png",
                         "courseViews" : 300
                     },
 
@@ -100,7 +100,7 @@
                         "courseTeacher" : "刘娜",
                         "courseCompany" : "南京市旭强信息科技有限公司",
                         "courseCat" : "技术",
-                        "teacherLogo " : "./assets/images/user1-small.png",
+                        "teacherLogo" : "./assets/images/user1-small.png",
                         "courseViews" : 300
                     },
 
@@ -115,7 +115,7 @@
                         "courseTeacher" : "刘娜",
                         "courseCompany" : "南京市旭强信息科技有限公司",
                         "courseCat" : "市场",
-                        "teacherLogo " : "./assets/images/user1-small.png",
+                        "teacherLogo" : "./assets/images/user1-small.png",
                         "courseViews" : 300
                     },
 
@@ -130,7 +130,7 @@
                         "courseTeacher" : "刘娜",
                         "courseCompany" : "南京市旭强信息科技有限公司",
                         "courseCat" : "财务",
-                        "teacherLogo " : "./assets/images/user1-small.png",
+                        "teacherLogo" : "./assets/images/user1-small.png",
                         "courseViews" : 300
                     },
 
@@ -145,7 +145,7 @@
                         "courseTeacher" : "刘娜",
                         "courseCompany" : "南京市旭强信息科技有限公司",
                         "courseCat" : "技术",
-                        "teacherLogo " : "./assets/images/user1-small.png",
+                        "teacherLogo" : "./assets/images/user1-small.png",
                         "courseViews" : 300
                     },
 
@@ -160,7 +160,7 @@
                         "courseTeacher" : "刘娜",
                         "courseCompany" : "南京市旭强信息科技有限公司",
                         "courseCat" : "市场",
-                        "teacherLogo " : "./assets/images/user1-small.png",
+                        "teacherLogo" : "./assets/images/user1-small.png",
                         "courseViews" : 300
                     }
 

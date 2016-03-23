@@ -11,13 +11,16 @@
     .controller('CollegeController', CollegeController);
 
   /** @ngInject */
-  function CollegeController($timeout,toastr) {
+  function CollegeController($timeout,toastr,$scope) {
     var vm = this;
 
       vm.classAnimation = '';
       vm.creationDate = 1458021821396;
       vm.showToastr = showToastr;
 
+      $scope.$on('catClick',function(e,data){
+          $scope.$broadcast('changeCat',data);
+      });
 
       activate();
 

@@ -32,34 +32,39 @@
         function showMore(order){
             vm.page++;
             vm.moreShares = getCompanyShares(companyId,vm.page,6);
-            var li = '<li ng-repeat="share in vm.moreShares | filter :query | orderBy : \''+order+'\'">';
-            li += '<div class="litpic">';
-            li += '<img src="{{share.shareLitpic}}" alt=""/>';
-            li += '<div class="play-btn" ng-show="share.shareType == \'video\'"></div>';
-            li += '</div>';
-            li += '<div class="s-title">';
-            li += '<h5>{{share.shareShotTitle}}</h5>';
-            li += '</div>';
-            li += '<div class="s-info">';
-            li += '<div class="s-tag">';
-            li += '<ul>';
-            li += '<li ng-repeat="tag in share.shareTagsArr">';
-            li += ' <img src="./assets/images/tag.png" alt=""/><span>{{tag}}</span>';
-            li += '</li>';
-            li += '</ul>';
-            li += '</div>';
-            li += '<div class="s-views">';
-            li += '<img src="./assets/images/views.png" alt=""/><span>{{share.shareViews}}</span>';
-            li += '</div>';
-            li += '</div>';
-            li += '<div class="s-user">';
-            li += '<img src="{{share.shareUserLogo}}" alt=""/><span class="s-user-name">{{share.shareUserName}}</span><span class="s-user-company">{{share.shareCompanyNameShot}}</span>';
-            li += '</div>';
-            li += '</li>';
+            var li ='';
+            angular.forEach(vm.moreShares,function(share){
+                li += '<li>'
+                li += '<div class="litpic">';
+                li += '<img src="'+share.shareLitpic+'" alt=""/>';
+                li += '<div class="play-btn" ng-show="share.shareType == \'video\'"></div>';
+                li += '</div>';
+                li += '<div class="s-title">';
+                li += '<h5>'+share.shareShotTitle+'</h5>';
+                li += '</div>';
+                li += '<div class="s-info">';
+                li += '<div class="s-tag">';
+                li += '<ul>';
+                angular.forEach(share.shareTagsArr,function(tag){
+                    li += '<li>';
+                    li += ' <img src="./assets/images/tag.png" alt=""/><span>'+tag+'</span>';
+                    li += '</li>';
+                });
+                li += '</ul>';
+                li += '</div>';
+                li += '<div class="s-views">';
+                li += '<img src="./assets/images/views.png" alt=""/><span>'+share.shareViews+'</span>';
+                li += '</div>';
+                li += '</div>';
+                li += '<div class="s-user">';
+                li += '<img src="'+share.shareUserLogo+'" alt=""/><span class="s-user-name">'+share.shareUserName+'</span><span class="s-user-company">'+share.shareCompanyNameShot+'</span>';
+                li += '</div>';
+                li += '</li>';
+            });
             if(order == "shareId"){
-                angular.element(".new-share ul").append(li);
+                angular.element(".new-ul").append(li);
             }else if(order ="shareUserName"){
-                angular.element(".hot-share ul").append(li);
+                angular.element(".hot-ul").append(li);
             }
         }
 
