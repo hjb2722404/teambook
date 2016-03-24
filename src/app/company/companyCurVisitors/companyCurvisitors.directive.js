@@ -29,7 +29,11 @@
         getCompanyCurVisitors(companyId);
 
         function getCompanyCurVisitors(companyId) {
-            vm.companyCurVisitors =  companycurvisitors.getCompanyCurVisitors(companyId);
+            return companycurvisitors.getCompanyCurVisitors(companyId)
+                .then(function(res){
+                    vm.companyCurVisitors = res;
+                })
+                .catch();
             //console.log(vm.companyCurVisitors);
         }
 

@@ -28,7 +28,11 @@
         getCompanyFollows(companyId);
 
         function getCompanyFollows(companyId) {
-            vm.companyFollows =  companyfollows.getCompanyFollows(companyId);
+           return companyfollows.getCompanyFollows(companyId)
+               .then(function(res){
+                   vm.companyFollows = res;
+               })
+               .catch();
         }
 
     }

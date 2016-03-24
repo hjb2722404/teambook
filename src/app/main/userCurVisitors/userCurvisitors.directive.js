@@ -23,8 +23,8 @@
     /** @ngInject */
     function UserCurVisitorsController(user,usercurvisitors) {
         var vm = this;
-        var user = user.getUser();
-        var userId = user.data.id;
+        var userInstance = user.getUser();
+        var userId = userInstance.data.id;
 
         vm.userCurVisitors = [];
         getUserCurVisitors(userId);

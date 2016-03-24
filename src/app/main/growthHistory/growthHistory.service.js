@@ -12,43 +12,43 @@
 
         function getGrowthHistory(userId) {
 
-            var response = {
-                "size" : 3,
-                "info" : "growth-history",
-                "data" : [
-                    {
-                       "growthTitle" : "如何对自己的工作进行排序",
-                        "growthType" : "share",
-                        "growthTime" : "03-21"
-                    },
-                    {
-                        "growthTitle" : "如何对自己的工作进行排序",
-                        "growthType" : "study",
-                        "growthTime" : "03-21"
-                    },
-                    {
-                        "growthTitle" : "如何对自己的工作进行排序",
-                        "growthType" : "college",
-                        "growthTime" : "03-21"
-                    }
-
-
-                ]
-            };
-
-            //var apiHost = teambookConfig.apiHost;
-
-            //return $http.get(apiHost + '/aip/members?id='+userId+'&sort=level')
-            //    .then(getGrowthHistoryComplete)
-            //    .catch(getGrowthHistoryFailed);
+            //var response = {
+            //    "size" : 3,
+            //    "info" : "growth-history",
+            //    "data" : [
+            //        {
+            //           "growthTitle" : "如何对自己的工作进行排序",
+            //            "growthType" : "share",
+            //            "growthTime" : "03-21"
+            //        },
+            //        {
+            //            "growthTitle" : "如何对自己的工作进行排序",
+            //            "growthType" : "study",
+            //            "growthTime" : "03-21"
+            //        },
+            //        {
+            //            "growthTitle" : "如何对自己的工作进行排序",
+            //            "growthType" : "college",
+            //            "growthTime" : "03-21"
+            //        }
             //
-            //  function getGrowthHistoryComplete(response) {
+            //
+            //    ]
+            //};
+
+            var apiHost = teambookConfig.apiHost;
+
+            return $http.get(apiHost + '/api/user/getStudyTrackByUserId?id='+userId)
+                .then(getGrowthHistoryComplete)
+                .catch(getGrowthHistoryFailed);
+
+              function getGrowthHistoryComplete(response) {
                   return response.data;
-            //  }
-            //
-            //  function getGrowthHistoryFailed(error) {
-            //      $log.error('XHR Failed for getGrowthHistory.\n' + angular.toJson(error.data, true));
-            //  }
+              }
+
+              function getGrowthHistoryFailed(error) {
+                  $log.error('XHR Failed for getGrowthHistory.\n' + angular.toJson(error.data, true));
+              }
         }
     }
 

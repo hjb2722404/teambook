@@ -70,33 +70,40 @@
         }
 
         function getCompanyShares(companyId) {
-            var results = companyshares.getCompanyShares(companyId);
 
-            angular.forEach(results,function(c,index){
-                var title = c.shareTitle;
-                var tags = [];
-                var cn = c.shareCompanyName;
+            return companyshares.getCompanyShares(companyId)
+                .then(function(res){
+                    var results = res;
 
-                if(title.length >13){
-                    c.shareShotTitle = c.shareTitle.substr(0,13) + '...';
-                }else {
-                    c.shareShotTitle = c.shareTitle;
-                }
+                        angular.forEach(results,function(c,index){
+                            var title = c.shareTitle;
+                            var tags = [];
+                            var cn = c.shareCompanyName;
 
-                if(cn.length>8){
-                    c.shareCompanyNameShot = c.shareCompanyName.substr(0,8)+'...'
-                }else{
-                    c.shareCompanyNameShot = c.shareCompanyName;
-                }
+                            if(title.length >13){
+                                c.shareShotTitle = c.shareTitle.substr(0,13) + '...';
+                            }else {
+                                c.shareShotTitle = c.shareTitle;
+                            }
 
-                 tags = c.shareTags.split(',');
-                 c.shareTagsArr = [];
-                c.shareTagsArr[0] = tags[0];
-                c.shareTagsArr[1] = tags[1];
+                            if(cn.length>8){
+                                c.shareCompanyNameShot = c.shareCompanyName.substr(0,8)+'...'
+                            }else{
+                                c.shareCompanyNameShot = c.shareCompanyName;
+                            }
 
-            });
+                            tags = c.shareTags.split(',');
+                            c.shareTagsArr = [];
+                            c.shareTagsArr[0] = tags[0];
+                            c.shareTagsArr[1] = tags[1];
 
-            return results;
+                        });
+
+                    return results;
+                })
+                .catch();
+
+
 
         }
 

@@ -29,7 +29,11 @@
         getCompanyGoodMembers(companyId);
 
         function getCompanyGoodMembers(companyId) {
-            vm.companyGoodMembers =  companygoodmembers.getCompanyGoodMembers(companyId);
+            return  companygoodmembers.getCompanyGoodMembers(companyId)
+                .then(function(res){
+                    vm.companyGoodMembers = res;
+                })
+                .catch();
         }
 
     }

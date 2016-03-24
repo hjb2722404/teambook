@@ -32,16 +32,21 @@
           });
 
           function getCourse(){
-              var results = courses.getCourses();
 
-              angular.forEach(results,function(c,index){
-                  var tags = [];
-                  tags = c.courseTags.split(',');
-                  c.courseTagsArr = tags;
+              return courses.getCourse()
+                  .then(function(res){
+                      var results = res;
+                      angular.forEach(results,function(c,index){
+                          var tags = [];
+                          tags = c.courseTags.split(',');
+                          c.courseTagsArr = tags;
 
-              });
+                      });
 
-              return results;
+                      return results;
+                  })
+                  .catch();
+
           }
       }
   }

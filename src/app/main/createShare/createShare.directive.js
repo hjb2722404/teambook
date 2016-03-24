@@ -23,7 +23,9 @@
       /** @ngInject */
       function CreateShareController($location) {
           var vm = this;
-          var userId = $location.search().userId;
+          var userInstance = user.getUser();
+          var userId = userInstance.data.id;
+
       }
   }
 

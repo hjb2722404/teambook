@@ -28,7 +28,11 @@
         getCompanyFans(companyId);
 
         function getCompanyFans(companyId) {
-            vm.companyFans =  companyfans.getCompanyFans(companyId);
+           return  companyfans.getCompanyFans(companyId)
+               .then(function(res){
+                   vm.companyFans = res;
+               })
+               .catch();
         }
 
     }

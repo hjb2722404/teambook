@@ -72,33 +72,38 @@
         }
 
         function getUserShares(userId) {
-            var results = usershares.getUserShares(userId);
 
-            angular.forEach(results,function(u,index){
-                var title = u.shareTitle;
-                var tags = [];
-                var un = u.shareUserCompanyName;
+            return usershares.getUserShares(userId)
+                .then(function(res){
+                    var results = res;
+                    angular.forEach(results,function(u,index){
+                        var title = u.shareTitle;
+                        var tags = [];
+                        var un = u.shareUserCompanyName;
 
-                if(title.length >13){
-                    u.shareShotTitle = u.shareTitle.substr(0,13) + '...';
-                }else {
-                    u.shareShotTitle = u.shareTitle;
-                }
+                        if(title.length >13){
+                            u.shareShotTitle = u.shareTitle.substr(0,13) + '...';
+                        }else {
+                            u.shareShotTitle = u.shareTitle;
+                        }
 
-                if(un.length>8){
-                    u.shareUserCompanyNameShot = u.shareUserCompanyName.substr(0,8)+'...'
-                }else{
-                    u.shareUserCompanyNameShot = u.shareUserCompanyName;
-                }
+                        if(un.length>8){
+                            u.shareUserCompanyNameShot = u.shareUserCompanyName.substr(0,8)+'...'
+                        }else{
+                            u.shareUserCompanyNameShot = u.shareUserCompanyName;
+                        }
 
-                 tags = u.shareTags.split(',');
-                 u.shareTagsArr = [];
-                u.shareTagsArr[0] = tags[0];
-                u.shareTagsArr[1] = tags[1];
+                        tags = u.shareTags.split(',');
+                        u.shareTagsArr = [];
+                        u.shareTagsArr[0] = tags[0];
+                        u.shareTagsArr[1] = tags[1];
 
-            });
+                    });
 
-            return results;
+                    return results;
+                })
+                .catch();
+
 
         }
 

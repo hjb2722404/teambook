@@ -21,14 +21,22 @@
     return directive;
 
     /** @ngInject */
-    function GrowthHistoryController($location,growthHistory) {
+    function GrowthHistoryController(user,growthHistory) {
         var vm = this;
-        var userId = $location.search().userId;
+        var userInstance = user.getUser();
+        var userId = userInstance.data.id;
         vm.growthHistory = [];
 
         getGrowthHistory(userId);
 
         function getGrowthHistory(userId) {
+
+            return growthHistory.getGrowthHistory(userId)
+                .then(function(historys){
+                    vm.growthHistory = historys;
+                })
+                .catch();
+
             vm.growthHistory =  growthHistory.getGrowthHistory(userId);
         }
 

@@ -29,7 +29,11 @@
         getCompanyData(companyId);
 
         function getCompanyData(companyId) {
-            vm.companyData =  companydata.getCompanyData(companyId);
+            return companydata.getCompanyData(companyId)
+                .then(function(res){
+                    vm.companyData = res;
+                })
+                .catch();
         }
 
     }

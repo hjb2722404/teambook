@@ -31,7 +31,12 @@
         vm.isShowCard = false;
 
         function getCompanyInfo(companyId) {
-            vm.companyInfos =  companyinfos.getCompanyInfos(companyId);
+
+            return companyinfos.getCompanyInfos(companyId)
+                .then(function(res){
+                    vm.companyInfos = res;
+                })
+                .catch();
         }
     }
   }
