@@ -14,7 +14,8 @@
       scope: {},
       controller: CompanySharesController,
       controllerAs: 'vm',
-      bindToController: true
+      bindToController: true,
+        replace : true
     };
 
     return directive;

@@ -33,7 +33,7 @@
 
     function login() {
 
-      return user.login(vm.username, vm.password)
+      return user.login(vm.username, vm.password,vm.autoLogin)
         .then(loginComplete)
         .catch(loginFailed);
     }

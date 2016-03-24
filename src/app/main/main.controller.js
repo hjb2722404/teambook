@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($timeout,webDevTec, toastr,user) {
     var vm = this;
 
     vm.awesomeThings = [];
@@ -17,6 +17,9 @@
     activate();
 
     function activate() {
+
+        user.checkAuth();
+
       getWebDevTec();
       $timeout(function() {
         vm.classAnimation = 'rubberBand';

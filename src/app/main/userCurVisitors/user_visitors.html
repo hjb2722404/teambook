@@ -7,7 +7,7 @@
         <div class="v-list">
             <ul>
                 <li ng-repeat="v in vm.userCurVisitors">
-                    <img class="v-user-logo" src="{{v.userLogo}}" alt=""/>
+                    <img class="v-user-logo" ng-src="{{v.userLogo}}" alt=""/>
                     <h5 class="v-user-name">{{v.userName}}</h5>
                     <h6 class="v-visit-time">{{v.visitTime}}</h6>
                 </li>

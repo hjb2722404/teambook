@@ -21,20 +21,28 @@
     return directive;
 
     /** @ngInject */
-    function UserInfoController($location,userinfos) {
+    function UserInfoController(userinfos,user) {
         var vm = this;
-        var userId = $location.search().userId;
+
+        var user = user.getUser();
+        var userId = user.data.id;
+
+        vm.isShowCard = false;
+
          vm.female = false;
 
         vm.userInfos = [];
         getUserInfo(userId);
 
-        vm.isShowCard = false;
 
         function getUserInfo(userId) {
             vm.userInfos =  userinfos.getUserInfos(userId);
-            if(vm.userInfos.userSex == "女"){
+
+            if(vm.userInfos.gender == "2"){
+                vm.userInfos.userSex = "女";
                 vm.female =true;
+            }else{
+                vm.userInfos.userSex = "男";
             }
         }
     }
