@@ -25,10 +25,8 @@
 
             function getUserComplete(response) {
 
-                var user = response.data.data;
-                user = angular.toJson(user);
-                console.log("data:"+user);
-                return user;
+                return response.data.data;
+
 
             }
 

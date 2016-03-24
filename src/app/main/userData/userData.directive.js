@@ -21,15 +21,22 @@
     return directive;
 
     /** @ngInject */
-    function UserDataController($location,userdata) {
+    function UserDataController(user,userdata) {
         var vm = this;
-        var userId = $location.search().userId;
+
+        var userIncetance = user.getUser();
+        var userId = userIncetance.data.id;
 
         vm.userData = [];
         getUserData(userId);
 
         function getUserData(userId) {
-            vm.userData =  userdata.getUserData(userId);
+
+            return userdata.getUserData(userId)
+                .then(function(userData){
+                    vm.userData = userData;
+                })
+                .cache();
         }
 
     }

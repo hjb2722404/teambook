@@ -36,14 +36,20 @@
 
 
         function getUserInfo(userId) {
-            vm.userInfos =  userinfos.getUserInfos(userId);
+            
+            return userinfos.getUserInfos(userId)
+                .then(function(userInfos){
+                    vm.userInfos = userInfos;
+                    if(vm.userInfos.gender == "2"){
+                        vm.userInfos.userSex = "女";
+                        vm.female =true;
+                    }else{
+                        vm.userInfos.userSex = "男";
+                    }
+                })
+                .catch();
 
-            if(vm.userInfos.gender == "2"){
-                vm.userInfos.userSex = "女";
-                vm.female =true;
-            }else{
-                vm.userInfos.userSex = "男";
-            }
+
         }
     }
   }
