@@ -12,60 +12,59 @@
 
         function getUserCurVisitors(userId) {
 
-            var response = {
-                "size" : 6,
-                "info" : "visitor",
-                "data" : [
-                    {
-                        "userName" : "用户一" ,
-                        "visitTime" : "3月17日" ,
-                        "userLogo" : "./assets/images/user2.png"
-                    },
-
-                    {
-                        "userName" : "用户二" ,
-                        "visitTime" : "3月17日" ,
-                        "userLogo" : "./assets/images/user3.png"
-                    },
-
-                    {
-                        "userName" : "用户三" ,
-                        "visitTime" : "3月17日" ,
-                        "userLogo" : "./assets/images/user4.png"
-                    },
-
-                    {
-                        "userName" : "用户四" ,
-                        "visitTime" : "3月17日" ,
-                        "userLogo" : "./assets/images/user5.png"
-                    },
-
-                    {
-                        "userName" : "用户五" ,
-                        "visitTime" : "3月17日" ,
-                        "userLogo" : "./assets/images/user.png"
-                    },
-
-                    {
-                        "userName" : "用户六" ,
-                        "visitTime" : "3月17日" ,
-                        "userLogo" : "./assets/images/user1.png"
-                    }
-                ]
-            };
-            //var apiHost = teambookConfig.apiHost;
+            //var response = {
+            //    "size" : 6,
+            //    "info" : "visitor",
+            //    "data" : [
+            //        {
+            //            "userName" : "用户一" ,
+            //            "visitTime" : "3月17日" ,
+            //            "userLogo" : "./assets/images/user2.png"
+            //        },
             //
-            //return $http.get(apiHost + '/aip/Visitors?type=user&id='+userId)
-            //    .then(getUserCurVisitorsComplete)
-            //    .catch(getUserCurVisitorsFailed);
+            //        {
+            //            "userName" : "用户二" ,
+            //            "visitTime" : "3月17日" ,
+            //            "userLogo" : "./assets/images/user3.png"
+            //        },
             //
-            //  function getUserCurVisitorsComplete(response) {
+            //        {
+            //            "userName" : "用户三" ,
+            //            "visitTime" : "3月17日" ,
+            //            "userLogo" : "./assets/images/user4.png"
+            //        },
+            //
+            //        {
+            //            "userName" : "用户四" ,
+            //            "visitTime" : "3月17日" ,
+            //            "userLogo" : "./assets/images/user5.png"
+            //        },
+            //
+            //        {
+            //            "userName" : "用户五" ,
+            //            "visitTime" : "3月17日" ,
+            //            "userLogo" : "./assets/images/user.png"
+            //        },
+            //
+            //        {
+            //            "userName" : "用户六" ,
+            //            "visitTime" : "3月17日" ,
+            //            "userLogo" : "./assets/images/user1.png"
+            //        }
+            //    ]
+            //};
+            var apiHost = teambookConfig.apiHost;
+            return $http.get(apiHost + '/api/user/getVisitUserByUserId?userId='+userId)
+                .then(getUserCurVisitorsComplete)
+                .catch(getUserCurVisitorsFailed);
+
+              function getUserCurVisitorsComplete(response) {
                   return response.data;
-            //  }
-            //
-            //  function getUserCurVisitorsFailed(error) {
-            //      $log.error('XHR Failed for getUserCurVisitors.\n' + angular.toJson(error.data, true));
-            //  }
+              }
+
+              function getUserCurVisitorsFailed(error) {
+                  $log.error('XHR Failed for getUserCurVisitors.\n' + angular.toJson(error.data, true));
+              }
         }
     }
 

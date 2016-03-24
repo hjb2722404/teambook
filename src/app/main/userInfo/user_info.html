@@ -1,21 +1,21 @@
 <div class="banner">
 
     <div class="user-logo-box">
-        <img src="{{vm.userInfos.userLogo}}" alt="" class="user-logo" ng-mouseover="isShowCard = !isShowCard"/>
+        <img ng-src="{{vm.userInfos.headPhoto}}" alt="" class="user-logo" ng-mouseover="isShowCard = !isShowCard"/>
         <div class="identity">
-            <img src="assets/images/vip.png" alt="" ng-show="{{vm.userInfos.userIsVip}}"/>
-            <img src="assets/images/no-vip.png" alt="" ng-show="!{{vm.userInfos.userIsVip}}"/>
-            <span class="level">Lv.{{vm.userInfos.userLevel}}</span>
+            <img src="assets/images/vip.png" alt="" />
+            <!--<img src="assets/images/no-vip.png" alt="" ng-show="!{{vm.userInfos.userIsVip}}"/>-->
+            <span class="level">Lv.{{vm.userInfos.level}}</span>
         </div>
 
     </div>
 
     <div class="user-name">
-        <h4>{{vm.userInfos.userName}}</h4>
+        <h4>{{vm.userInfos.username}}</h4>
     </div>
     <div class="user-dec">
         <p>
-            {{vm.userInfos.userDec}}
+            {{vm.userInfos.signature}}
         </p>
     </div>
 
@@ -28,21 +28,21 @@
 
     <div class="card" ng-show="isShowCard" ng-mouseleave="isShowCard = !isShowCard">
         <div class="user-logo-box">
-            <img src="{{vm.userInfos.userLogo}}" alt="" class="user-logo"/>
+            <img ng-src="{{vm.userInfos.headPhoto}}" alt="" class="user-logo"/>
             <div class="identity">
-                <img src="assets/images/vip.png" alt="" ng-show="{{vm.userInfos.userIsVip}}"/>
-                <img src="assets/images/no-vip.png" alt="" ng-show="!{{vm.userInfos.userIsVip}}"/>
-                <span class="level">Lv.{{vm.userInfos.userLevel}}</span>
+                <img src="assets/images/vip.png" alt="" />
+                <!--<img src="assets/images/no-vip.png" alt="" ng-show="!{{vm.userInfos.userIsVip}}"/>-->
+                <span class="level">Lv.{{vm.userInfos.level}}</span>
             </div>
 
         </div>
 
         <div class="user-name-card">
-            <h4>{{vm.userInfos.userName}}</h4>
+            <h4>{{vm.userInfos.username}}</h4>
         </div>
         <div class="user-dec-card">
             <p>
-                {{vm.userInfos.userDec}}
+                {{vm.userInfos.signature}}
             </p>
         </div>
 
@@ -52,13 +52,13 @@
                     <span><a href="#">{{vm.userInfos.userSex}}</a></span><img src="./assets/images/nv.png" alt="" ng-show="vm.female"/><img src="./assets/images/nan.png" alt="" ng-show="!vm.female"/>
                 </div>
                 <div class="col-md-6 website">
-                    <img src="./assets/images/website.png" alt=""/><span><a href="#">{{vm.userInfos.userCompany}}</a></span>
+                    <img src="./assets/images/website.png" alt=""/><span><a href="#">{{vm.userInfos.companyName}}</a></span>
                 </div>
                 <div class="col-md-6 email">
-                    <span><a href="#">{{vm.userInfos.userEmail}}</a></span><img src="./assets/images/youjian.png" alt=""/>
+                    <span><a href="#">{{vm.userInfos.email}}</a></span><img src="./assets/images/youjian.png" alt=""/>
                 </div>
                 <div class="col-md-6 zhiwei">
-                    <img src="./assets/images/zhiwei.png" alt=""/><span><a href="#">{{vm.userInfos.userZhiwei}}</a></span>
+                    <img src="./assets/images/zhiwei.png" alt=""/><span><a href="#">{{vm.userInfos.department}} {{vm.userInfos.occupation}}</a></span>
 
                 </div>
             </div>

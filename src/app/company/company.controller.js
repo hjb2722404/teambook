@@ -11,7 +11,7 @@
     .controller('CompanyController', CompanyController);
 
   /** @ngInject */
-  function CompanyController($timeout,toastr) {
+  function CompanyController($timeout,toastr,user) {
     var vm = this;
 
       vm.classAnimation = '';
@@ -22,6 +22,7 @@
       activate();
 
       function activate() {
+          user.checkAuth();
           $timeout(function() {
             vm.classAnimation = 'rubberBand';
           }, 4000);

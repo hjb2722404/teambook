@@ -11,7 +11,7 @@
     .controller('CollegeController', CollegeController);
 
   /** @ngInject */
-  function CollegeController($timeout,toastr,$scope) {
+  function CollegeController($timeout,toastr,$scope,user) {
     var vm = this;
 
       vm.classAnimation = '';
@@ -25,6 +25,7 @@
       activate();
 
       function activate() {
+          user.checkAuth();
           $timeout(function() {
             vm.classAnimation = 'rubberBand';
           }, 4000);

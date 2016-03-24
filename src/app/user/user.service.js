@@ -6,7 +6,7 @@
     .factory('user', User);
 
   /** @ngInject */
-  function User($cookies, $http, $q, teambookConfig) {
+  function User($cookies,$location,  $http, $q, teambookConfig) {
 
     var COOKIE_USER_NAME = "user";
 
@@ -25,8 +25,13 @@
      * @param username
      * @param password
      */
-    function login(username, password) {
+    function login(username, password,autoLogin) {
 
+        if(autoLogin){
+            var date = new Date();
+            date.setDate(date.getDate() + 7);
+            var expires = date;
+        }
       var login_url = teambookConfig.apiHost + "/api/user/login";
 
       return $http.post(login_url, {username: username, password: password})
@@ -35,9 +40,10 @@
 
       function loginComplete(res) {
 
-        var user = res.data;
-        $cookies.put(COOKIE_USER_NAME, user);
-        return user;
+            //console.log("res :" +res);
+            var user = res.data;
+            $cookies.putObject(COOKIE_USER_NAME, user,{"expires":expires});
+            return user;
       }
 
       function loginFailed(error) {
@@ -60,7 +66,7 @@
      * @param cb
      */
     function getUser() {
-      return $cookies.get(COOKIE_USER_NAME);
+      return $cookies.getObject(COOKIE_USER_NAME);
     }
 
     /**
@@ -68,8 +74,9 @@
      * @param cb
      */
     function checkAuth() {
-
+        if(!getUser()){
+            $location.path('/login');
+        }
     }
-
   }
 })();

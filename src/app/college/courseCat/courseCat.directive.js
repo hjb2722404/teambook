@@ -27,6 +27,9 @@
 
           vm.showCourse = showCourse;
 
+          /*切换课程分类
+          * @param cat:分类id
+          * */
           function showCourse(cat) {
               //console.log($scope.$parent.catFilter);
               switch (cat) {
@@ -43,7 +46,6 @@
                       break;
                   case "cat4":
                       $scope.$emit('catClick','市场');
-
                       break;
               }
           }

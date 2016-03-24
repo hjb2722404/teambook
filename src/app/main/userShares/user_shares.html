@@ -13,7 +13,7 @@
                 <ul class="new-ul">
                     <li ng-repeat="shares in vm.userShares | filter: query : 5 | orderBy:'shareId'">
                         <div class="litpic">
-                            <img src="{{shares.shareLitpic}}" alt=""/>
+                            <img ng-src="{{shares.shareLitpic}}" alt=""/>
                             <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
                         </div>
                         <div class="s-title">
@@ -46,7 +46,7 @@
                 <ul class="hot-ul">
                     <li ng-repeat="shares in vm.userShares | filter: query | orderBy:'shareUserName'">
                         <div class="litpic">
-                            <img src="{{shares.shareLitpic}}" alt=""/>
+                            <img ng-src="{{shares.shareLitpic}}" alt=""/>
                             <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
                         </div>
                         <div class="s-title">
