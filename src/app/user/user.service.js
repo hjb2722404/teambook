@@ -6,7 +6,7 @@
     .factory('user', User);
 
   /** @ngInject */
-  function User($cookies,$location,  $http, $q, teambookConfig) {
+  function User($cookies,$location,  $http, $q, teambookConfig,toastr) {
 
     var COOKIE_USER_NAME = "user";
 
@@ -31,6 +31,8 @@
             var date = new Date();
             date.setDate(date.getDate() + 7);
             var expires = date;
+        }else{
+            expires = null;
         }
       var login_url = teambookConfig.apiHost + "/api/user/login";
 
@@ -40,10 +42,15 @@
 
       function loginComplete(res) {
 
-            //console.log("res :" +res);
-            var user = res.data;
-            $cookies.putObject(COOKIE_USER_NAME, user,{"expires":expires});
-            return user;
+          if(res.data.data){
+              var user = res.data;
+              $cookies.putObject(COOKIE_USER_NAME, user,{"expires":expires});
+              return user;
+          }
+          else {
+              toastr.error(res.data.msg);
+              return false;
+          }
       }
 
       function loginFailed(error) {

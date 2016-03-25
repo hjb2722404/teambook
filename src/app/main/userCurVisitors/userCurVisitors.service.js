@@ -10,7 +10,7 @@
 
         this.getUserCurVisitors = getUserCurVisitors;
 
-        function getUserCurVisitors(userId) {
+        function getUserCurVisitors(userId,size) {
 
             //var response = {
             //    "size" : 6,
@@ -54,7 +54,7 @@
             //    ]
             //};
             var apiHost = teambookConfig.apiHost;
-            return $http.get(apiHost + '/api/user/getVisitUserByUserId?userId='+userId)
+            return $http.get(apiHost + '/api/visit/getVisitUserByUserId?userId='+userId+'&showNum='+size)
                 .then(getUserCurVisitorsComplete)
                 .catch(getUserCurVisitorsFailed);
 

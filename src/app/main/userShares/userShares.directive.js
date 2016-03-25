@@ -21,9 +21,10 @@
     return directive;
 
     /** @ngInject */
-    function UserSharesController($location,usershares) {
+    function UserSharesController(usershares,user) {
         var vm = this;
-        var userId = $location.search().userId;
+        var userInstance = user.getUser();
+        var userId = userInstance.data.id;
         vm.userShares = [];
         vm.shareTags = [];
         vm.userShares = getUserShares(userId);

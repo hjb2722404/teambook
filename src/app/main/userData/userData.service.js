@@ -12,11 +12,6 @@
 
         function getUserData(userId) {
 
-            //return {
-            //    "follows" : 40,
-            //    "shares" : 28,
-            //    "fans" : 36
-            //};
             var apiHost = teambookConfig.apiHost;
 
             return $http.get(apiHost + '/api/user/getSocialByUserId?userId=' + userId)
@@ -25,8 +20,7 @@
 
             function getUserDataComplete(response) {
 
-                console.log(response.data);
-                return response.data;
+                return response.data.data;
 
             }
 

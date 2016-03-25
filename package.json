@@ -1,7 +1,9 @@
 {
   "name": "teambookWww",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "vplayer": "^1.0.3"
+  },
   "scripts": {
     "test": "gulp test"
   },

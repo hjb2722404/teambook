@@ -27,14 +27,13 @@
         var userId = userInstance.data.id;
 
         vm.userCurVisitors = [];
-        getUserCurVisitors(userId);
+        getUserCurVisitors(userId,6);
 
-        function getUserCurVisitors(userId) {
+        function getUserCurVisitors(userId,size) {
 
-            return usercurvisitors.getUserCurVisitors(userId)
-                .then(function(userCurVisitors){
-
-                    vm.userCurVisitors = userCurVisitors;
+            return usercurvisitors.getUserCurVisitors(userId,size)
+                .then(function(res){
+                    vm.userCurVisitors = res.data;
                 })
                 .catch();
 

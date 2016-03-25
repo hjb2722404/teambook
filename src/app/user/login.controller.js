@@ -42,7 +42,6 @@
 
     }
 
-
     function loginComplete() {
       if ($location.pre == "/login") {
         $location.pre = "/home";
