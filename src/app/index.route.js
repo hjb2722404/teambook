@@ -31,6 +31,14 @@
           controllerAs: 'college'
       });
 
+      $stateProvider
+          .state('content', {
+              url: '/shareContent',
+              templateUrl: 'app/shareContent/shareContent.html',
+              controller: 'ShareContentController',
+              controllerAs: 'content'
+          });
+
     $stateProvider
       .state('login', {
         url: '/login',
@@ -45,6 +53,8 @@
         controller: 'LogoutController',
         controllerAs: 'logout'
       });
+
+
 
 
 

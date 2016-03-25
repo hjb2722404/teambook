@@ -12,7 +12,7 @@
       restrict: 'E',
       templateUrl: 'app/main/userData/user_data.html',
       scope: {},
-      controller: UserDataController,
+      controller: UserDatasController,
       controllerAs: 'vm',
       bindToController: true,
       replace :true
@@ -21,22 +21,22 @@
     return directive;
 
     /** @ngInject */
-    function UserDataController(user,userdata) {
+    function UserDatasController(user,userdata) {
         var vm = this;
 
         var userIncetance = user.getUser();
         var userId = userIncetance.data.id;
 
-        vm.userData = [];
+        vm.userDatas = [];
         getUserData(userId);
 
         function getUserData(userId) {
 
             return userdata.getUserData(userId)
-                .then(function(userData){
-                    vm.userData = userData;
+                .then(function(res){
+                    vm.userDatas = res;
                 })
-                .cache();
+                .catch();
         }
 
     }
