@@ -11,10 +11,10 @@
         <div class="s-cons">
             <div class="new-share" ng-show="isNew" ng-init="isNew =true;">
                 <ul class="new-ul">
-                    <li ng-repeat="shares in vm.userShares | filter: query : 5 | orderBy:'shareId'">
+                    <li ng-repeat="shares in vm.userShares | filter: query : 5 | orderBy:'id'">
                         <div class="litpic">
-                            <img ng-src="{{shares.shareLitpic}}" alt=""/>
-                            <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
+                            <img ng-src="{{shares.surfaceImgUrl}}" alt=""/>
+                            <div class="play-btn" ></div>
                         </div>
                         <div class="s-title">
                             <h5>{{shares.shareShotTitle}}</h5>
@@ -28,7 +28,7 @@
                                 </ul>
                             </div>
                             <div class="s-views">
-                                <img src="./assets/images/views.png" alt=""/><span>{{shares.shareViews}}</span>
+                                <img src="./assets/images/views.png" alt=""/><span>{{shares.playCount}}</span>
                             </div>
                         </div>
                         <div class="s-user">

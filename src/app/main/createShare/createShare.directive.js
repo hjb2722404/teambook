@@ -20,11 +20,15 @@
 
       return directive;
 
+
       /** @ngInject */
       function CreateShareController($location,user) {
           var vm = this;
           var userInstance = user.getUser();
           var userId = userInstance.data.id;
+
+          vm.isShowBox = false;
+
       }
   }
 

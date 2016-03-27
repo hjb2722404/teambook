@@ -78,14 +78,14 @@
                 .then(function(res){
                     var results = res;
                     angular.forEach(results,function(u,index){
-                        var title = u.shareTitle;
+                        var title = u.name;
                         var tags = [];
                         var un = u.shareUserCompanyName;
 
                         if(title.length >13){
-                            u.shareShotTitle = u.shareTitle.substr(0,13) + '...';
+                            u.shareShotTitle = title.substr(0,13) + '...';
                         }else {
-                            u.shareShotTitle = u.shareTitle;
+                            u.shareShotTitle = title;
                         }
 
                         if(un.length>8){
@@ -94,7 +94,7 @@
                             u.shareUserCompanyNameShot = u.shareUserCompanyName;
                         }
 
-                        tags = u.shareTags.split(',');
+                        tags = u.tags.split(',');
                         u.shareTagsArr = [];
                         u.shareTagsArr[0] = tags[0];
                         u.shareTagsArr[1] = tags[1];

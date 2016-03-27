@@ -1,10 +1,70 @@
 <div class="row">
     <div class="col-md-12 create-btn">
         <img src="./assets/images/xin-jian.png" alt=""/>
-        <h5>新建分享</h5>
+        <h5><a href="javascipt:;" ng-click="vm.isShowBox = true;">新建分享</a></h5>
     </div>
-    <div class="create-box col-md-8 col-md-offset-2">
+    <div class="create-box" ng-show="vm.isShowBox">
+        <div class="create-form-box">
+            <div class="row">
+                <div class="col-md-8">
+                    <h4>新建分享</h4>
+                </div>
+                <div class="col-md-4" style="text-align: right">
+                    <a href="javascript:;" ng-click="vm.isShowBox= false;">X</a>
+                </div>
+            </div>
+            <div class="row">
+                <form action="" method="" >
+                    <div class="col-md-4">
+                        <img src="./assets/images/video-litpic.png" alt=""/>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <label for="title">标题</label>
+                                <input type="text" class="form-control" id="title" name="title" placeholder="3-15字"/>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="type">类型</label>
+                                <select name="type" id="type" class="form-control">
 
+                                    <option value="">请选择分类</option>
+                                    <option value="">行政</option>
+                                    <option value="">技术</option>
+                                    <option value="">财务</option>
+                                    <option value="">市场</option>
+                                    <option value="">其他</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="tags">标签</label>
+                                <input type="text" class="form-control" id="tags"/>
+                            </div>
+                            <div class="col-md-6">
+                                <span>例子</span><span>这里</span><span>随便改</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="video">视频分享</label>
+                                <input type="file" class="form-control" id="video"/>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="attach">附件上传</label>
+                                <input type="file" class="form-control" id="attach"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="content">内容概要</label>
+                        <textarea class="form-control" rows="8"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -39,6 +39,14 @@
               controllerAs: 'content'
           });
 
+      $stateProvider
+          .state('course', {
+              url: '/courseDetail',
+              templateUrl: 'app/courseDetail/course_detail.html',
+              controller: 'CourseDetailController',
+              controllerAs: 'course'
+          });
+
     $stateProvider
       .state('login', {
         url: '/login',

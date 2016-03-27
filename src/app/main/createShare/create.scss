@@ -9,5 +9,22 @@
 }
 
 .create-box {
+  width: 100%;
+  position: fixed;
+  background: rgba(30,30,30,0.7);
+  height:100%;
+  z-index: 10000;
+  left: 0;
+  top: 0;
 
+  .create-form-box {
+    width: 50%;
+    background-color: #ffffff;
+    height: 60%;
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    padding: 20px;
+
+  }
 }
