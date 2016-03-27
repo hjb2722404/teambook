@@ -6,8 +6,8 @@
         </div>
         <div class="gm-list">
             <ul>
-                <li ng-repeat="gh in vm.growthHistory" class="gh-item">
-                    <h6><img ng-src="./assets/images/taren.png"  alt=""/>{{gh.growthTitle}} <span>{{gh.growthTime}}</span></h6>
+                <li ng-repeat="gh in vm.growthHistory | limitTo:5 | orderBy : 'tmpTime'" class="gh-item">
+                    <h6><img ng-src="{{gh.typeImg}}"  alt=""/>{{gh.title}} <span>{{gh.localTime}}</span></h6>
                 </li>
 
             </ul>

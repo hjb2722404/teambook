@@ -38,12 +38,14 @@
 
             var apiHost = teambookConfig.apiHost;
 
-            return $http.get(apiHost + '/api/user/getStudyTrackByUserId?id='+userId)
+            return $http.get(apiHost + '/api/study/getStudyTrackByUserId?userId='+userId)
                 .then(getGrowthHistoryComplete)
                 .catch(getGrowthHistoryFailed);
 
               function getGrowthHistoryComplete(response) {
-                  return response.data;
+                  //console.log("growth:"+angular.toJson(response.data.data));
+                  return response.data.data;
+
               }
 
               function getGrowthHistoryFailed(error) {

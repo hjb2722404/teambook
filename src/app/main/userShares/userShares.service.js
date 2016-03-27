@@ -128,12 +128,12 @@
 
             var apiHost = teambookConfig.apiHost;
 
-            return $http.get(apiHost + '/api/getShareListByUserId?id=' + userId + '&page=' + page + '&size=' + size + '&sort=' + sort)
+            return $http.get(apiHost + '/api/share/getShareListByUserId?userId=' + userId + '&page=' + page + '&size=' + size + '&sort=' + sort)
                 .then(getUserSharesComplete)
                 .catch(getUserSharesFailed);
 
             function getUserSharesComplete(response) {
-                return response.data;
+                return response.data.data;
             }
 
             function getUserSharesFailed(error) {
