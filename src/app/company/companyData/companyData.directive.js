@@ -24,6 +24,9 @@
     function CompanyDataController($location,companydata) {
         var vm = this;
         var companyId = $location.search().companyId;
+        if(!companyId){
+            companyId = 1;
+        }
 
         vm.companyData = [];
         getCompanyData(companyId);

@@ -21,11 +21,15 @@
     return directive;
 
     /** @ngInject */
-    function UserDatasController(user,userdata) {
+    function UserDatasController($location,user,userdata) {
         var vm = this;
-
-        var userIncetance = user.getUser();
-        var userId = userIncetance.data.id;
+        var userId;
+        if($location.pre == "member"){
+            userId = $location.search().id;
+        }else{
+            var userIncetance = user.getUser();
+            userId = userIncetance.data.id;
+        }
 
         vm.userDatas = [];
         getUserData(userId);

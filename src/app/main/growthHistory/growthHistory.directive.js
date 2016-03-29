@@ -21,10 +21,15 @@
     return directive;
 
     /** @ngInject */
-    function GrowthHistoryController(user,growthHistory) {
+    function GrowthHistoryController($location,user,growthHistory) {
         var vm = this;
-        var userInstance = user.getUser();
-        var userId = userInstance.data.id;
+        var userId;
+        if($location.pre == "member"){
+            userId = $location.search().id;
+        }else{
+            var userIncetance = user.getUser();
+            userId = userIncetance.data.id;
+        }
         vm.growthHistory = [];
 
         getGrowthHistory(userId);

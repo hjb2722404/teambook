@@ -1,22 +1,19 @@
 <div class="banner">
 
     <div class="company-logo-box">
-        <img src="{{vm.companyInfos.companyLogo}}" alt="" class="company-logo" ng-mouseover="isShowCard = !isShowCard"/>
-        <div class="identity">
-            <img src="assets/images/vip.png" alt="" ng-show="{{vm.companyInfos.companyIsVip}}"/>
-            <img src="assets/images/no-vip.png" alt="" ng-show="!{{vm.companyInfos.companyIsVip}}"/>
-            <span class="level">Lv.10</span>
+        <img src="{{vm.companyInfos.logo}}" alt="" class="company-logo" ng-mouseover="isShowCard = !isShowCard"/>
+        <!--<div class="identity">-->
+            <!--&lt;!&ndash;<img src="assets/images/vip.png" alt="" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<img src="assets/images/no-vip.png" alt="" ng-show="!{{vm.companyInfos.companyIsVip}}"/>&ndash;&gt;-->
+            <!--<span class="level">Lv.10</span>-->
+        <!--</div>-->
+        <div class="follow">
+            <span>关注TA</span>
         </div>
-
     </div>
 
     <div class="company-name">
         <h4>{{vm.companyInfos.companyName}}</h4>
-    </div>
-    <div class="company-dec">
-        <p>
-            {{vm.companyInfos.companyDec}}
-        </p>
     </div>
 
     <div class="tools">
@@ -28,13 +25,15 @@
 
     <div class="card" ng-show="isShowCard" ng-mouseleave="isShowCard = !isShowCard">
         <div class="company-logo-box">
-            <img src="{{vm.companyInfos.companyLogo}}" alt="" class="company-logo" />
-            <div class="identity">
-                <img src="assets/images/vip.png" alt="" ng-show="{{vm.companyInfos.companyIsVip}}"/>
-                <img src="assets/images/no-vip.png" alt="" ng-show="!{{vm.companyInfos.companyIsVip}}"/>
-                <span class="level">Lv.10</span>
+            <img src="{{vm.companyInfos.logo}}" alt="" class="company-logo" />
+            <!--<div class="identity">-->
+                <!--<img src="assets/images/vip.png" alt="" ng-show="{{vm.companyInfos.companyIsVip}}"/>-->
+                <!--<img src="assets/images/no-vip.png" alt="" ng-show="!{{vm.companyInfos.companyIsVip}}"/>-->
+                <!--<span class="level">Lv.10</span>-->
+            <!--</div>-->
+            <div class="follow">
+                <span class="inner">关注TA</span>
             </div>
-
         </div>
 
         <div class="company-name-card">
@@ -42,23 +41,23 @@
         </div>
         <div class="company-dec-card">
             <p>
-                {{vm.companyInfos.companyDec}}
+                {{vm.companyInfos.introduction}}
             </p>
         </div>
 
         <div class="contact">
             <div class="row">
                 <div class="col-md-6 weibo">
-                    <span><a href="#">关注新浪微博</a></span><img src="./assets/images/weibo.png" alt=""/>
+                    <span><a href="#">{{vm.companyInfos.weibo}}</a></span><img src="./assets/images/weibo.png" alt=""/>
                 </div>
                 <div class="col-md-6 website">
-                    <img src="./assets/images/website.png" alt=""/><span><a href="http://www.baidu.com/">阿里巴巴集团</a></span>
+                    <img src="./assets/images/website.png" alt=""/><span><a href="http://www.baidu.com/">{{vm.companyInfos.companyName}}</a></span>
                 </div>
                 <div class="col-md-6 weixin">
-                    <span><a href="#">关注微信公众账号</a></span><img src="./assets/images/weixin.png" alt=""/>
+                    <span><a href="#">{{vm.companyInfos.weChat}}</a></span><img src="./assets/images/weixin.png" alt=""/>
                 </div>
                 <div class="col-md-6 tel">
-                    <img src="./assets/images/tel.png" alt=""/><span><a href="tel:{{vm.companyInfos.companyTel}}">{{vm.companyInfos.companyTel}}</a></span>
+                    <img src="./assets/images/tel.png" alt=""/><span><a href="tel:{{vm.companyInfos.telephone}}">{{vm.companyInfos.telephone}}</a></span>
 
                 </div>
             </div>

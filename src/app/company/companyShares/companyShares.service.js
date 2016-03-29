@@ -12,133 +12,61 @@
 
         function getCompanyShares(companyId,page,size,sort) {
 
-            var response = {
-                "size " : 9,
-                "info" : "share",
-                "data" : [
-                    {
-                        "shareId" : 3,
-                        "shareTitle" : "3如何对自己的工作进行排序方法",
-                        "shareLitpic" : "./assets/images/video-litpic.png",
-                        "shareTags" : "标签,标签2,标签3",
-                        "shareViews" :300,
-                        "shareUserName" : "刘娜",
-                        "shareUserLogo" : "./assets/images/user1-small.png",
-                        "shareCompanyName" : "南京旭强信息科技有限",
-                        "shareType" : "video"
-                    },
+            if (!size) {
+                size = 8;
+            }
 
-                    {
-                        "shareId" : 6,
-                        "shareTitle" : "6如何对自己的工作进行排序",
-                        "shareLitpic" : "./assets/images/video-litpic.png",
-                        "shareTags" : "标签1,标签2,标签3",
-                        "shareViews" :300,
-                        "shareUserName" : "刘娜",
-                        "shareUserLogo" : "./assets/images/user2-small.png",
-                        "shareCompanyName" : "南京旭强信息科技有限公司",
-                        "shareType" : "video"
-                    },
+            if(!page){
+                page = 1;
+            }
 
-                    {
-                        "shareId" : 2,
-                        "shareTitle" : "2如何对自己的工作进行排序",
-                        "shareLitpic" : "./assets/images/doc-litpic.png",
-                        "shareTags" : "标签1,标签2,标签3",
-                        "shareViews" :300,
-                        "shareUserName" : "刘娜",
-                        "shareUserLogo" : "./assets/images/user-small.png",
-                        "shareCompanyName" : "南京旭强信息科技有限公司",
-                        "shareType" : "doc"
-                    },
+            if(!sort){
+                sort = 'lasttime,asc'
+            }
 
-                    {
-                        "shareId" : 1,
-                        "shareTitle" : "1如何对自己的工作进行排序",
-                        "shareLitpic" : "./assets/images/video-litpic.png",
-                        "shareTags" : "标签1,标签2,标签3",
-                        "shareViews" :300,
-                        "shareUserName" : "刘娜",
-                        "shareUserLogo" : "./assets/images/user3-small.png",
-                        "shareCompanyName" : "南京旭强信息科技有限公司",
-                        "shareType" : "video"
-                    },
+            var apiHost = teambookConfig.apiHost;
 
-                    {
-                        "shareId" : 5,
-                        "shareTitle" : "5如何对自己的工作进行排序",
-                        "shareLitpic" : "./assets/images/doc-litpic.png",
-                        "shareTags" : "标签1,标签2,标签3",
-                        "shareViews" :300,
-                        "shareUserName" : "刘娜",
-                        "shareUserLogo" : "./assets/images/user4-small.png",
-                        "shareCompanyName" : "南京旭强信息科技有限公司",
-                        "shareType" : "doc"
-                    },
+            return $http.get(apiHost + '/api/company/getSharesByCompanyId?companyId=' + companyId + '&page=' + page + '&size=' + size + '&sort=' + sort)
+                .then(getCompanySharesComplete)
+                .catch(getCompanySharesFailed);
 
-                    {
-                        "shareId" : 4,
-                        "shareTitle" : "4如何对自己的工作进行排序",
-                        "shareLitpic" : "./assets/images/video-litpic.png",
-                        "shareTags" : "标签1,标签2,标签3",
-                        "shareViews" :300,
-                        "shareUserName" : "刘娜",
-                        "shareUserLogo" : "./assets/images/user5-small.png",
-                        "shareCompanyName" : "南京旭强信息科技有限公司",
-                        "shareType" : "video"
-                    },
+            function getCompanySharesComplete(response) {
+                var results = response.data.data;
+                results = dataFormat(results);
+                return results;
+            }
 
-                    {
-                        "shareId" : 8,
-                        "shareTitle" : "8如何对自己的工作进行排序",
-                        "shareLitpic" : "./assets/images/doc-litpic.png",
-                        "shareTags" : "标签1,标签2,标签3",
-                        "shareViews" :300,
-                        "shareUserName" : "刘娜",
-                        "shareUserLogo" : "./assets/images/user6-small.png",
-                        "shareCompanyName" : "南京旭强信息科技有限公司",
-                        "shareType" : "doc"
-                    },
+            function getCompanySharesFailed(error) {
+                $log.error('XHR Failed for getContributors.\n' + angular.toJson(error.data, true));
+            }
+        }
 
-                    {
-                        "shareId" : 7,
-                        "shareTitle" : "7如何对自己的工作进行排序",
-                        "shareLitpic" : "./assets/images/video-litpic.png",
-                        "shareTags" : "标签1,标签2,标签3",
-                        "shareViews" :300,
-                        "shareUserName" : "刘娜",
-                        "shareUserLogo" : "./assets/images/user7-small.png",
-                        "shareCompanyName" : "南京旭强信息科技有限公司",
-                        "shareType" : "video"
-                    }
-                ]
-            };
+        function dataFormat(res){
+            angular.forEach(res,function(c,index){
+                var title = c.name;
+                var tags = [];
+                var cn = c.companyName;
 
-            //if (!size) {
-            //    size = 8;
-            //}
-            //
-            //if(!page){
-            //    page = 1;
-            //}
-            //
-            //if(!sort){
-            //    sort = 'lasttime,asc'
-            //}
-            //
-            //var apiHost = teambookConfig.apiHost;
-            //
-            //return $http.get(apiHost + '/aip/shares?type=company&id=' + companyId + '&page=' + page + '&size=' + size + '&sort=' + sort)
-            //    .then(getCompanySharesComplete)
-            //    .catch(getCompanySharesFailed);
-            //
-            //function getCompanySharesComplete(response) {
-                return response.data;
-            //}
-            //
-            //function getCompanySharesFailed(error) {
-            //    $log.error('XHR Failed for getContributors.\n' + angular.toJson(error.data, true));
-            //}
+                if(title.length >13){
+                    c.shareShotTitle = title.substr(0,13) + '...';
+                }else {
+                    c.shareShotTitle = title;
+                }
+
+                if(cn.length>8){
+                    c.shareCompanyNameShot = cn.substr(0,8)+'...'
+                }else{
+                    c.shareCompanyNameShot = cn;
+                }
+
+                tags = c.tags.split(',');
+                c.shareTagsArr = [];
+                c.shareTagsArr[0] = tags[0];
+                c.shareTagsArr[1] = tags[1];
+
+            });
+
+            return res;
         }
     }
 

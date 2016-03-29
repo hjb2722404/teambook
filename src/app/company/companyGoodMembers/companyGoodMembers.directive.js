@@ -25,6 +25,9 @@
         var vm = this;
         var companyId = $location.search().companyId;
         vm.companyGoodMembers = [];
+        if(!companyId){
+            companyId = 1;
+        }
 
         getCompanyGoodMembers(companyId);
 

@@ -4,8 +4,12 @@
   background-color: #118eee;
   text-align: center;
   margin-top: 20px;
-  color : #ffffff;
-  font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
+
+  a {
+    color : #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
+    text-decoration: none;
+  }
 }
 
 .create-box {

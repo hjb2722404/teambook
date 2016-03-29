@@ -6,15 +6,15 @@
     </div>
     <div class="gm-list">
         <ul>
-            <li ng-repeat="gm in vm.companyGoodMembers">
+            <li ng-repeat="gm in vm.companyGoodMembers | limitTo:3 | orderBy:'studyNum'">
                 <div class="gm-info">
-                    <img src="{{gm.userLogo}}" alt=""/>
-                    <h5>{{gm.userName}}</h5>
+                    <img src="{{gm.headPhoto}}" alt=""/>
+                    <h5>{{gm.realName}}</h5>
                 </div>
                 <div class="gm-data">
-                    <h6>本周共分享{{gm.weekShare}}条</h6>
-                    <h6>本周供学习{{gm.weekLearn}}条</h6>
-                    <h6>职位：{{gm.userZhiwei}}</h6>
+                    <h6>本周共分享{{gm.shareNum}}条</h6>
+                    <h6>本周供学习{{gm.studyNum}}条</h6>
+                    <h6>职位：{{gm.department}}</h6>
                 </div>
             </li>
 

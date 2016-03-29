@@ -21,11 +21,15 @@
     return directive;
 
     /** @ngInject */
-    function UserCurVisitorsController(user,usercurvisitors) {
+    function UserCurVisitorsController($location,user,usercurvisitors) {
         var vm = this;
-        var userInstance = user.getUser();
-        var userId = userInstance.data.id;
-
+        var userId;
+        if($location.pre == "member"){
+            userId = $location.search().id;
+        }else{
+            var userIncetance = user.getUser();
+            userId = userIncetance.data.id;
+        }
         vm.userCurVisitors = [];
         getUserCurVisitors(userId,6);
 
