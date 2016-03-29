@@ -23,27 +23,19 @@
       /** @ngInject */
       function CourseListController($location,courses,$scope) {
           var vm = this;
-          var userId = $location.search().userId;
+          //var userId = $location.search().userId;
           vm.courses = [];
-          vm.courses = getCourse();
 
+          getCourse();
           $scope.$on('changeCat',function(e,data){
               vm.catFilter = data;
           });
 
           function getCourse(){
 
-              return courses.getCourse()
+              return courses.getCourses()
                   .then(function(res){
-                      var results = res;
-                      angular.forEach(results,function(c,index){
-                          var tags = [];
-                          tags = c.courseTags.split(',');
-                          c.courseTagsArr = tags;
-
-                      });
-
-                      return results;
+                      vm.courses = res;
                   })
                   .catch();
 

@@ -34,18 +34,18 @@
               //console.log($scope.$parent.catFilter);
               switch (cat) {
                   case "cat1":
-                      $scope.$emit('catClick','行政');
+                      $scope.$emit('catClick','cat1');
                       break;
                   case "cat2":
-                      $scope.$emit('catClick','技术');
+                      $scope.$emit('catClick','cat2');
 
                       break;
                   case "cat3":
-                      $scope.$emit('catClick','财务');
+                      $scope.$emit('catClick','cat3');
 
                       break;
                   case "cat4":
-                      $scope.$emit('catClick','市场');
+                      $scope.$emit('catClick','cat4');
                       break;
               }
           }
