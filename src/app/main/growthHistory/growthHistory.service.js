@@ -38,7 +38,7 @@
 
             var apiHost = teambookConfig.apiHost;
 
-            return $http.get(apiHost + '/api/study/getStudyTrackByUserId?userId='+userId)
+            return $http.get(apiHost + '/api/study/getStudyRecordByUserId?userId='+userId)
                 .then(getGrowthHistoryComplete)
                 .catch(getGrowthHistoryFailed);
 

@@ -10,10 +10,10 @@
     <div class="s-cons">
         <div class="new-share" ng-show="isNew" ng-init="isNew =true;">
             <ul class="new-ul">
-                <li ng-repeat="shares in vm.companyShares | filter: query : 5 | orderBy:'shareId'">
+                <li ng-repeat="shares in vm.companyShares | filter: query : 5 | orderBy:'id'">
                     <div class="litpic">
-                        <img src="{{shares.shareLitpic}}" alt=""/>
-                        <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
+                        <img ng-src="{{shares.surfaceImgUrl}}" alt=""/>
+                        <div class="play-btn"></div>
                     </div>
                     <div class="s-title">
                         <h5>{{shares.shareShotTitle}}</h5>
@@ -27,11 +27,11 @@
                             </ul>
                         </div>
                         <div class="s-views">
-                            <img src="./assets/images/views.png" alt=""/><span>{{shares.shareViews}}</span>
+                            <img src="./assets/images/views.png" alt=""/><span>{{shares.playCount}}</span>
                         </div>
                     </div>
                     <div class="s-user">
-                        <img src="{{shares.shareUserLogo}}" alt=""/><span class="s-user-name">{{shares.shareUserName}}</span><span class="s-user-company">{{shares.shareCompanyNameShot}}</span>
+                        <img src="{{shares.headPhoto}}" alt=""/><span class="s-user-name">{{shares.realName}}</span><span class="s-user-company">{{shares.companyName}}</span>
                     </div>
                 </li>
             </ul>
@@ -43,10 +43,10 @@
         </div>
         <div class="hot-share" ng-show="isHot" ng-init="isHot = false">
             <ul class="hot-ul">
-                <li ng-repeat="shares in vm.companyShares | filter: query | orderBy:'shareUserName'">
+                <li ng-repeat="shares in vm.companyShares | filter: query | orderBy:'playCount'">
                     <div class="litpic">
                         <img src="{{shares.shareLitpic}}" alt=""/>
-                        <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
+                        <div class="play-btn"></div>
                     </div>
                     <div class="s-title">
                         <h5>{{shares.shareShotTitle}}</h5>
@@ -60,15 +60,15 @@
                             </ul>
                         </div>
                         <div class="s-views">
-                            <img src="./assets/images/views.png" alt=""/><span>{{shares.shareViews}}</span>
+                            <img src="./assets/images/views.png" alt=""/><span>{{shares.playCount}}</span>
                         </div>
                     </div>
                     <div class="s-user">
-                        <img src="{{shares.shareUserLogo}}" alt=""/><span class="s-user-name">{{shares.shareUserName}}</span><span class="s-user-company">{{shares.shareCompanyNameShot}}</span>
+                        <img src="{{shares.headPhoto}}" alt=""/><span class="s-user-name">{{shares.realName}}</span><span class="s-user-company">{{shares.companyName}}</span>
                     </div>
                 </li>
             </ul>
-            <div class="more-shares-btn" ng-click="vm.showMore('shareUserName')"  ng-init="isMoreHot = false">
+            <div class="more-shares-btn" ng-click="vm.showMore('realName')"  ng-init="isMoreHot = false">
                 <h5>查看更多分享...</h5>
             </div>
             <div class="clear-fix"></div>

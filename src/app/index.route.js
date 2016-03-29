@@ -47,6 +47,14 @@
               controllerAs: 'course'
           });
 
+      $stateProvider
+          .state('member', {
+              url: '/member',
+              templateUrl: 'app/member/member.html',
+              controller: 'MemberController',
+              controllerAs: 'member'
+          });
+
     $stateProvider
       .state('login', {
         url: '/login',

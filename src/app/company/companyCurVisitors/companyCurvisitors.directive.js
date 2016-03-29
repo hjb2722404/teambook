@@ -24,6 +24,9 @@
     function CompanyCurVisitorsController($location,companycurvisitors) {
         var vm = this;
         var companyId = $location.search().companyId;
+        if(!companyId){
+            companyId = 1;
+        }
 
         vm.companyCurVisitors = [];
         getCompanyCurVisitors(companyId);
@@ -34,7 +37,6 @@
                     vm.companyCurVisitors = res;
                 })
                 .catch();
-            //console.log(vm.companyCurVisitors);
         }
 
     }

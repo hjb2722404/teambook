@@ -12,60 +12,20 @@
 
         function getCompanyCurVisitors(companyId) {
 
-            var response = {
-                "size" : 6,
-                "info" : "visitor",
-                "data" : [
-                    {
-                        "userName" : "用户一" ,
-                        "visitTime" : "3月17日" ,
-                        "userLogo" : "./assets/images/user2.png"
-                    },
 
-                    {
-                        "userName" : "用户二" ,
-                        "visitTime" : "3月17日" ,
-                        "userLogo" : "./assets/images/user3.png"
-                    },
+            var apiHost = teambookConfig.apiHost;
 
-                    {
-                        "userName" : "用户三" ,
-                        "visitTime" : "3月17日" ,
-                        "userLogo" : "./assets/images/user4.png"
-                    },
+            return $http.get(apiHost + '/api/company/getVisitById?id='+companyId)
+                .then(getCompanyCurVisitorsComplete)
+                .catch(getCompanyCurVisitorsFailed);
 
-                    {
-                        "userName" : "用户四" ,
-                        "visitTime" : "3月17日" ,
-                        "userLogo" : "./assets/images/user5.png"
-                    },
+              function getCompanyCurVisitorsComplete(response) {
+                  return response.data.data;
+              }
 
-                    {
-                        "userName" : "用户五" ,
-                        "visitTime" : "3月17日" ,
-                        "userLogo" : "./assets/images/user.png"
-                    },
-
-                    {
-                        "userName" : "用户六" ,
-                        "visitTime" : "3月17日" ,
-                        "userLogo" : "./assets/images/user1.png"
-                    }
-                ]
-            };
-            //var apiHost = teambookConfig.apiHost;
-            //
-            //return $http.get(apiHost + '/aip/Visitors?type=company&id='+companyId)
-            //    .then(getCompanyCurVisitorsComplete)
-            //    .catch(getCompanyCurVisitorsFailed);
-            //
-            //  function getCompanyCurVisitorsComplete(response) {
-                  return response.data;
-            //  }
-            //
-            //  function getCompanyCurVisitorsFailed(error) {
-            //      $log.error('XHR Failed for getCompanyCurVisitors.\n' + angular.toJson(error.data, true));
-            //  }
+              function getCompanyCurVisitorsFailed(error) {
+                  $log.error('XHR Failed for getCompanyCurVisitors.\n' + angular.toJson(error.data, true));
+              }
         }
     }
 
