@@ -46,7 +46,7 @@
                 <ul class="hot-ul">
                     <li ng-repeat="shares in vm.userShares | filter: query | orderBy:'shareUserName' | limitTo:9">
                         <div class="litpic">
-                            <img ng-src="{{shares.shareLitpic}}" alt=""/>
+                            <img ng-src="{{shares.surfaceImgUrl}}" alt=""/>
                             <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
                         </div>
                         <div class="s-title">
@@ -69,7 +69,7 @@
                         </div>
                     </li>
                 </ul>
-                <div class="more-shares-btn" ng-click="vm.showMore('shareUserName')"  ng-init="isMoreHot = false">
+                <div class="more-shares-btn" ng-click="vm.showMore('realName')"  ng-init="isMoreHot = false">
                     <h5>查看更多分享...</h5>
                 </div>
                 <div class="clear-fix"></div>

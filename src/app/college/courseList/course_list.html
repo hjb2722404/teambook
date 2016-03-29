@@ -1,23 +1,23 @@
 
     <div class="col-md-12 course-list">
         <ul>
-            <li ng-repeat="c in vm.courses | filter : vm.catFilter " class="row">
+            <li ng-repeat="c in vm.courses | filter : vm.catFilter | limitTo:9 " class="row">
                 <div class="col-md-4 couser-Litpic">
-                    <img src="{{c.courseLitpic}}" alt=""/>
+                    <a href="#/courseDetail?id={{c.id}}"><img src="{{c.surfaceImageUrl}}" alt=""/></a>
                     <div class="play-btn"></div>
                 </div>
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-12 course-title">
-                            <h4>{{c.courseTitle}} <span class="course-up-time">
+                            <h4><a href="#/courseDetail?id={{c.id}}">{{c.courseName}}</a> <span class="course-up-time">
                                 <img src="./assets/images/time.png" alt=""/>
-                                {{c.courseUpTime}}
+                                {{c.publisherTime}}
                             </span></h4>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 course-dec ">
-                            <p>{{c.courseDec}}</p>
+                            <p>{{c.introduction}}</p>
                         </div>
                     </div>
                     <div class="row">
@@ -30,14 +30,14 @@
                                 </ul>
                             </div>
                             <div class="s-views">
-                                <img src="./assets/images/views.png" alt=""/><span>{{c.courseViews}}</span>
+                                <img src="./assets/images/views.png" alt=""/><span>{{c.studyCount}}</span>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="course-user">
-                                <img src="{{c.teacherLogo}}" alt=""/><span class="s-user-name">{{c.courseTeacher}}</span><span class="course-user-company">{{c.courseCompany}}</span>
+                                <span class="course-user-company">{{c.publisher}}</span>
                             </div>
                         </div>
                     </div>
