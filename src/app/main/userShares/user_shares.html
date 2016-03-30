@@ -46,11 +46,11 @@
                 <ul class="hot-ul">
                     <li ng-repeat="shares in vm.userShares | filter: query | orderBy:'shareUserName' | limitTo:9">
                         <div class="litpic">
-                            <img ng-src="{{shares.surfaceImgUrl}}" alt=""/>
+                            <a ng-href="#/shareContent?id={{shares.id}}"><img ng-src="{{shares.surfaceImgUrl}}" alt=""/></a>
                             <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
                         </div>
                         <div class="s-title">
-                            <h5>{{shares.shareShotTitle}}</h5>
+                            <a ng-href="#/shareContent?id={{shares.id}}"><h5>{{shares.shareShotTitle}}</h5></a>
                         </div>
                         <div class="s-info">
                             <div class="s-tag">
