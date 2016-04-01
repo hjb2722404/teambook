@@ -3,7 +3,7 @@
 
     angular
         .module('teambookWww')
-        .controller('EditController', EditController);
+        .controller('editController', EditController);
 
     /** @ngInject */
     function EditController($timeout, toastr,user) {

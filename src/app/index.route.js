@@ -35,8 +35,15 @@
       .state('editData', {
           url: '/editData',
           templateUrl: 'app/editData/editData.html',
-          controller: 'EditController',
+          controller: 'editController',
           controllerAs: 'EditController'
+      })
+    $stateProvider
+      .state('growthPath', {
+          url: '/growthPath',
+          templateUrl: 'app/growthPath/growthPath.html',
+          controller: 'growthPath',
+          controllerAs: 'GrowthPath'
       })
 
       $stateProvider
