@@ -3,16 +3,16 @@
 
   angular
     .module('teambookWww')
-    .directive('userInfo', userInfo);
+    .directive('memberInfo', memberInfo);
 
 
   /** @ngInject */
-  function userInfo() {
+  function memberInfo() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/main/userInfo/user_info.html',
+      templateUrl: 'app/member/memberInfo/member_info.html',
       scope: {},
-      controller: UserInfoController,
+      controller: MemberInfoController,
       controllerAs: 'vm',
       bindToController: true,
       replace:true
@@ -21,18 +21,18 @@
     return directive;
 
     /** @ngInject */
-    function UserInfoController(userinfos,user) {
+    function MemberInfoController($location,userinfos) {
         var vm = this;
 
-        var userInstance = user.getUser();
-        var userId = userInstance.data.id;
+        var userId = $location.search().id;
 
         vm.isShowCard = false;
 
-        vm.female = false;
+         vm.female = false;
 
         vm.userInfos = [];
         getUserInfo(userId);
+
 
         function getUserInfo(userId) {
             

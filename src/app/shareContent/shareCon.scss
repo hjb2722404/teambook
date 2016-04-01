@@ -1,0 +1,73 @@
+
+.share-con {
+  background-color: #ffffff;
+}
+
+.share-con-infos {
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.share-con-title {
+  font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
+}
+
+.share-con-author {
+
+    color : #999999;
+
+    img {
+      width: 30px;
+      border-radius: 30px;
+    }
+}
+
+.attch-download {
+
+  float: right;
+
+  a {
+    display: block;
+    width: 150px;
+    height:40px;
+    border-radius: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
+    color : #333333;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border:2px #333333 solid;
+    line-height: 36px;
+    margin-top: 30px;
+    margin-right: 30px;
+  }
+}
+
+.share-con-details {
+  padding: 15px;
+  line-height: 1.5rem;
+  color:#666666;
+  border-bottom: 1px solid #cccccc;
+}
+
+.share-con-score {
+  padding: 30px;
+  border-bottom: 1px solid #cccccc;
+
+  h4　{
+    font-family: "Helvetica Neue", Helvetica, Arial, "微软雅黑";
+    font-weight: bold;
+  }
+
+  span {
+    float: right;
+    color: red;
+  }
+}
+.share-con-recomand{
+  padding: 30px;
+}
+.share-con-comment{
+  padding: 30px;
+}

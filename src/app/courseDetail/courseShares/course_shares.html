@@ -1,0 +1,16 @@
+<div class="main">
+    <div class="col-md-12 course-child">
+        <ul>
+            <li ng-repeat="s in vm.couseShareslist">
+                <div class="course-child-title">
+                    <a href="#/shareContent?id={{s.shareId}}"><h5>{{s.sectionTopic}}</h5></a>
+                </div>
+                <div class="course-child-is-study">
+                    <span>{{s.isStudyState}}</span>
+                </div>
+            </li>
+        </ul>
+
+        <div class="clear-fix"></div>
+    </div>
+</div>

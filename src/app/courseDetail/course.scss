@@ -1,0 +1,40 @@
+.course-child{
+  margin-top: 50px;
+  padding-top: 20px;
+  background-color: #ffffff;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      width: 100%;
+      padding-left: 20px;
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px solid #999999;
+      background-color: #dddddd;
+    }
+  }
+
+  .course-child-title {
+    width: 80%;
+    float: left;
+  }
+
+  .course-child-is-study {
+    float: right;
+    width: 18%;
+    text-align: right;
+    padding-right: 15px;
+  }
+}
+
+.course-intro-desc {
+  min-height: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

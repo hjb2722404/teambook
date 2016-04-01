@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-12 shares">
+        <div class="s-tabs">
+            <ul>
+                <li><a href="javascript:void(0)">TA的分享</a></li>
+            </ul>
+
+            <div class="clear-fix"></div>
+        </div>
+        <div class="s-cons">
+            <div class="hot-share">
+                <ul class="hot-ul">
+                    <li ng-repeat="shares in vm.userShares | filter: query | orderBy:'shareUserName' | limitTo:9">
+                        <div class="litpic">
+                            <img ng-src="{{shares.shareLitpic}}" alt=""/>
+                            <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
+                        </div>
+                        <div class="s-title">
+                            <h5>{{shares.shareShotTitle}}</h5>
+                        </div>
+                        <div class="s-info">
+                            <div class="s-tag">
+                                <ul>
+                                    <li ng-repeat="tag in shares.shareTagsArr">
+                                        <img src="./assets/images/tag.png" alt=""/><span>{{tag}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="s-views">
+                                <img src="./assets/images/views.png" alt=""/><span>{{shares.shareViews}}</span>
+                            </div>
+                        </div>
+                        <div class="s-user">
+                            <img src="{{shares.headPhoto}}" alt=""/><span class="s-user-name">{{shares.realName}}</span><span class="s-user-company">{{shares.shareUserCompanyNameShot}}</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="more-shares-btn" ng-click="vm.showMore('shareUserName')"  ng-init="isMoreHot = false">
+                    <h5>查看更多分享...</h5>
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+            <div class="clear-fix"></div>
+        </div>
+
+        <div class="clear-fix"></div>
+    </div>
+</div>

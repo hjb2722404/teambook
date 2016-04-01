@@ -1,0 +1,268 @@
+
+<div class="edit-user-info">
+	<div class="edit-basic-info">
+		<div class="edit-title clearfix">
+			<p>基本信息</p>
+			<a href="javascript:;">编辑</a>
+		</div>
+		<div class="basic-info">
+			<div class="basic-info-row clearfix">
+				<div class="col-sm-4 basic-info-son">
+					<span class="son-ico glyphicon glyphicon-gift"></span>
+					<p class="son-txt">{{vm.userInfos.birthday}}</p>
+				</div>
+				<div class="col-sm-4 basic-info-son">
+					<span class="son-ico glyphicon glyphicon-book"></span>
+					<p class="son-txt">{{vm.userInfos.workingYears}}</p>
+				</div>
+				<div class="col-sm-4 basic-info-son">
+					<span class="son-ico glyphicon glyphicon-phone"></span>
+					<p class="son-txt">{{vm.userInfos.phone}}</p>
+				</div>
+			</div>
+			<div class="basic-info-row clearfix">
+				<div class="col-sm-4 basic-info-son">
+					<span class="son-ico glyphicon glyphicon-tower"></span>
+					<p class="son-txt">大专</p>
+				</div>
+				<div class="col-sm-4 basic-info-son">
+					<span class="son-ico glyphicon glyphicon-user"></span>
+					<p class="son-txt">{{vm.userInfos.userSex}}</p>
+				</div>
+				<div class="col-sm-4 basic-info-son">
+					<span class="son-ico glyphicon glyphicon-envelope"></span>
+					<p class="son-txt">{{vm.userInfos.email}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="sign">
+		<div class="edit-title clearfix">
+			<p>个性签名</p>
+		</div>
+		<div class="sign-box">
+        	<form class="clearfix">
+        		<input type="text" id="sign-text" placeholder="你的工作感悟或者一句话介绍，建议少于50字" />
+        		<button type="submit" id="submit">保存</button>
+        	</form>
+		</div>
+	</div>
+
+	<div class="edit-experience">
+		<div class="experience-group">
+			<div class="edit-title clearfix">
+				<p>教育经历</p>
+				<a href="javascript:;" ng-click="vm.isShowBox1 = true;">
+					添加
+					<span class="glyphicon glyphicon-plus"></span>
+				</a>
+			</div>
+			<div class="experience-con">
+				<ul class="experience-ul">
+					<li class="experience-li">
+						<a href="javascript:;" class="experience-title">
+							<span class="glyphicon glyphicon-record"></span>
+							2011.09 - 2015.10 &nbsp;&nbsp;&nbsp;&nbsp;
+							苏州工艺美术学院毕业&nbsp;&nbsp;&nbsp;&nbsp;
+							大专&nbsp;&nbsp;&nbsp;&nbsp;
+							移动媒体交互设计
+						</a>
+						<a href="javascript:;" class="experience-edit">编辑<span class="glyphicon glyphicon-pencil"></span></a>
+						<p class="exerience-text">接受教育。。。。。</p>
+					</li>
+					<li class="experience-li">
+						<a href="javascript:;" class="experience-title">
+							<span class="glyphicon glyphicon-record"></span>
+							2011.09 - 2015.10 &nbsp;&nbsp;&nbsp;&nbsp;
+							苏州工艺美术学院毕业&nbsp;&nbsp;&nbsp;&nbsp;
+							大专&nbsp;&nbsp;&nbsp;&nbsp;
+							移动媒体交互设计
+						</a>
+						<a href="javascript:;" class="experience-edit">编辑<span class="glyphicon glyphicon-pencil"></span></a>
+						<p class="exerience-text"></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="experience-group">
+			<div class="edit-title clearfix">
+				<p>工作经历</p>
+				<a href="javascript:;" ng-click="vm.isShowBox2 = true;">
+					添加
+					<span class="glyphicon glyphicon-plus"></span>
+				</a>
+			</div>
+			<div class="experience-con">
+				<ul class="experience-ul">
+					<li class="experience-li">
+						<a href="javascript:;" class="experience-title">
+							<span class="glyphicon glyphicon-record"></span>
+							2011.09 - 2015.10 &nbsp;&nbsp;&nbsp;&nbsp;
+							苏州工艺美术学院毕业&nbsp;&nbsp;&nbsp;&nbsp;
+							大专&nbsp;&nbsp;&nbsp;&nbsp;
+							移动媒体交互设计
+						</a>
+						<a href="javascript:;" class="experience-edit">编辑<span class="glyphicon glyphicon-pencil"></span></a>
+						<p class="exerience-text">接受教育。。。。。</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="experience-group">
+			<div class="edit-title clearfix">
+				<p>获奖荣誉</p>
+				<a href="javascript:;" ng-click="vm.isShowBox3 = true;">
+					添加
+					<span class="glyphicon glyphicon-plus"></span>
+				</a>
+			</div>
+			<div class="experience-con">
+				<ul class="experience-ul">
+					<li class="experience-li">
+						<a href="javascript:;" class="experience-title">
+							<span class="glyphicon glyphicon-record"></span>
+							2011.09 - 2015.10 &nbsp;&nbsp;&nbsp;&nbsp;
+							苏州工艺美术学院毕业&nbsp;&nbsp;&nbsp;&nbsp;
+							大专&nbsp;&nbsp;&nbsp;&nbsp;
+							移动媒体交互设计
+						</a>
+						<a href="javascript:;" class="experience-edit">编辑<span class="glyphicon glyphicon-pencil"></span></a>
+						<p class="exerience-text"></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--添加 box-->
+	<div class="create-box" ng-show="vm.isShowBox1">
+		<form class="create-form-box form-horizontal">
+			<div class="form-title clearfix">
+				<p>教育经历</p>
+				<a href="javascript:;" ng-click="vm.isShowBox1 = false;"><span class="glyphicon glyphicon-remove"></span></a>
+			</div>
+			<div class="form-box">
+				<div class="form-group">
+					<label for="schoolName" class="col-sm-2 control-label">学校名称</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="schoolName" placeholder="请填写你的学校名称" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="majorName" class="col-sm-2 control-label">专业名称</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="majorName" placeholder="请填写你的专业名称" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="education" class="col-sm-2 control-label">学历</label>
+					<div class="col-sm-10">
+						<select class="form-control">
+						  <option>请选择你的学历</option>
+						  <option>初中</option>
+						  <option>高中</option>
+						  <option>大专</option>
+						  <option>本科</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="education" class="col-sm-2 control-label">起止日期</label>
+					<div class="col-sm-5">
+						<select class="form-control">
+						  <option>起始时间</option>
+						</select>
+					</div>
+					<div class="col-sm-5">
+						<select class="form-control">
+						  <option>结束时间</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+				    <div class="col-sm-offset-2 col-sm-10">
+				    	<button type="submit" class="btn btn-primary">保存</button>
+				    	&nbsp;&nbsp;&nbsp;&nbsp;
+				    	<button type="reset" class="btn btn-default">取消</button>
+				    </div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="create-box" ng-show="vm.isShowBox2">
+		<form class="create-form-box form-horizontal">
+			<div class="form-title clearfix">
+				<p>工作经历</p>
+				<a href="javascript:;" ng-click="vm.isShowBox2 = false;"><span class="glyphicon glyphicon-remove"></span></a>
+			</div>
+			<div class="form-box">
+				<div class="form-group">
+					<label for="companyName" class="col-sm-2 control-label">公司名称</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="companyName" placeholder="请填写你的公司名称" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">起止日期</label>
+					<div class="col-sm-5">
+						<select class="form-control">
+							<option>开始时间</option>
+						</select>
+					</div>
+					<div class="col-sm-5">
+						<select class="form-control">
+							<option>结束时间</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="workCon" class="col-sm-2 control-label">工作内容</label>
+					<div class="col-sm-10">
+						<textarea id="workCon" class="form-control" rows="3">
+							
+						</textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-primary">保存</button>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<button type="reset" class="btn btn-default">取消</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="create-box" ng-show="vm.isShowBox3">
+		<form class="create-form-box form-horizontal">
+			<div class="form-title clearfix">
+				<p>获取荣誉</p>
+				<a href="javascript:;" ng-click="vm.isShowBox3 = false;"><span class="glyphicon glyphicon-remove"></span></a>
+			</div>
+			<div class="form-box">
+				<div class="form-group">
+					<label for="winningName" class="col-sm-2 control-label">获奖名称</label>
+					<div class="col-sm-10">
+						<input type="text" id="winningName" class="form-control" placeholder="请填写你获的奖项的名称" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="winningTime" class="col-sm-2 control-label">获奖时间</label>
+					<div class="col-sm-10">
+						<input type="text" id="winningTime" class="form-control" placeholder="请填写你的获奖时间" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-primary">保存</button>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<button type="reset" class="btn btn-default">取消</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</div>

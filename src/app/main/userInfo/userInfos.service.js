@@ -12,19 +12,17 @@
 
             getUserInfos:getUserInfos
         };
-
         return service;
 
         function getUserInfos(userId) {
 
             var apiHost = teambookConfig.apiHost;
-
             return $http.get(apiHost+'/api/user/getUserById?id='+userId)
                 .then(getUserComplete)
                 .catch(getUserFailed);
 
             function getUserComplete(response) {
-
+                console.log(response.data.data);
                 return response.data.data;
 
 
