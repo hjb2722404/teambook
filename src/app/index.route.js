@@ -31,6 +31,14 @@
           controllerAs: 'college'
       });
 
+    $stateProvider
+      .state('editData', {
+          url: '/editData',
+          templateUrl: 'app/editData/editData.html',
+          controller: 'EditController',
+          controllerAs: 'EditController'
+      })
+
       $stateProvider
           .state('content', {
               url: '/shareContent',
