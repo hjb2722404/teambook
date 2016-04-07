@@ -1,0 +1,27 @@
+.growthHead {
+	margin-bottom: 10px;
+}
+.growthHead img {
+	width: 60px;
+	height: 60px;
+    border-radius: 30px;
+    float: left;
+}
+.growthHead p {
+	width: 80px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 40px 0 20px;
+    float: left;
+    line-height: 60px;
+}
+.growthHead a {
+	float: left;
+	line-height: 60px;
+	font-weight: bold;
+	font-size: 18px;
+}

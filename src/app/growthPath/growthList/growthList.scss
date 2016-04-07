@@ -1,0 +1,43 @@
+.growthList {
+	padding: 20px;
+	background: #FFF;
+}
+.listGroup {
+	background: #F7F7F7;
+	font-family: "微软雅黑";
+	margin-bottom: 10px;
+}
+.listGroup:last-child {
+	margin-bottom: 0;
+}
+.listName,
+.listTags,
+.listTime,
+.listScore {
+	padding: 10px 0;
+}
+
+.listIco {
+	float: left;
+	margin-right: 10px;
+    margin-left: -15px;
+}
+.listIco a {
+    display: block;
+    width: 70px;
+    height: 40px;
+    background-color: #337ab7;
+    background-image: url("../assets/images/taren.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.listName span {
+    display: inline-block;
+    vertical-align: bottom;
+	width: 30px;
+	height: 20px;
+	background-image: url("../assets/images/play-btn.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}

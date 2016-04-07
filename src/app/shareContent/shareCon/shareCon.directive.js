@@ -24,7 +24,6 @@
     function ShareConController($location,shareContents,userinfos) {
         var vm = this;
         var shareId = $location.search().shareId;
-        //VPlayer.setup();
         vm.shareCons = [];
         vm.userInfo = [];
         vm.dom = angular.element("#share-video");
@@ -55,18 +54,6 @@
                               "id_video",
                               option
                             );
-                            // 先前vdieojs插件的代码
-                            //videoPlayer(vm.dom);
-                            // var player = videojs('really-cool-video', { /* Options */ }, function() {
-                            //     console.log('Good to go!');
-
-                            //     this.play(); // if you don't trust autoplay for some reason
-
-                            //     // How about an event listener?
-                            //     this.on('ended', function() {
-                            //         console.log('awww...over so soon?');
-                            //     });
-                            // });
                           })
                          .catch();
 
