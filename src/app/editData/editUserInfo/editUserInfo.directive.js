@@ -19,32 +19,65 @@
     return directive;
 
     /** @ngInject */
-    function editUserInfoController(userinfos,user) {
+    function editUserInfoController(getData,user) {
 
       var vm = this;
       var userInstance = user.getUser();
       var userId = userInstance.data.id;
-      vm.isShowCard = false;
 
-      vm.female = false;
+      vm.userData = [];
+      vm.Education = [];
+      vm.Resume = [];
+      vm.Honor = [];
 
-      vm.userInfos = [];
-      getUserInfo(userId);
-      function getUserInfo(userId) {
+      getUserData(userId);
+      getEducation(userId);
+      getResume(userId);
+      getHonor(userId);
+
+      function getUserData(userId) {
           
-        return userinfos.getUserInfos(userId)
-            .then(function(userInfos){
-                vm.userInfos = userInfos;
-                if(vm.userInfos.gender == "2"){
-                    vm.userInfos.userSex = "女";
+        return getData.getUserData(userId)
+            .then(function(userData){
+                vm.userData = userData;
+                if(vm.userData.gender == "2"){
+                    vm.userData.userSex = "女";
                     vm.female =true;
                 }else{
-                    vm.userInfos.userSex = "男";
+                    vm.userData.userSex = "男";
                 }
             })
             .catch();
+      }
 
+      function getEducation(userId) {
 
+          return getData.getEducation(userId)
+              .then(function(Education){
+                  vm.Education = Education;
+
+              })
+              .catch();
+      }
+
+      function getResume(userId) {
+
+        return getData.getResume(userId)
+              .then(function(Resume){
+                  vm.Resume = Resume;
+
+              })
+              .catch();
+      }
+
+      function getHonor(userId) {
+
+        return getData.getHonor(userId)
+            .then(function(Honor){
+                vm.Honor = Honor;
+
+            })
+            .catch();
       }
 
     }

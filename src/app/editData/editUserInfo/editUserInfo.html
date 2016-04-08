@@ -9,29 +9,29 @@
 			<div class="basic-info-row clearfix">
 				<div class="col-sm-4 basic-info-son">
 					<span class="son-ico glyphicon glyphicon-gift"></span>
-					<p class="son-txt">{{vm.userInfos.birthday}}</p>
+					<p class="son-txt">{{vm.userData.birthday}}</p>
 				</div>
 				<div class="col-sm-4 basic-info-son">
 					<span class="son-ico glyphicon glyphicon-book"></span>
-					<p class="son-txt">{{vm.userInfos.workingYears}}</p>
+					<p class="son-txt">{{vm.userData.workingYears}}</p>
 				</div>
 				<div class="col-sm-4 basic-info-son">
 					<span class="son-ico glyphicon glyphicon-phone"></span>
-					<p class="son-txt">{{vm.userInfos.phone}}</p>
+					<p class="son-txt">{{vm.userData.phone}}</p>
 				</div>
 			</div>
 			<div class="basic-info-row clearfix">
 				<div class="col-sm-4 basic-info-son">
 					<span class="son-ico glyphicon glyphicon-tower"></span>
-					<p class="son-txt">大专</p>
+					<p class="son-txt">{{vm.userData.occupation}}</p>
 				</div>
 				<div class="col-sm-4 basic-info-son">
 					<span class="son-ico glyphicon glyphicon-user"></span>
-					<p class="son-txt">{{vm.userInfos.userSex}}</p>
+					<p class="son-txt">{{vm.userData.userSex}}</p>
 				</div>
 				<div class="col-sm-4 basic-info-son">
 					<span class="son-ico glyphicon glyphicon-envelope"></span>
-					<p class="son-txt">{{vm.userInfos.email}}</p>
+					<p class="son-txt">{{vm.userData.email}}</p>
 				</div>
 			</div>
 		</div>
@@ -60,27 +60,17 @@
 			</div>
 			<div class="experience-con">
 				<ul class="experience-ul">
-					<li class="experience-li">
+					<li class="experience-li" ng-repeat="e in vm.Education">
 						<a href="javascript:;" class="experience-title">
 							<span class="glyphicon glyphicon-record"></span>
-							2011.09 - 2015.10 &nbsp;&nbsp;&nbsp;&nbsp;
-							苏州工艺美术学院毕业&nbsp;&nbsp;&nbsp;&nbsp;
-							大专&nbsp;&nbsp;&nbsp;&nbsp;
-							移动媒体交互设计
+							{{e.fromTime}} - {{e.toTime}}
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							{{e.universityName}}&nbsp;&nbsp;&nbsp;&nbsp;
+							{{e.majorName}}&nbsp;&nbsp;&nbsp;&nbsp;
+							{{e.majorName}}
 						</a>
 						<a href="javascript:;" class="experience-edit">编辑<span class="glyphicon glyphicon-pencil"></span></a>
-						<p class="exerience-text">接受教育。。。。。</p>
-					</li>
-					<li class="experience-li">
-						<a href="javascript:;" class="experience-title">
-							<span class="glyphicon glyphicon-record"></span>
-							2011.09 - 2015.10 &nbsp;&nbsp;&nbsp;&nbsp;
-							苏州工艺美术学院毕业&nbsp;&nbsp;&nbsp;&nbsp;
-							大专&nbsp;&nbsp;&nbsp;&nbsp;
-							移动媒体交互设计
-						</a>
-						<a href="javascript:;" class="experience-edit">编辑<span class="glyphicon glyphicon-pencil"></span></a>
-						<p class="exerience-text"></p>
+						<p class="exerience-text">{{e.majorName}}</p>
 					</li>
 				</ul>
 			</div>
@@ -93,18 +83,19 @@
 					<span class="glyphicon glyphicon-plus"></span>
 				</a>
 			</div>
-			<div class="experience-con">
+			<div class="experience-con" ng-repeat="r in vm.Resume">
 				<ul class="experience-ul">
 					<li class="experience-li">
 						<a href="javascript:;" class="experience-title">
 							<span class="glyphicon glyphicon-record"></span>
-							2011.09 - 2015.10 &nbsp;&nbsp;&nbsp;&nbsp;
-							苏州工艺美术学院毕业&nbsp;&nbsp;&nbsp;&nbsp;
-							大专&nbsp;&nbsp;&nbsp;&nbsp;
-							移动媒体交互设计
+							{{r.fromTime}} - {{r.toTime}}
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							{{r.companyName}}&nbsp;&nbsp;&nbsp;&nbsp;
+							{{r.jobTitle}}&nbsp;&nbsp;&nbsp;&nbsp;
+							{{r.achievement}}
 						</a>
 						<a href="javascript:;" class="experience-edit">编辑<span class="glyphicon glyphicon-pencil"></span></a>
-						<p class="exerience-text">接受教育。。。。。</p>
+						<p class="exerience-text">{{r.achievement}}</p>
 					</li>
 				</ul>
 			</div>
@@ -117,15 +108,16 @@
 					<span class="glyphicon glyphicon-plus"></span>
 				</a>
 			</div>
-			<div class="experience-con">
+			<div class="experience-con" ng-repeat="h in vm.Honor">
 				<ul class="experience-ul">
 					<li class="experience-li">
 						<a href="javascript:;" class="experience-title">
 							<span class="glyphicon glyphicon-record"></span>
-							2011.09 - 2015.10 &nbsp;&nbsp;&nbsp;&nbsp;
-							苏州工艺美术学院毕业&nbsp;&nbsp;&nbsp;&nbsp;
-							大专&nbsp;&nbsp;&nbsp;&nbsp;
-							移动媒体交互设计
+							{{h.getTime}}
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							{{h.awardBy}}&nbsp;&nbsp;&nbsp;&nbsp;
+							{{h.honer}}&nbsp;&nbsp;&nbsp;&nbsp;
+							{{h.honer}}
 						</a>
 						<a href="javascript:;" class="experience-edit">编辑<span class="glyphicon glyphicon-pencil"></span></a>
 						<p class="exerience-text"></p>

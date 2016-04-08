@@ -12,7 +12,7 @@
       restrict: 'E',
       templateUrl: 'app/userFollow/followHead/followHead.html',
       scope: {},
-      controller: growthController,
+      controller: followHeadController,
       controllerAs: 'vm',
       bindToController: true
     };
@@ -20,7 +20,8 @@
     return directive;
 
     /** @ngInject */
-    function growthController() {
+    function followHeadController() {
+
       var vm = this;
       return vm;
     }

@@ -57,7 +57,6 @@
           util = qcVideo.get('util'),
           Code = qcVideo.get('Code'),
           Version = qcVideo.get('Version');
-
         var secret_key = "HeRddNQ0xYTRbLrHmmAXb0zhkhtdnZM2";
         qcVideo.uploader.init(
           {
@@ -71,7 +70,7 @@
                 .then(function(res){
                   cd(res.data.data.sign);
                 });
-              console.log(argStr, cd);
+              console.log("argStr============"+argStr, "cd=================="+cd);
             },
 
             upBtnId: upBtnId,
@@ -86,8 +85,9 @@
             onFileUpdate: function (args) {
               $("#FileUpdate").html(''
                             + '文件名：' + args.name
-                            + ' >> 大小：' + util.getHStorage(args.size)
-                            + ' >> 状态：' + util.getFileStatusName(args.status) + ''
+                            + ' >> 大小：' + args.size
+                            //+ ' >> 大小：' + util.getHStorage(args.size)
+                            //+ ' >> 状态：' + util.getFileStatusName(args.status) + ''
                             + ( args.percent ? ' >> 进度：' + args.percent + '%' : '')
                             + ( args.speed ? ' >> 速度：' + args.speed + '' : '')
                             + ( args.errorCode ? '>>错误码:' + args.errorCode + '' :'')
@@ -109,8 +109,9 @@
             //上传错误文件过滤提示
             onFileerError: function (args) {
               $("#FileerError").html(
-                  "文件上传失败"
+                "文件上传失败" 
               )
+              console.log('message:' + args.message + (args.solution ? (';solution==' + args.solution) : ''));
             }
           }
         );

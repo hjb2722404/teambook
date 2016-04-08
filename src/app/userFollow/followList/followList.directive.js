@@ -1,29 +1,41 @@
-(function() {
-  'use strict';
+(function () {
+	'use strict';
 
-  angular
-    .module('teambookWww')
-    .directive('followList', followList);
+	angular
+		.module('teambookWww')
+		.directive('followList', FollowList);
 
+	/** @ngInject */
+	function FollowList(followLists,user){
+		var directive = {
+			restrict: 'E',
+			templateUrl: 'app/userFollow/followList/followList.html',
+			scope: {},
+			controller: followListController,
+			controllerAs: 'vm',
+			bindToController: true
+		};
 
-  /** @ngInject */
-  function followList() {
-    var directive = {
-      restrict: 'E',
-      templateUrl: 'app/userFollow/followList/followList.html',
-      scope: {},
-      controller: growthController,
-      controllerAs: 'vm',
-      bindToController: true
-    };
+		return directive;
 
-    return directive;
+		/** @ngInject */
+		function followListController() {
+			var vm = this;
 
-    /** @ngInject */
-    function growthController() {
-      var vm = this;
-      return vm;
-    }
-  }
+	      	var userInstance = user.getUser();
+	      	var userId = userInstance.data.id;
 
+	      	vm.dataList = [];
+	      	getDataList(userId)
+
+	      	function getDataList(userId) {
+
+	      		return followLists.getLists(userId)
+	      			.then(function(dataList){
+	      				vm.dataList = dataList;
+	      			})
+	      			.catch();
+	      	}
+		}
+	}
 })();

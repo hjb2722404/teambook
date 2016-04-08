@@ -1,9 +1,5 @@
-	<p>
-		<a href="javascript:;" ng-class="{followSelect:isFs == true}" ng-click="isFs = true; isGz = false;">关注</a>
-		/
-		<a href="javascript:;" ng-class="{followSelect:isGz == true}" ng-click="isGz = true; isFs = false;">粉丝</a>
-	</p>
-<div class="followList" ng-show="isGz" ng-init="isGz = true">
+
+<div class="followList">
 	<div class="listGroup clearfix">
 		<div class="col-sm-4">
 			<div class="followList-head">
@@ -170,7 +166,7 @@
 		</div>
 	</div>
 </div>
-<div class="followList" ng-show="isFs" ng-init="isFs = false">
+<div class="followList">
 	<div class="listGroup clearfix">
 		<div class="col-sm-4">
 			<div class="followList-head">

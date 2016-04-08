@@ -3,32 +3,29 @@
 
     angular
         .module('teambookWww')
-        .service('followList', FollowList);
+        .service('followLists', FollowLists);
 
     /** @ngInject */
-    function FollowList($http,$log,teambookConfig) {
+    function FollowLists($http,$log,teambookConfig) {
 
-        this.getFollows = getFollows;
-        this.getFans = getFans;
+        this.getLists = getLists;
 
-        function getFollows(userId) {
+        function getLists(userId) {
 
             var apiHost = teambookConfig.apiHost;
+            return $http.get(apiHost + '/api/fan/getFanUserByUserId?userId='+userId)
+                .then(getCompanySharesComplete)
+                .catch(getCompanySharesFailed);
 
-            return $http.get(apiHost + '/api/care/getCareListByUserId' + userId)
-                .then(getComplete)
-                .catch(getFailed);
-
-            function getComplete(response) {
-                
+            function getCompanySharesComplete(response) {
+                console.log(response.data.data);
                 return response.data.data;
             }
 
-            function getFailed(error) {
-                $log.error('XHR Failed for getContributors.\n' + angular.toJson(error.data, true));
+            function getCompanySharesFailed(error) {
+                $log.error('XHR Failed for getUser.\n' + angular.toJson(error.data, true));
             }
         }
-
     }
 
 })();
