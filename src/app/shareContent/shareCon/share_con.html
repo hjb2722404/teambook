@@ -1,0 +1,62 @@
+<div class="main share-con">
+    <div class="col-md-12 share-con-infos">
+        <div class="row">
+            <div class="col-md-8 ">
+                <div class="row">
+                    <div class="col-md-12 share-con-title">
+                        <h3>{{vm.shareCons.name}}</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 share-con-author">
+                        <img ng-src="{{vm.userInfo.headPhoto}}" alt=""/>
+                        <span>{{vm.userInfo.username}}</span>
+                        <span>{{vm.shareCons.tags}}</span>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img ng-src="./assets/images/views.png" alt=""/>
+                                <span>{{vm.shareCons.playCount}}</span>
+                            </div>
+                            <div class="col-md-8">
+                                <img ng-src="./assets/images/time.png" alt=""/>
+                                <span>{{vm.shareCons.createTime}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="owner-op"></div>
+                <div class="attch-download">
+                    <a ng-href="{{vm.shareCons.attachmentUrl}}">下载附件</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <!-- 先前的video标签
+        <video id="really-cool-video" class="video-js vjs-default-skin" controls
+               preload="auto" width="900" height="400" poster="really-cool-video-poster.jpg"
+               data-setup='{}'>
+            <source src="" id="share-video" type="video/mp4">
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser
+                that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+        </video>
+        -->
+        <!--腾讯云的video标签-->
+        <div id="id_video"></div>
+    </div>
+    <div class="col-md-12">
+        <div class="share-con-details">
+            {{vm.shareCons.content}}
+        </div>
+    </div>
+    <div class="col-md-12 share-con-score">
+        <h4>1000人已经为该分享打分<span>当前评分：7.8分</span></h4>
+    </div>
+    <div class="clear-fix"></div>
+</div>

@@ -29,11 +29,10 @@
 
         vm.isShowCard = false;
 
-         vm.female = false;
+        vm.female = false;
 
         vm.userInfos = [];
         getUserInfo(userId);
-
 
         function getUserInfo(userId) {
             

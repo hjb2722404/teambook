@@ -1,0 +1,1336 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.37
+4 verbose node symlink /usr/bin/node
+5 warn package.json teambookWww@0.0.0 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/www',
+7 verbose install   [ 'estraverse',
+7 verbose install     'gulp',
+7 verbose install     'gulp-autoprefixer',
+7 verbose install     'gulp-angular-templatecache',
+7 verbose install     'del',
+7 verbose install     'lodash',
+7 verbose install     'gulp-minify-css',
+7 verbose install     'gulp-filter',
+7 verbose install     'gulp-flatten',
+7 verbose install     'gulp-eslint',
+7 verbose install     'eslint-plugin-angular',
+7 verbose install     'gulp-load-plugins',
+7 verbose install     'gulp-size',
+7 verbose install     'gulp-uglify',
+7 verbose install     'gulp-useref',
+7 verbose install     'gulp-util',
+7 verbose install     'gulp-ng-annotate',
+7 verbose install     'gulp-replace',
+7 verbose install     'gulp-rename',
+7 verbose install     'gulp-rev',
+7 verbose install     'gulp-rev-replace',
+7 verbose install     'gulp-minify-html',
+7 verbose install     'gulp-inject',
+7 verbose install     'gulp-protractor',
+7 verbose install     'gulp-sourcemaps',
+7 verbose install     'gulp-sass',
+7 verbose install     'gulp-angular-filesort',
+7 verbose install     'main-bower-files',
+7 verbose install     'wiredep',
+7 verbose install     'karma',
+7 verbose install     'karma-jasmine',
+7 verbose install     'karma-phantomjs-launcher',
+7 verbose install     'phantomjs',
+7 verbose install     'karma-angular-filesort',
+7 verbose install     'karma-coverage',
+7 verbose install     'karma-ng-html2js-preprocessor',
+7 verbose install     'browser-sync',
+7 verbose install     'browser-sync-spa',
+7 verbose install     'http-proxy-middleware',
+7 verbose install     'chalk',
+7 verbose install     'uglify-save-license',
+7 verbose install     'wrench' ] ]
+8 info preinstall teambookWww@0.0.0
+9 warn package.json callsite@1.0.0 No repository field.
+10 warn package.json colorspace@1.0.1 No repository field.
+11 warn package.json gulp-minify-css@1.2.4 No repository field.
+12 warn package.json gulp-minify-html@1.0.6 No repository field.
+13 warn package.json has-binary@0.1.7 No repository field.
+14 warn package.json indexof@0.0.1 No repository field.
+15 warn package.json object-component@0.0.3 No repository field.
+16 warn package.json parsejson@0.0.1 No repository field.
+17 warn package.json parseqs@0.0.2 No repository field.
+18 warn package.json path@0.12.7 path is also the name of a node core module.
+19 warn package.json string_decoder@0.10.31 string_decoder is also the name of a node core module.
+20 warn package.json util@0.10.3 util is also the name of a node core module.
+21 verbose readDependencies using package.json deps
+22 verbose already installed skipping gulp-angular-templatecache@~1.8.0 /www
+23 verbose already installed skipping del@~2.0.2 /www
+24 verbose already installed skipping lodash@~3.10.1 /www
+25 verbose already installed skipping gulp-minify-css@~1.2.1 /www
+26 verbose already installed skipping gulp-filter@~3.0.1 /www
+27 verbose already installed skipping gulp-flatten@~0.2.0 /www
+28 verbose already installed skipping gulp-eslint@~1.0.0 /www
+29 verbose already installed skipping eslint-plugin-angular@~0.12.0 /www
+30 verbose already installed skipping gulp-load-plugins@~0.10.0 /www
+31 verbose already installed skipping gulp-size@~2.0.0 /www
+32 verbose already installed skipping gulp-uglify@~1.4.1 /www
+33 verbose already installed skipping gulp-useref@~1.3.0 /www
+34 verbose already installed skipping gulp-util@~3.0.6 /www
+35 verbose already installed skipping gulp-ng-annotate@~1.1.0 /www
+36 verbose already installed skipping gulp-replace@~0.5.4 /www
+37 verbose already installed skipping gulp-rename@~1.2.2 /www
+38 verbose already installed skipping gulp-rev@~6.0.1 /www
+39 verbose already installed skipping gulp-rev-replace@~0.4.2 /www
+40 verbose already installed skipping gulp-minify-html@~1.0.4 /www
+41 verbose already installed skipping gulp-inject@~3.0.0 /www
+42 verbose already installed skipping gulp-protractor@~1.0.0 /www
+43 verbose already installed skipping gulp-sourcemaps@~1.6.0 /www
+44 verbose already installed skipping gulp-sass@~2.0.4 /www
+45 verbose already installed skipping gulp-angular-filesort@~1.1.1 /www
+46 verbose already installed skipping main-bower-files@~2.9.0 /www
+47 verbose already installed skipping wiredep@~2.2.2 /www
+48 verbose already installed skipping karma@~0.13.10 /www
+49 verbose already installed skipping karma-jasmine@~0.3.6 /www
+50 verbose already installed skipping karma-phantomjs-launcher@~0.2.1 /www
+51 verbose already installed skipping phantomjs@~1.9.18 /www
+52 verbose already installed skipping karma-angular-filesort@~1.0.0 /www
+53 verbose already installed skipping karma-coverage@~0.5.2 /www
+54 verbose already installed skipping karma-ng-html2js-preprocessor@~0.2.0 /www
+55 verbose already installed skipping browser-sync@~2.9.11 /www
+56 verbose already installed skipping browser-sync-spa@~1.0.3 /www
+57 verbose already installed skipping http-proxy-middleware@~0.9.0 /www
+58 verbose already installed skipping chalk@~1.1.1 /www
+59 verbose already installed skipping uglify-save-license@~0.4.1 /www
+60 verbose already installed skipping wrench@~1.5.8 /www
+61 verbose already installed skipping estraverse@~4.1.0 /www
+62 verbose already installed skipping gulp@~3.9.0 /www
+63 verbose already installed skipping gulp-autoprefixer@~3.0.2 /www
+64 silly resolved []
+65 info build /www
+66 verbose linkStuff [ false, false, false, '/' ]
+67 info linkStuff teambookWww@0.0.0
+68 verbose linkBins teambookWww@0.0.0
+69 verbose linkMans teambookWww@0.0.0
+70 verbose rebuildBundles teambookWww@0.0.0
+71 verbose rebuildBundles [ '.bin',
+71 verbose rebuildBundles   'abbrev',
+71 verbose rebuildBundles   'accepts',
+71 verbose rebuildBundles   'accessibility-developer-tools',
+71 verbose rebuildBundles   'acorn',
+71 verbose rebuildBundles   'adm-zip',
+71 verbose rebuildBundles   'after',
+71 verbose rebuildBundles   'agent-base',
+71 verbose rebuildBundles   'align-text',
+71 verbose rebuildBundles   'alter',
+71 verbose rebuildBundles   'amdefine',
+71 verbose rebuildBundles   'ansi',
+71 verbose rebuildBundles   'ansi-escapes',
+71 verbose rebuildBundles   'ansi-regex',
+71 verbose rebuildBundles   'ansi-styles',
+71 verbose rebuildBundles   'anymatch',
+71 verbose rebuildBundles   'archy',
+71 verbose rebuildBundles   'are-we-there-yet',
+71 verbose rebuildBundles   'argh',
+71 verbose rebuildBundles   'argparse',
+71 verbose rebuildBundles   'arr-diff',
+71 verbose rebuildBundles   'arr-flatten',
+71 verbose rebuildBundles   'array-differ',
+71 verbose rebuildBundles   'array-index',
+71 verbose rebuildBundles   'array-slice',
+71 verbose rebuildBundles   'array-union',
+71 verbose rebuildBundles   'array-uniq',
+71 verbose rebuildBundles   'array-unique',
+71 verbose rebuildBundles   'arraybuffer.slice',
+71 verbose rebuildBundles   'arrify',
+71 verbose rebuildBundles   'async',
+71 verbose rebuildBundles   'async-each',
+71 verbose rebuildBundles   'async-each-series',
+71 verbose rebuildBundles   'async-foreach',
+71 verbose rebuildBundles   'autoprefixer',
+71 verbose rebuildBundles   'aws-sign2',
+71 verbose rebuildBundles   'backo2',
+71 verbose rebuildBundles   'balanced-match',
+71 verbose rebuildBundles   'base64-arraybuffer',
+71 verbose rebuildBundles   'base64id',
+71 verbose rebuildBundles   'batch',
+71 verbose rebuildBundles   'beeper',
+71 verbose rebuildBundles   'benchmark',
+71 verbose rebuildBundles   'better-assert',
+71 verbose rebuildBundles   'binary-extensions',
+71 verbose rebuildBundles   'binaryextensions',
+71 verbose rebuildBundles   'bindings',
+71 verbose rebuildBundles   'bl',
+71 verbose rebuildBundles   'blob',
+71 verbose rebuildBundles   'block-stream',
+71 verbose rebuildBundles   'bluebird',
+71 verbose rebuildBundles   'body-parser',
+71 verbose rebuildBundles   'boom',
+71 verbose rebuildBundles   'bower-config',
+71 verbose rebuildBundles   'brace-expansion',
+71 verbose rebuildBundles   'braces',
+71 verbose rebuildBundles   'browser-sync',
+71 verbose rebuildBundles   'browser-sync-client',
+71 verbose rebuildBundles   'browser-sync-spa',
+71 verbose rebuildBundles   'browser-sync-ui',
+71 verbose rebuildBundles   'browserslist',
+71 verbose rebuildBundles   'bufferstreams',
+71 verbose rebuildBundles   'bufferutil',
+71 verbose rebuildBundles   'bytes',
+71 verbose rebuildBundles   'callsite',
+71 verbose rebuildBundles   'camelcase',
+71 verbose rebuildBundles   'camelcase-keys',
+71 verbose rebuildBundles   'caniuse-db',
+71 verbose rebuildBundles   'caseless',
+71 verbose rebuildBundles   'center-align',
+71 verbose rebuildBundles   'chalk',
+71 verbose rebuildBundles   'chokidar',
+71 verbose rebuildBundles   'clean-css',
+71 verbose rebuildBundles   'cli-color',
+71 verbose rebuildBundles   'cli-cursor',
+71 verbose rebuildBundles   'cli-width',
+71 verbose rebuildBundles   'cliui',
+71 verbose rebuildBundles   'clone',
+71 verbose rebuildBundles   'clone-stats',
+71 verbose rebuildBundles   'code-point-at',
+71 verbose rebuildBundles   'color',
+71 verbose rebuildBundles   'color-convert',
+71 verbose rebuildBundles   'color-name',
+71 verbose rebuildBundles   'color-string',
+71 verbose rebuildBundles   'colornames',
+71 verbose rebuildBundles   'colors',
+71 verbose rebuildBundles   'colorspace',
+71 verbose rebuildBundles   'combined-stream',
+71 verbose rebuildBundles   'commander',
+71 verbose rebuildBundles   'component-bind',
+71 verbose rebuildBundles   'component-emitter',
+71 verbose rebuildBundles   'component-inherit',
+71 verbose rebuildBundles   'concat-map',
+71 verbose rebuildBundles   'concat-stream',
+71 verbose rebuildBundles   'concat-with-sourcemaps',
+71 verbose rebuildBundles   'connect',
+71 verbose rebuildBundles   'connect-history-api-fallback',
+71 verbose rebuildBundles   'content-type',
+71 verbose rebuildBundles   'convert-source-map',
+71 verbose rebuildBundles   'core-js',
+71 verbose rebuildBundles   'core-util-is',
+71 verbose rebuildBundles   'cross-spawn',
+71 verbose rebuildBundles   'cross-spawn-async',
+71 verbose rebuildBundles   'cryptiles',
+71 verbose rebuildBundles   'custom-event',
+71 verbose rebuildBundles   'd',
+71 verbose rebuildBundles   'dargs',
+71 verbose rebuildBundles   'dateformat',
+71 verbose rebuildBundles   'deap',
+71 verbose rebuildBundles   'debug',
+71 verbose rebuildBundles   'decamelize',
+71 verbose rebuildBundles   'deep-is',
+71 verbose rebuildBundles   'defaults',
+71 verbose rebuildBundles   'del',
+71 verbose rebuildBundles   'delayed-stream',
+71 verbose rebuildBundles   'delegates',
+71 verbose rebuildBundles   'depd',
+71 verbose rebuildBundles   'deprecated',
+71 verbose rebuildBundles   'destroy',
+71 verbose rebuildBundles   'dev-ip',
+71 verbose rebuildBundles   'di',
+71 verbose rebuildBundles   'diagnostics',
+71 verbose rebuildBundles   'doctrine',
+71 verbose rebuildBundles   'dom-serialize',
+71 verbose rebuildBundles   'dom-serializer',
+71 verbose rebuildBundles   'domelementtype',
+71 verbose rebuildBundles   'domhandler',
+71 verbose rebuildBundles   'domutils',
+71 verbose rebuildBundles   'duplexer',
+71 verbose rebuildBundles   'duplexer2',
+71 verbose rebuildBundles   'duplexify',
+71 verbose rebuildBundles   'easy-extender',
+71 verbose rebuildBundles   'eazy-logger',
+71 verbose rebuildBundles   'ee-first',
+71 verbose rebuildBundles   'emits',
+71 verbose rebuildBundles   'emitter-steward',
+71 verbose rebuildBundles   'enabled',
+71 verbose rebuildBundles   'end-of-stream',
+71 verbose rebuildBundles   'engine.io',
+71 verbose rebuildBundles   'engine.io-client',
+71 verbose rebuildBundles   'engine.io-parser',
+71 verbose rebuildBundles   'ent',
+71 verbose rebuildBundles   'entities',
+71 verbose rebuildBundles   'env-variable',
+71 verbose rebuildBundles   'es5-ext',
+71 verbose rebuildBundles   'es6-iterator',
+71 verbose rebuildBundles   'es6-map',
+71 verbose rebuildBundles   'es6-set',
+71 verbose rebuildBundles   'es6-symbol',
+71 verbose rebuildBundles   'es6-weak-map',
+71 verbose rebuildBundles   'escape-html',
+71 verbose rebuildBundles   'escape-string-regexp',
+71 verbose rebuildBundles   'escodegen',
+71 verbose rebuildBundles   'escope',
+71 verbose rebuildBundles   'eslint',
+71 verbose rebuildBundles   'eslint-plugin-angular',
+71 verbose rebuildBundles   'esprima',
+71 verbose rebuildBundles   'esrecurse',
+71 verbose rebuildBundles   'estraverse',
+71 verbose rebuildBundles   'estraverse-fb',
+71 verbose rebuildBundles   'esutils',
+71 verbose rebuildBundles   'etag',
+71 verbose rebuildBundles   'event-emitter',
+71 verbose rebuildBundles   'event-stream',
+71 verbose rebuildBundles   'eventemitter3',
+71 verbose rebuildBundles   'exit',
+71 verbose rebuildBundles   'exit-hook',
+71 verbose rebuildBundles   'expand-braces',
+71 verbose rebuildBundles   'expand-brackets',
+71 verbose rebuildBundles   'expand-range',
+71 verbose rebuildBundles   'express',
+71 verbose rebuildBundles   'extend',
+71 verbose rebuildBundles   'extglob',
+71 verbose rebuildBundles   'fancy-log',
+71 verbose rebuildBundles   'fast-levenshtein',
+71 verbose rebuildBundles   'figures',
+71 verbose rebuildBundles   'file-entry-cache',
+71 verbose rebuildBundles   'filename-regex',
+71 verbose rebuildBundles   'fileset',
+71 verbose rebuildBundles   'fill-range',
+71 verbose rebuildBundles   'finalhandler',
+71 verbose rebuildBundles   'find-index',
+71 verbose rebuildBundles   'findup-sync',
+71 verbose rebuildBundles   'first-chunk-stream',
+71 verbose rebuildBundles   'flagged-respawn',
+71 verbose rebuildBundles   'flat-cache',
+71 verbose rebuildBundles   'for-in',
+71 verbose rebuildBundles   'for-own',
+71 verbose rebuildBundles   'forever-agent',
+71 verbose rebuildBundles   'fork-stream',
+71 verbose rebuildBundles   'form-data',
+71 verbose rebuildBundles   'formidable',
+71 verbose rebuildBundles   'foxy',
+71 verbose rebuildBundles   'fresh',
+71 verbose rebuildBundles   'from',
+71 verbose rebuildBundles   'fstream',
+71 verbose rebuildBundles   'gauge',
+71 verbose rebuildBundles   'gaze',
+71 verbose rebuildBundles   'generate-function',
+71 verbose rebuildBundles   'generate-object-property',
+71 verbose rebuildBundles   'get-stdin',
+71 verbose rebuildBundles   'glob',
+71 verbose rebuildBundles   'glob-base',
+71 verbose rebuildBundles   'glob-parent',
+71 verbose rebuildBundles   'glob-stream',
+71 verbose rebuildBundles   'glob-watcher',
+71 verbose rebuildBundles   'glob2base',
+71 verbose rebuildBundles   'globals',
+71 verbose rebuildBundles   'globby',
+71 verbose rebuildBundles   'globule',
+71 verbose rebuildBundles   'glogg',
+71 verbose rebuildBundles   'graceful-fs',
+71 verbose rebuildBundles   'graceful-readlink',
+71 verbose rebuildBundles   'gulp',
+71 verbose rebuildBundles   'gulp-angular-filesort',
+71 verbose rebuildBundles   'gulp-angular-templatecache',
+71 verbose rebuildBundles   'gulp-autoprefixer',
+71 verbose rebuildBundles   'gulp-concat',
+71 verbose rebuildBundles   'gulp-eslint',
+71 verbose rebuildBundles   'gulp-filter',
+71 verbose rebuildBundles   'gulp-flatten',
+71 verbose rebuildBundles   'gulp-footer',
+71 verbose rebuildBundles   'gulp-header',
+71 verbose rebuildBundles   'gulp-if',
+71 verbose rebuildBundles   'gulp-inject',
+71 verbose rebuildBundles   'gulp-load-plugins',
+71 verbose rebuildBundles   'gulp-match',
+71 verbose rebuildBundles   'gulp-minify-css',
+71 verbose rebuildBundles   'gulp-minify-html',
+71 verbose rebuildBundles   'gulp-ng-annotate',
+71 verbose rebuildBundles   'gulp-protractor',
+71 verbose rebuildBundles   'gulp-rename',
+71 verbose rebuildBundles   'gulp-replace',
+71 verbose rebuildBundles   'gulp-rev',
+71 verbose rebuildBundles   'gulp-rev-replace',
+71 verbose rebuildBundles   'gulp-sass',
+71 verbose rebuildBundles   'gulp-size',
+71 verbose rebuildBundles   'gulp-sourcemaps',
+71 verbose rebuildBundles   'gulp-uglify',
+71 verbose rebuildBundles   'gulp-useref',
+71 verbose rebuildBundles   'gulp-util',
+71 verbose rebuildBundles   'gulplog',
+71 verbose rebuildBundles   'gzip-size',
+71 verbose rebuildBundles   'handlebars',
+71 verbose rebuildBundles   'har-validator',
+71 verbose rebuildBundles   'has-ansi',
+71 verbose rebuildBundles   'has-binary',
+71 verbose rebuildBundles   'has-cors',
+71 verbose rebuildBundles   'has-flag',
+71 verbose rebuildBundles   'has-gulplog',
+71 verbose rebuildBundles   'has-unicode',
+71 verbose rebuildBundles   'hawk',
+71 verbose rebuildBundles   'hoek',
+71 verbose rebuildBundles   'html-entities',
+71 verbose rebuildBundles   'htmlparser2',
+71 verbose rebuildBundles   'http-errors',
+71 verbose rebuildBundles   'http-proxy',
+71 verbose rebuildBundles   'http-proxy-middleware',
+71 verbose rebuildBundles   'http-signature',
+71 verbose rebuildBundles   'https-proxy-agent',
+71 verbose rebuildBundles   'iconv-lite',
+71 verbose rebuildBundles   'immutable',
+71 verbose rebuildBundles   'indent-string',
+71 verbose rebuildBundles   'indexof',
+71 verbose rebuildBundles   'inflight',
+71 verbose rebuildBundles   'inherits',
+71 verbose rebuildBundles   'inquirer',
+71 verbose rebuildBundles   'interpret',
+71 verbose rebuildBundles   'invert-kv',
+71 verbose rebuildBundles   'is-absolute',
+71 verbose rebuildBundles   'is-absolute-url',
+71 verbose rebuildBundles   'is-binary-path',
+71 verbose rebuildBundles   'is-buffer',
+71 verbose rebuildBundles   'is-dotfile',
+71 verbose rebuildBundles   'is-equal-shallow',
+71 verbose rebuildBundles   'is-extendable',
+71 verbose rebuildBundles   'is-extglob',
+71 verbose rebuildBundles   'is-finite',
+71 verbose rebuildBundles   'is-fullwidth-code-point',
+71 verbose rebuildBundles   'is-glob',
+71 verbose rebuildBundles   'is-my-json-valid',
+71 verbose rebuildBundles   'is-number',
+71 verbose rebuildBundles   'is-path-cwd',
+71 verbose rebuildBundles   'is-path-in-cwd',
+71 verbose rebuildBundles   'is-path-inside',
+71 verbose rebuildBundles   'is-plain-obj',
+71 verbose rebuildBundles   'is-primitive',
+71 verbose rebuildBundles   'is-property',
+71 verbose rebuildBundles   'is-relative',
+71 verbose rebuildBundles   'is-relative-url',
+71 verbose rebuildBundles   'is-resolvable',
+71 verbose rebuildBundles   'is-utf8',
+71 verbose rebuildBundles   'isarray',
+71 verbose rebuildBundles   'isbinaryfile',
+71 verbose rebuildBundles   'isexe',
+71 verbose rebuildBundles   'isobject',
+71 verbose rebuildBundles   'isstream',
+71 verbose rebuildBundles   'istanbul',
+71 verbose rebuildBundles   'istextorbinary',
+71 verbose rebuildBundles   'jasmine',
+71 verbose rebuildBundles   'jasmine-core',
+71 verbose rebuildBundles   'jasminewd',
+71 verbose rebuildBundles   'jasminewd2',
+71 verbose rebuildBundles   'js-base64',
+71 verbose rebuildBundles   'js-string-escape',
+71 verbose rebuildBundles   'js-yaml',
+71 verbose rebuildBundles   'json-stable-stringify',
+71 verbose rebuildBundles   'json-stringify-safe',
+71 verbose rebuildBundles   'json3',
+71 verbose rebuildBundles   'jsonify',
+71 verbose rebuildBundles   'jsonpointer',
+71 verbose rebuildBundles   'karma',
+71 verbose rebuildBundles   'karma-angular-filesort',
+71 verbose rebuildBundles   'karma-coverage',
+71 verbose rebuildBundles   'karma-jasmine',
+71 verbose rebuildBundles   'karma-ng-html2js-preprocessor',
+71 verbose rebuildBundles   'karma-phantomjs-launcher',
+71 verbose rebuildBundles   'kind-of',
+71 verbose rebuildBundles   'kuler',
+71 verbose rebuildBundles   'lazy-cache',
+71 verbose rebuildBundles   'lcid',
+71 verbose rebuildBundles   'levn',
+71 verbose rebuildBundles   'liftoff',
+71 verbose rebuildBundles   'limiter',
+71 verbose rebuildBundles   'localtunnel',
+71 verbose rebuildBundles   'lodash',
+71 verbose rebuildBundles   'lodash._arraycopy',
+71 verbose rebuildBundles   'lodash._arrayeach',
+71 verbose rebuildBundles   'lodash._arraymap',
+71 verbose rebuildBundles   'lodash._baseassign',
+71 verbose rebuildBundles   'lodash._baseclone',
+71 verbose rebuildBundles   'lodash._basecopy',
+71 verbose rebuildBundles   'lodash._basedifference',
+71 verbose rebuildBundles   'lodash._baseflatten',
+71 verbose rebuildBundles   'lodash._basefor',
+71 verbose rebuildBundles   'lodash._baseindexof',
+71 verbose rebuildBundles   'lodash._basetostring',
+71 verbose rebuildBundles   'lodash._basevalues',
+71 verbose rebuildBundles   'lodash._bindcallback',
+71 verbose rebuildBundles   'lodash._cacheindexof',
+71 verbose rebuildBundles   'lodash._createassigner',
+71 verbose rebuildBundles   'lodash._createcache',
+71 verbose rebuildBundles   'lodash._getnative',
+71 verbose rebuildBundles   'lodash._isiterateecall',
+71 verbose rebuildBundles   'lodash._pickbyarray',
+71 verbose rebuildBundles   'lodash._pickbycallback',
+71 verbose rebuildBundles   'lodash._reescape',
+71 verbose rebuildBundles   'lodash._reevaluate',
+71 verbose rebuildBundles   'lodash._reinterpolate',
+71 verbose rebuildBundles   'lodash._root',
+71 verbose rebuildBundles   'lodash.assign',
+71 verbose rebuildBundles   'lodash.clonedeep',
+71 verbose rebuildBundles   'lodash.escape',
+71 verbose rebuildBundles   'lodash.isarguments',
+71 verbose rebuildBundles   'lodash.isarray',
+71 verbose rebuildBundles   'lodash.isplainobject',
+71 verbose rebuildBundles   'lodash.istypedarray',
+71 verbose rebuildBundles   'lodash.keys',
+71 verbose rebuildBundles   'lodash.keysin',
+71 verbose rebuildBundles   'lodash.merge',
+71 verbose rebuildBundles   'lodash.omit',
+71 verbose rebuildBundles   'lodash.pad',
+71 verbose rebuildBundles   'lodash.padend',
+71 verbose rebuildBundles   'lodash.padstart',
+71 verbose rebuildBundles   'lodash.repeat',
+71 verbose rebuildBundles   'lodash.rest',
+71 verbose rebuildBundles   'lodash.restparam',
+71 verbose rebuildBundles   'lodash.template',
+71 verbose rebuildBundles   'lodash.templatesettings',
+71 verbose rebuildBundles   'lodash.toplainobject',
+71 verbose rebuildBundles   'lodash.tostring',
+71 verbose rebuildBundles   'log4js',
+71 verbose rebuildBundles   'longest',
+71 verbose rebuildBundles   'lru-cache',
+71 verbose rebuildBundles   'lru-queue',
+71 verbose rebuildBundles   'main-bower-files',
+71 verbose rebuildBundles   'map-obj',
+71 verbose rebuildBundles   'map-stream',
+71 verbose rebuildBundles   'media-typer',
+71 verbose rebuildBundles   'memoizee',
+71 verbose rebuildBundles   'meow',
+71 verbose rebuildBundles   'merge',
+71 verbose rebuildBundles   'merge-stream',
+71 verbose rebuildBundles   'micromatch',
+71 verbose rebuildBundles   'mime',
+71 verbose rebuildBundles   'mime-db',
+71 verbose rebuildBundles   'mime-types',
+71 verbose rebuildBundles   'minijasminenode',
+71 verbose rebuildBundles   'minimatch',
+71 verbose rebuildBundles   'minimist',
+71 verbose rebuildBundles   'minimize',
+71 verbose rebuildBundles   'mkdirp',
+71 verbose rebuildBundles   'modify-filename',
+71 verbose rebuildBundles   'mout',
+71 verbose rebuildBundles   'ms',
+71 verbose rebuildBundles   'multimatch',
+71 verbose rebuildBundles   'multipipe',
+71 verbose rebuildBundles   'mute-stream',
+71 verbose rebuildBundles   'nan',
+71 verbose rebuildBundles   'negotiator',
+71 verbose rebuildBundles   'next-tick',
+71 verbose rebuildBundles   'ng-annotate',
+71 verbose rebuildBundles   'ng-dependencies',
+71 verbose rebuildBundles   'node-gyp',
+71 verbose rebuildBundles   'node-sass',
+71 verbose rebuildBundles   'node-useref',
+71 verbose rebuildBundles   'node-uuid',
+71 verbose rebuildBundles   'nopt',
+71 verbose rebuildBundles   'normalize-path',
+71 verbose rebuildBundles   'normalize-range',
+71 verbose rebuildBundles   'npmconf',
+71 verbose rebuildBundles   'npmlog',
+71 verbose rebuildBundles   'num2fraction',
+71 verbose rebuildBundles   'number-is-nan',
+71 verbose rebuildBundles   'oauth-sign',
+71 verbose rebuildBundles   'object-assign',
+71 verbose rebuildBundles   'object-component',
+71 verbose rebuildBundles   'object-keys',
+71 verbose rebuildBundles   'object-path',
+71 verbose rebuildBundles   'object.omit',
+71 verbose rebuildBundles   'on-finished',
+71 verbose rebuildBundles   'once',
+71 verbose rebuildBundles   'onetime',
+71 verbose rebuildBundles   'openurl',
+71 verbose rebuildBundles   'opn',
+71 verbose rebuildBundles   'opt-merger',
+71 verbose rebuildBundles   'optimist',
+71 verbose rebuildBundles   'optionator',
+71 verbose rebuildBundles   'options',
+71 verbose rebuildBundles   'orchestrator',
+71 verbose rebuildBundles   'ordered-ast-traverse',
+71 verbose rebuildBundles   'ordered-esprima-props',
+71 verbose rebuildBundles   'ordered-read-streams',
+71 verbose rebuildBundles   'os-homedir',
+71 verbose rebuildBundles   'os-locale',
+71 verbose rebuildBundles   'os-shim',
+71 verbose rebuildBundles   'os-tmpdir',
+71 verbose rebuildBundles   'osenv',
+71 verbose rebuildBundles   'parse-glob',
+71 verbose rebuildBundles   'parsejson',
+71 verbose rebuildBundles   'parseqs',
+71 verbose rebuildBundles   'parseuri',
+71 verbose rebuildBundles   'parseurl',
+71 verbose rebuildBundles   'path',
+71 verbose rebuildBundles   'path-array',
+71 verbose rebuildBundles   'path-exists',
+71 verbose rebuildBundles   'path-is-absolute',
+71 verbose rebuildBundles   'path-is-inside',
+71 verbose rebuildBundles   'pause-stream',
+71 verbose rebuildBundles   'phantomjs',
+71 verbose rebuildBundles   'pify',
+71 verbose rebuildBundles   'pinkie',
+71 verbose rebuildBundles   'pinkie-promise',
+71 verbose rebuildBundles   'portscanner',
+71 verbose rebuildBundles   'postcss',
+71 verbose rebuildBundles   'postcss-value-parser',
+71 verbose rebuildBundles   'prelude-ls',
+71 verbose rebuildBundles   'preserve',
+71 verbose rebuildBundles   'pretty-bytes',
+71 verbose rebuildBundles   'pretty-hrtime',
+71 verbose rebuildBundles   'process',
+71 verbose rebuildBundles   'process-nextick-args',
+71 verbose rebuildBundles   'propprop',
+71 verbose rebuildBundles   'protractor',
+71 verbose rebuildBundles   'pseudomap',
+71 verbose rebuildBundles   'q',
+71 verbose rebuildBundles   'qs',
+71 verbose rebuildBundles   'query-string',
+71 verbose rebuildBundles   'randomatic',
+71 verbose rebuildBundles   'range-parser',
+71 verbose rebuildBundles   'raw-body',
+71 verbose rebuildBundles   'read-json-sync',
+71 verbose rebuildBundles   'readable-stream',
+71 verbose rebuildBundles   'readdirp',
+71 verbose rebuildBundles   'readline2',
+71 verbose rebuildBundles   'rechoir',
+71 verbose rebuildBundles   'regex-cache',
+71 verbose rebuildBundles   'repeat-element',
+71 verbose rebuildBundles   'repeat-string',
+71 verbose rebuildBundles   'repeating',
+71 verbose rebuildBundles   'replace-ext',
+71 verbose rebuildBundles   'replacestream',
+71 verbose rebuildBundles   'request',
+71 verbose rebuildBundles   'requires-port',
+71 verbose rebuildBundles   'resolve',
+71 verbose rebuildBundles   'resp-modifier',
+71 verbose rebuildBundles   'restore-cursor',
+71 verbose rebuildBundles   'rev-hash',
+71 verbose rebuildBundles   'rev-path',
+71 verbose rebuildBundles   'right-align',
+71 verbose rebuildBundles   'rimraf',
+71 verbose rebuildBundles   'run-async',
+71 verbose rebuildBundles   'rx-lite',
+71 verbose rebuildBundles   'sass-graph',
+71 verbose rebuildBundles   'saucelabs',
+71 verbose rebuildBundles   'sax',
+71 verbose rebuildBundles   'selenium-webdriver',
+71 verbose rebuildBundles   'semver',
+71 verbose rebuildBundles   'send',
+71 verbose rebuildBundles   'sequencify',
+71 verbose rebuildBundles   'serve-index',
+71 verbose rebuildBundles   'serve-static',
+71 verbose rebuildBundles   'shelljs',
+71 verbose rebuildBundles   'sigmund',
+71 verbose rebuildBundles   'simple-fmt',
+71 verbose rebuildBundles   'simple-is',
+71 verbose rebuildBundles   'sntp',
+71 verbose rebuildBundles   'socket.io',
+71 verbose rebuildBundles   'socket.io-adapter',
+71 verbose rebuildBundles   'socket.io-client',
+71 verbose rebuildBundles   'socket.io-parser',
+71 verbose rebuildBundles   'sort-keys',
+71 verbose rebuildBundles   'source-map',
+71 verbose rebuildBundles   'source-map-support',
+71 verbose rebuildBundles   'sparkles',
+71 verbose rebuildBundles   'spawn-sync',
+71 verbose rebuildBundles   'split',
+71 verbose rebuildBundles   'sprintf-js',
+71 verbose rebuildBundles   'stable',
+71 verbose rebuildBundles   'statuses',
+71 verbose rebuildBundles   'stream-combiner',
+71 verbose rebuildBundles   'stream-consume',
+71 verbose rebuildBundles   'stream-counter',
+71 verbose rebuildBundles   'stream-throttle',
+71 verbose rebuildBundles   'streamfilter',
+71 verbose rebuildBundles   'strict-uri-encode',
+71 verbose rebuildBundles   'string-width',
+71 verbose rebuildBundles   'string_decoder',
+71 verbose rebuildBundles   'stringmap',
+71 verbose rebuildBundles   'stringset',
+71 verbose rebuildBundles   'stringstream',
+71 verbose rebuildBundles   'strip-ansi',
+71 verbose rebuildBundles   'strip-bom',
+71 verbose rebuildBundles   'strip-bom-stream',
+71 verbose rebuildBundles   'strip-json-comments',
+71 verbose rebuildBundles   'supports-color',
+71 verbose rebuildBundles   'tar',
+71 verbose rebuildBundles   'ternary-stream',
+71 verbose rebuildBundles   'text-hex',
+71 verbose rebuildBundles   'text-table',
+71 verbose rebuildBundles   'textextensions',
+71 verbose rebuildBundles   'tfunk',
+71 verbose rebuildBundles   'through',
+71 verbose rebuildBundles   'through2',
+71 verbose rebuildBundles   'through2-filter',
+71 verbose rebuildBundles   'tildify',
+71 verbose rebuildBundles   'time-stamp',
+71 verbose rebuildBundles   'timers-ext',
+71 verbose rebuildBundles   'tmp',
+71 verbose rebuildBundles   'to-array',
+71 verbose rebuildBundles   'toposort',
+71 verbose rebuildBundles   'tough-cookie',
+71 verbose rebuildBundles   'tryit',
+71 verbose rebuildBundles   'tryor',
+71 verbose rebuildBundles   'tunnel-agent',
+71 verbose rebuildBundles   'type-check',
+71 verbose rebuildBundles   'type-is',
+71 verbose rebuildBundles   'typedarray',
+71 verbose rebuildBundles   'ua-parser-js',
+71 verbose rebuildBundles   'ucfirst',
+71 verbose rebuildBundles   'uglify-js',
+71 verbose rebuildBundles   'uglify-save-license',
+71 verbose rebuildBundles   'uglify-to-browserify',
+71 verbose rebuildBundles   'ultron',
+71 verbose rebuildBundles   'underscore',
+71 verbose rebuildBundles   'unique-stream',
+71 verbose rebuildBundles   'unpipe',
+71 verbose rebuildBundles   'user-home',
+71 verbose rebuildBundles   'useragent',
+71 verbose rebuildBundles   'utf-8-validate',
+71 verbose rebuildBundles   'utf8',
+71 verbose rebuildBundles   'util',
+71 verbose rebuildBundles   'util-deprecate',
+71 verbose rebuildBundles   'utils-merge',
+71 verbose rebuildBundles   'v8flags',
+71 verbose rebuildBundles   'vinyl',
+71 verbose rebuildBundles   'vinyl-bufferstream',
+71 verbose rebuildBundles   'vinyl-file',
+71 verbose rebuildBundles   'vinyl-fs',
+71 verbose rebuildBundles   'vinyl-sourcemaps-apply',
+71 verbose rebuildBundles   'void-elements',
+71 verbose rebuildBundles   'weinre',
+71 verbose rebuildBundles   'which',
+71 verbose rebuildBundles   'window-size',
+71 verbose rebuildBundles   'wiredep',
+71 verbose rebuildBundles   'wordwrap',
+71 verbose rebuildBundles   'wrap-ansi',
+71 verbose rebuildBundles   'wrappy',
+71 verbose rebuildBundles   'wrench',
+71 verbose rebuildBundles   'write',
+71 verbose rebuildBundles   'ws',
+71 verbose rebuildBundles   'xml-escape',
+71 verbose rebuildBundles   'xml2js',
+71 verbose rebuildBundles   'xmlbuilder',
+71 verbose rebuildBundles   'xmlhttprequest-ssl',
+71 verbose rebuildBundles   'xtend',
+71 verbose rebuildBundles   'y18n',
+71 verbose rebuildBundles   'yallist',
+71 verbose rebuildBundles   'yargs',
+71 verbose rebuildBundles   'yeast' ]
+72 verbose rebuild bundle /www/node_modules/abbrev
+73 info build /www/node_modules/abbrev
+74 info preinstall abbrev@1.0.7
+75 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+76 info linkStuff abbrev@1.0.7
+77 verbose linkBins abbrev@1.0.7
+78 verbose linkMans abbrev@1.0.7
+79 verbose rebuildBundles abbrev@1.0.7
+80 info install abbrev@1.0.7
+81 info postinstall abbrev@1.0.7
+82 verbose rebuild bundle /www/node_modules/accepts
+83 info build /www/node_modules/accepts
+84 info preinstall accepts@1.2.13
+85 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+86 info linkStuff accepts@1.2.13
+87 verbose linkBins accepts@1.2.13
+88 verbose linkMans accepts@1.2.13
+89 verbose rebuildBundles accepts@1.2.13
+90 info install accepts@1.2.13
+91 info postinstall accepts@1.2.13
+92 verbose rebuild bundle /www/node_modules/accessibility-developer-tools
+93 info build /www/node_modules/accessibility-developer-tools
+94 info preinstall accessibility-developer-tools@2.6.0
+95 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+96 info linkStuff accessibility-developer-tools@2.6.0
+97 verbose linkBins accessibility-developer-tools@2.6.0
+98 verbose linkMans accessibility-developer-tools@2.6.0
+99 verbose rebuildBundles accessibility-developer-tools@2.6.0
+100 info install accessibility-developer-tools@2.6.0
+101 info postinstall accessibility-developer-tools@2.6.0
+102 verbose rebuild bundle /www/node_modules/acorn
+103 info build /www/node_modules/acorn
+104 info preinstall acorn@2.6.4
+105 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+106 info linkStuff acorn@2.6.4
+107 verbose linkBins acorn@2.6.4
+108 verbose link bins [ { acorn: './bin/acorn' }, '/www/node_modules/.bin', false ]
+109 verbose linkMans acorn@2.6.4
+110 verbose rebuildBundles acorn@2.6.4
+111 info install acorn@2.6.4
+112 info postinstall acorn@2.6.4
+113 verbose rebuild bundle /www/node_modules/adm-zip
+114 info build /www/node_modules/adm-zip
+115 info preinstall adm-zip@0.4.4
+116 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+117 info linkStuff adm-zip@0.4.4
+118 verbose linkBins adm-zip@0.4.4
+119 verbose linkMans adm-zip@0.4.4
+120 verbose rebuildBundles adm-zip@0.4.4
+121 info install adm-zip@0.4.4
+122 info postinstall adm-zip@0.4.4
+123 verbose rebuild bundle /www/node_modules/after
+124 info build /www/node_modules/after
+125 info preinstall after@0.8.1
+126 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+127 info linkStuff after@0.8.1
+128 verbose linkBins after@0.8.1
+129 verbose linkMans after@0.8.1
+130 verbose rebuildBundles after@0.8.1
+131 info install after@0.8.1
+132 info postinstall after@0.8.1
+133 verbose rebuild bundle /www/node_modules/agent-base
+134 info build /www/node_modules/agent-base
+135 info preinstall agent-base@2.0.1
+136 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+137 info linkStuff agent-base@2.0.1
+138 verbose linkBins agent-base@2.0.1
+139 verbose linkMans agent-base@2.0.1
+140 verbose rebuildBundles agent-base@2.0.1
+141 verbose rebuildBundles [ '.bin', 'semver' ]
+142 info install agent-base@2.0.1
+143 info postinstall agent-base@2.0.1
+144 verbose rebuild bundle /www/node_modules/align-text
+145 info build /www/node_modules/align-text
+146 info preinstall align-text@0.1.4
+147 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+148 info linkStuff align-text@0.1.4
+149 verbose linkBins align-text@0.1.4
+150 verbose linkMans align-text@0.1.4
+151 verbose rebuildBundles align-text@0.1.4
+152 info install align-text@0.1.4
+153 info postinstall align-text@0.1.4
+154 verbose rebuild bundle /www/node_modules/alter
+155 info build /www/node_modules/alter
+156 info preinstall alter@0.2.0
+157 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+158 info linkStuff alter@0.2.0
+159 verbose linkBins alter@0.2.0
+160 verbose linkMans alter@0.2.0
+161 verbose rebuildBundles alter@0.2.0
+162 info install alter@0.2.0
+163 info postinstall alter@0.2.0
+164 verbose rebuild bundle /www/node_modules/amdefine
+165 info build /www/node_modules/amdefine
+166 info preinstall amdefine@1.0.0
+167 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+168 info linkStuff amdefine@1.0.0
+169 verbose linkBins amdefine@1.0.0
+170 verbose linkMans amdefine@1.0.0
+171 verbose rebuildBundles amdefine@1.0.0
+172 info install amdefine@1.0.0
+173 info postinstall amdefine@1.0.0
+174 verbose rebuild bundle /www/node_modules/ansi
+175 info build /www/node_modules/ansi
+176 info preinstall ansi@0.3.1
+177 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+178 info linkStuff ansi@0.3.1
+179 verbose linkBins ansi@0.3.1
+180 verbose linkMans ansi@0.3.1
+181 verbose rebuildBundles ansi@0.3.1
+182 info install ansi@0.3.1
+183 info postinstall ansi@0.3.1
+184 verbose rebuild bundle /www/node_modules/ansi-escapes
+185 info build /www/node_modules/ansi-escapes
+186 info preinstall ansi-escapes@1.3.0
+187 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+188 info linkStuff ansi-escapes@1.3.0
+189 verbose linkBins ansi-escapes@1.3.0
+190 verbose linkMans ansi-escapes@1.3.0
+191 verbose rebuildBundles ansi-escapes@1.3.0
+192 info install ansi-escapes@1.3.0
+193 info postinstall ansi-escapes@1.3.0
+194 verbose rebuild bundle /www/node_modules/ansi-regex
+195 info build /www/node_modules/ansi-regex
+196 info preinstall ansi-regex@0.2.1
+197 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+198 info linkStuff ansi-regex@0.2.1
+199 verbose linkBins ansi-regex@0.2.1
+200 verbose linkMans ansi-regex@0.2.1
+201 verbose rebuildBundles ansi-regex@0.2.1
+202 info install ansi-regex@0.2.1
+203 info postinstall ansi-regex@0.2.1
+204 verbose rebuild bundle /www/node_modules/ansi-styles
+205 info build /www/node_modules/ansi-styles
+206 info preinstall ansi-styles@1.1.0
+207 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+208 info linkStuff ansi-styles@1.1.0
+209 verbose linkBins ansi-styles@1.1.0
+210 verbose linkMans ansi-styles@1.1.0
+211 verbose rebuildBundles ansi-styles@1.1.0
+212 info install ansi-styles@1.1.0
+213 info postinstall ansi-styles@1.1.0
+214 verbose rebuild bundle /www/node_modules/anymatch
+215 info build /www/node_modules/anymatch
+216 info preinstall anymatch@1.3.0
+217 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+218 info linkStuff anymatch@1.3.0
+219 verbose linkBins anymatch@1.3.0
+220 verbose linkMans anymatch@1.3.0
+221 verbose rebuildBundles anymatch@1.3.0
+222 info install anymatch@1.3.0
+223 info postinstall anymatch@1.3.0
+224 verbose rebuild bundle /www/node_modules/archy
+225 info build /www/node_modules/archy
+226 info preinstall archy@1.0.0
+227 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+228 info linkStuff archy@1.0.0
+229 verbose linkBins archy@1.0.0
+230 verbose linkMans archy@1.0.0
+231 verbose rebuildBundles archy@1.0.0
+232 info install archy@1.0.0
+233 info postinstall archy@1.0.0
+234 verbose rebuild bundle /www/node_modules/are-we-there-yet
+235 info build /www/node_modules/are-we-there-yet
+236 info preinstall are-we-there-yet@1.1.2
+237 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+238 info linkStuff are-we-there-yet@1.1.2
+239 verbose linkBins are-we-there-yet@1.1.2
+240 verbose linkMans are-we-there-yet@1.1.2
+241 verbose rebuildBundles are-we-there-yet@1.1.2
+242 info install are-we-there-yet@1.1.2
+243 info postinstall are-we-there-yet@1.1.2
+244 verbose rebuild bundle /www/node_modules/argh
+245 info build /www/node_modules/argh
+246 info preinstall argh@0.1.4
+247 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+248 info linkStuff argh@0.1.4
+249 verbose linkBins argh@0.1.4
+250 verbose linkMans argh@0.1.4
+251 verbose rebuildBundles argh@0.1.4
+252 info install argh@0.1.4
+253 info postinstall argh@0.1.4
+254 verbose rebuild bundle /www/node_modules/argparse
+255 info build /www/node_modules/argparse
+256 info preinstall argparse@1.0.6
+257 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+258 info linkStuff argparse@1.0.6
+259 verbose linkBins argparse@1.0.6
+260 verbose linkMans argparse@1.0.6
+261 verbose rebuildBundles argparse@1.0.6
+262 info install argparse@1.0.6
+263 info postinstall argparse@1.0.6
+264 verbose rebuild bundle /www/node_modules/arr-diff
+265 info build /www/node_modules/arr-diff
+266 info preinstall arr-diff@2.0.0
+267 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+268 info linkStuff arr-diff@2.0.0
+269 verbose linkBins arr-diff@2.0.0
+270 verbose linkMans arr-diff@2.0.0
+271 verbose rebuildBundles arr-diff@2.0.0
+272 info install arr-diff@2.0.0
+273 info postinstall arr-diff@2.0.0
+274 verbose rebuild bundle /www/node_modules/arr-flatten
+275 info build /www/node_modules/arr-flatten
+276 info preinstall arr-flatten@1.0.1
+277 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+278 info linkStuff arr-flatten@1.0.1
+279 verbose linkBins arr-flatten@1.0.1
+280 verbose linkMans arr-flatten@1.0.1
+281 verbose rebuildBundles arr-flatten@1.0.1
+282 info install arr-flatten@1.0.1
+283 info postinstall arr-flatten@1.0.1
+284 verbose rebuild bundle /www/node_modules/array-differ
+285 info build /www/node_modules/array-differ
+286 info preinstall array-differ@1.0.0
+287 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+288 info linkStuff array-differ@1.0.0
+289 verbose linkBins array-differ@1.0.0
+290 verbose linkMans array-differ@1.0.0
+291 verbose rebuildBundles array-differ@1.0.0
+292 info install array-differ@1.0.0
+293 info postinstall array-differ@1.0.0
+294 verbose rebuild bundle /www/node_modules/array-index
+295 info build /www/node_modules/array-index
+296 info preinstall array-index@1.0.0
+297 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+298 info linkStuff array-index@1.0.0
+299 verbose linkBins array-index@1.0.0
+300 verbose linkMans array-index@1.0.0
+301 verbose rebuildBundles array-index@1.0.0
+302 info install array-index@1.0.0
+303 info postinstall array-index@1.0.0
+304 verbose rebuild bundle /www/node_modules/array-slice
+305 info build /www/node_modules/array-slice
+306 info preinstall array-slice@0.2.3
+307 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+308 info linkStuff array-slice@0.2.3
+309 verbose linkBins array-slice@0.2.3
+310 verbose linkMans array-slice@0.2.3
+311 verbose rebuildBundles array-slice@0.2.3
+312 info install array-slice@0.2.3
+313 info postinstall array-slice@0.2.3
+314 verbose rebuild bundle /www/node_modules/array-union
+315 info build /www/node_modules/array-union
+316 info preinstall array-union@1.0.1
+317 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+318 info linkStuff array-union@1.0.1
+319 verbose linkBins array-union@1.0.1
+320 verbose linkMans array-union@1.0.1
+321 verbose rebuildBundles array-union@1.0.1
+322 info install array-union@1.0.1
+323 info postinstall array-union@1.0.1
+324 verbose rebuild bundle /www/node_modules/array-uniq
+325 info build /www/node_modules/array-uniq
+326 info preinstall array-uniq@1.0.2
+327 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+328 info linkStuff array-uniq@1.0.2
+329 verbose linkBins array-uniq@1.0.2
+330 verbose linkMans array-uniq@1.0.2
+331 verbose rebuildBundles array-uniq@1.0.2
+332 info install array-uniq@1.0.2
+333 info postinstall array-uniq@1.0.2
+334 verbose rebuild bundle /www/node_modules/array-unique
+335 info build /www/node_modules/array-unique
+336 info preinstall array-unique@0.2.1
+337 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+338 info linkStuff array-unique@0.2.1
+339 verbose linkBins array-unique@0.2.1
+340 verbose linkMans array-unique@0.2.1
+341 verbose rebuildBundles array-unique@0.2.1
+342 info install array-unique@0.2.1
+343 info postinstall array-unique@0.2.1
+344 verbose rebuild bundle /www/node_modules/arraybuffer.slice
+345 info build /www/node_modules/arraybuffer.slice
+346 info preinstall arraybuffer.slice@0.0.6
+347 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+348 info linkStuff arraybuffer.slice@0.0.6
+349 verbose linkBins arraybuffer.slice@0.0.6
+350 verbose linkMans arraybuffer.slice@0.0.6
+351 verbose rebuildBundles arraybuffer.slice@0.0.6
+352 info install arraybuffer.slice@0.0.6
+353 info postinstall arraybuffer.slice@0.0.6
+354 verbose rebuild bundle /www/node_modules/arrify
+355 info build /www/node_modules/arrify
+356 info preinstall arrify@1.0.1
+357 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+358 info linkStuff arrify@1.0.1
+359 verbose linkBins arrify@1.0.1
+360 verbose linkMans arrify@1.0.1
+361 verbose rebuildBundles arrify@1.0.1
+362 info install arrify@1.0.1
+363 info postinstall arrify@1.0.1
+364 verbose rebuild bundle /www/node_modules/async
+365 info build /www/node_modules/async
+366 info preinstall async@1.5.2
+367 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+368 info linkStuff async@1.5.2
+369 verbose linkBins async@1.5.2
+370 verbose linkMans async@1.5.2
+371 verbose rebuildBundles async@1.5.2
+372 info install async@1.5.2
+373 info postinstall async@1.5.2
+374 verbose rebuild bundle /www/node_modules/async-each
+375 info build /www/node_modules/async-each
+376 info preinstall async-each@1.0.0
+377 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+378 info linkStuff async-each@1.0.0
+379 verbose linkBins async-each@1.0.0
+380 verbose linkMans async-each@1.0.0
+381 verbose rebuildBundles async-each@1.0.0
+382 info install async-each@1.0.0
+383 info postinstall async-each@1.0.0
+384 verbose rebuild bundle /www/node_modules/async-each-series
+385 info build /www/node_modules/async-each-series
+386 info preinstall async-each-series@0.1.1
+387 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+388 info linkStuff async-each-series@0.1.1
+389 verbose linkBins async-each-series@0.1.1
+390 verbose linkMans async-each-series@0.1.1
+391 verbose rebuildBundles async-each-series@0.1.1
+392 info install async-each-series@0.1.1
+393 info postinstall async-each-series@0.1.1
+394 verbose rebuild bundle /www/node_modules/async-foreach
+395 info build /www/node_modules/async-foreach
+396 info preinstall async-foreach@0.1.3
+397 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+398 info linkStuff async-foreach@0.1.3
+399 verbose linkBins async-foreach@0.1.3
+400 verbose linkMans async-foreach@0.1.3
+401 verbose rebuildBundles async-foreach@0.1.3
+402 info install async-foreach@0.1.3
+403 info postinstall async-foreach@0.1.3
+404 verbose rebuild bundle /www/node_modules/autoprefixer
+405 info build /www/node_modules/autoprefixer
+406 info preinstall autoprefixer@6.3.3
+407 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+408 info linkStuff autoprefixer@6.3.3
+409 verbose linkBins autoprefixer@6.3.3
+410 verbose linkMans autoprefixer@6.3.3
+411 verbose rebuildBundles autoprefixer@6.3.3
+412 info install autoprefixer@6.3.3
+413 info postinstall autoprefixer@6.3.3
+414 verbose rebuild bundle /www/node_modules/aws-sign2
+415 info build /www/node_modules/aws-sign2
+416 info preinstall aws-sign2@0.6.0
+417 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+418 info linkStuff aws-sign2@0.6.0
+419 verbose linkBins aws-sign2@0.6.0
+420 verbose linkMans aws-sign2@0.6.0
+421 verbose rebuildBundles aws-sign2@0.6.0
+422 info install aws-sign2@0.6.0
+423 info postinstall aws-sign2@0.6.0
+424 verbose rebuild bundle /www/node_modules/backo2
+425 info build /www/node_modules/backo2
+426 info preinstall backo2@1.0.2
+427 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+428 info linkStuff backo2@1.0.2
+429 verbose linkBins backo2@1.0.2
+430 verbose linkMans backo2@1.0.2
+431 verbose rebuildBundles backo2@1.0.2
+432 info install backo2@1.0.2
+433 info postinstall backo2@1.0.2
+434 verbose rebuild bundle /www/node_modules/balanced-match
+435 info build /www/node_modules/balanced-match
+436 info preinstall balanced-match@0.3.0
+437 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+438 info linkStuff balanced-match@0.3.0
+439 verbose linkBins balanced-match@0.3.0
+440 verbose linkMans balanced-match@0.3.0
+441 verbose rebuildBundles balanced-match@0.3.0
+442 info install balanced-match@0.3.0
+443 info postinstall balanced-match@0.3.0
+444 verbose rebuild bundle /www/node_modules/base64-arraybuffer
+445 info build /www/node_modules/base64-arraybuffer
+446 info preinstall base64-arraybuffer@0.1.2
+447 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+448 info linkStuff base64-arraybuffer@0.1.2
+449 verbose linkBins base64-arraybuffer@0.1.2
+450 verbose linkMans base64-arraybuffer@0.1.2
+451 verbose rebuildBundles base64-arraybuffer@0.1.2
+452 info install base64-arraybuffer@0.1.2
+453 info postinstall base64-arraybuffer@0.1.2
+454 verbose rebuild bundle /www/node_modules/base64id
+455 info build /www/node_modules/base64id
+456 info preinstall base64id@0.1.0
+457 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+458 info linkStuff base64id@0.1.0
+459 verbose linkBins base64id@0.1.0
+460 verbose linkMans base64id@0.1.0
+461 verbose rebuildBundles base64id@0.1.0
+462 info install base64id@0.1.0
+463 info postinstall base64id@0.1.0
+464 verbose rebuild bundle /www/node_modules/batch
+465 info build /www/node_modules/batch
+466 info preinstall batch@0.5.3
+467 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+468 info linkStuff batch@0.5.3
+469 verbose linkBins batch@0.5.3
+470 verbose linkMans batch@0.5.3
+471 verbose rebuildBundles batch@0.5.3
+472 info install batch@0.5.3
+473 info postinstall batch@0.5.3
+474 verbose rebuild bundle /www/node_modules/beeper
+475 info build /www/node_modules/beeper
+476 info preinstall beeper@1.1.0
+477 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+478 info linkStuff beeper@1.1.0
+479 verbose linkBins beeper@1.1.0
+480 verbose linkMans beeper@1.1.0
+481 verbose rebuildBundles beeper@1.1.0
+482 info install beeper@1.1.0
+483 info postinstall beeper@1.1.0
+484 verbose rebuild bundle /www/node_modules/benchmark
+485 info build /www/node_modules/benchmark
+486 info preinstall benchmark@1.0.0
+487 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+488 info linkStuff benchmark@1.0.0
+489 verbose linkBins benchmark@1.0.0
+490 verbose linkMans benchmark@1.0.0
+491 verbose rebuildBundles benchmark@1.0.0
+492 info install benchmark@1.0.0
+493 info postinstall benchmark@1.0.0
+494 verbose rebuild bundle /www/node_modules/better-assert
+495 info build /www/node_modules/better-assert
+496 info preinstall better-assert@1.0.2
+497 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+498 info linkStuff better-assert@1.0.2
+499 verbose linkBins better-assert@1.0.2
+500 verbose linkMans better-assert@1.0.2
+501 verbose rebuildBundles better-assert@1.0.2
+502 info install better-assert@1.0.2
+503 info postinstall better-assert@1.0.2
+504 verbose rebuild bundle /www/node_modules/binary-extensions
+505 info build /www/node_modules/binary-extensions
+506 info preinstall binary-extensions@1.4.0
+507 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+508 info linkStuff binary-extensions@1.4.0
+509 verbose linkBins binary-extensions@1.4.0
+510 verbose linkMans binary-extensions@1.4.0
+511 verbose rebuildBundles binary-extensions@1.4.0
+512 info install binary-extensions@1.4.0
+513 info postinstall binary-extensions@1.4.0
+514 verbose rebuild bundle /www/node_modules/binaryextensions
+515 info build /www/node_modules/binaryextensions
+516 info preinstall binaryextensions@1.0.0
+517 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+518 info linkStuff binaryextensions@1.0.0
+519 verbose linkBins binaryextensions@1.0.0
+520 verbose linkMans binaryextensions@1.0.0
+521 verbose rebuildBundles binaryextensions@1.0.0
+522 info install binaryextensions@1.0.0
+523 info postinstall binaryextensions@1.0.0
+524 verbose rebuild bundle /www/node_modules/bindings
+525 info build /www/node_modules/bindings
+526 info preinstall bindings@1.2.1
+527 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+528 info linkStuff bindings@1.2.1
+529 verbose linkBins bindings@1.2.1
+530 verbose linkMans bindings@1.2.1
+531 verbose rebuildBundles bindings@1.2.1
+532 info install bindings@1.2.1
+533 info postinstall bindings@1.2.1
+534 verbose rebuild bundle /www/node_modules/bl
+535 info build /www/node_modules/bl
+536 info preinstall bl@1.0.3
+537 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+538 info linkStuff bl@1.0.3
+539 verbose linkBins bl@1.0.3
+540 verbose linkMans bl@1.0.3
+541 verbose rebuildBundles bl@1.0.3
+542 info install bl@1.0.3
+543 info postinstall bl@1.0.3
+544 verbose rebuild bundle /www/node_modules/blob
+545 info build /www/node_modules/blob
+546 info preinstall blob@0.0.4
+547 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+548 info linkStuff blob@0.0.4
+549 verbose linkBins blob@0.0.4
+550 verbose linkMans blob@0.0.4
+551 verbose rebuildBundles blob@0.0.4
+552 info install blob@0.0.4
+553 info postinstall blob@0.0.4
+554 verbose rebuild bundle /www/node_modules/block-stream
+555 info build /www/node_modules/block-stream
+556 info preinstall block-stream@0.0.8
+557 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+558 info linkStuff block-stream@0.0.8
+559 verbose linkBins block-stream@0.0.8
+560 verbose linkMans block-stream@0.0.8
+561 verbose rebuildBundles block-stream@0.0.8
+562 info install block-stream@0.0.8
+563 info postinstall block-stream@0.0.8
+564 verbose rebuild bundle /www/node_modules/bluebird
+565 info build /www/node_modules/bluebird
+566 info preinstall bluebird@2.10.2
+567 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+568 info linkStuff bluebird@2.10.2
+569 verbose linkBins bluebird@2.10.2
+570 verbose linkMans bluebird@2.10.2
+571 verbose rebuildBundles bluebird@2.10.2
+572 info install bluebird@2.10.2
+573 info postinstall bluebird@2.10.2
+574 verbose rebuild bundle /www/node_modules/body-parser
+575 info build /www/node_modules/body-parser
+576 info preinstall body-parser@1.15.0
+577 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+578 info linkStuff body-parser@1.15.0
+579 verbose linkBins body-parser@1.15.0
+580 verbose linkMans body-parser@1.15.0
+581 verbose rebuildBundles body-parser@1.15.0
+582 verbose rebuildBundles [ 'http-errors', 'qs' ]
+583 info install body-parser@1.15.0
+584 info postinstall body-parser@1.15.0
+585 verbose rebuild bundle /www/node_modules/boom
+586 info build /www/node_modules/boom
+587 info preinstall boom@2.10.1
+588 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+589 info linkStuff boom@2.10.1
+590 verbose linkBins boom@2.10.1
+591 verbose linkMans boom@2.10.1
+592 verbose rebuildBundles boom@2.10.1
+593 info install boom@2.10.1
+594 info postinstall boom@2.10.1
+595 verbose rebuild bundle /www/node_modules/bower-config
+596 info build /www/node_modules/bower-config
+597 info preinstall bower-config@0.5.2
+598 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+599 info linkStuff bower-config@0.5.2
+600 verbose linkBins bower-config@0.5.2
+601 verbose linkMans bower-config@0.5.2
+602 verbose rebuildBundles bower-config@0.5.2
+603 verbose rebuildBundles [ 'graceful-fs', 'osenv' ]
+604 info install bower-config@0.5.2
+605 info postinstall bower-config@0.5.2
+606 verbose rebuild bundle /www/node_modules/brace-expansion
+607 info build /www/node_modules/brace-expansion
+608 info preinstall brace-expansion@1.1.3
+609 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+610 info linkStuff brace-expansion@1.1.3
+611 verbose linkBins brace-expansion@1.1.3
+612 verbose linkMans brace-expansion@1.1.3
+613 verbose rebuildBundles brace-expansion@1.1.3
+614 info install brace-expansion@1.1.3
+615 info postinstall brace-expansion@1.1.3
+616 verbose rebuild bundle /www/node_modules/braces
+617 info build /www/node_modules/braces
+618 info preinstall braces@1.8.3
+619 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+620 info linkStuff braces@1.8.3
+621 verbose linkBins braces@1.8.3
+622 verbose linkMans braces@1.8.3
+623 verbose rebuildBundles braces@1.8.3
+624 info install braces@1.8.3
+625 info postinstall braces@1.8.3
+626 verbose rebuild bundle /www/node_modules/browser-sync-client
+627 info build /www/node_modules/browser-sync-client
+628 info preinstall browser-sync-client@2.4.1
+629 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+630 info linkStuff browser-sync-client@2.4.1
+631 verbose linkBins browser-sync-client@2.4.1
+632 verbose linkMans browser-sync-client@2.4.1
+633 verbose rebuildBundles browser-sync-client@2.4.1
+634 info install browser-sync-client@2.4.1
+635 info postinstall browser-sync-client@2.4.1
+636 verbose rebuild bundle /www/node_modules/browser-sync-ui
+637 info build /www/node_modules/browser-sync-ui
+638 info preinstall browser-sync-ui@0.5.18
+639 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+640 info linkStuff browser-sync-ui@0.5.18
+641 verbose linkBins browser-sync-ui@0.5.18
+642 verbose linkMans browser-sync-ui@0.5.18
+643 verbose rebuildBundles browser-sync-ui@0.5.18
+644 info install browser-sync-ui@0.5.18
+645 info postinstall browser-sync-ui@0.5.18
+646 verbose rebuild bundle /www/node_modules/browserslist
+647 info build /www/node_modules/browserslist
+648 info preinstall browserslist@1.1.3
+649 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+650 info linkStuff browserslist@1.1.3
+651 verbose linkBins browserslist@1.1.3
+652 verbose link bins [ { browserslist: './cli.js' }, '/www/node_modules/.bin', false ]
+653 verbose linkMans browserslist@1.1.3
+654 verbose rebuildBundles browserslist@1.1.3
+655 info install browserslist@1.1.3
+656 info postinstall browserslist@1.1.3
+657 verbose rebuild bundle /www/node_modules/bufferstreams
+658 info build /www/node_modules/bufferstreams
+659 info preinstall bufferstreams@1.0.2
+660 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+661 info linkStuff bufferstreams@1.0.2
+662 verbose linkBins bufferstreams@1.0.2
+663 verbose linkMans bufferstreams@1.0.2
+664 verbose rebuildBundles bufferstreams@1.0.2
+665 info install bufferstreams@1.0.2
+666 info postinstall bufferstreams@1.0.2
+667 verbose rebuild bundle /www/node_modules/bufferutil
+668 info build /www/node_modules/bufferutil
+669 info preinstall bufferutil@1.2.1
+670 verbose linkStuff [ false, false, false, '/www/node_modules' ]
+671 info linkStuff bufferutil@1.2.1
+672 verbose linkBins bufferutil@1.2.1
+673 verbose linkMans bufferutil@1.2.1
+674 verbose rebuildBundles bufferutil@1.2.1
+675 info install bufferutil@1.2.1
+676 verbose unsafe-perm in lifecycle false
+677 info bufferutil@1.2.1 Failed to exec install script
+678 error bufferutil@1.2.1 install: `node-gyp rebuild`
+678 error Exit status 1
+679 error Failed at the bufferutil@1.2.1 install script.
+679 error This is most likely a problem with the bufferutil package,
+679 error not with npm itself.
+679 error Tell the author that this fails on your system:
+679 error     node-gyp rebuild
+679 error You can get their info via:
+679 error     npm owner ls bufferutil
+679 error There is likely additional logging output above.
+680 error System Linux 3.10.0-229.4.2.el7.x86_64
+681 error command "/usr/bin/node" "/usr/bin/npm" "install"
+682 error cwd /www
+683 error node -v v0.10.37
+684 error npm -v 1.4.28
+685 error code ELIFECYCLE
+686 verbose exit [ 1, true ]
