@@ -1,0 +1,33 @@
+.followHead {
+    font-family: "微软雅黑";
+	margin-bottom: 10px;
+}
+
+.followHead img {
+	width: 60px;
+	height: 60px;
+    border-radius: 30px;
+    float: left;
+}
+
+.followHead strong {
+	width: 80px;
+    font-weight: bold;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 40px 0 20px;
+    float: left;
+    line-height: 60px;
+}
+
+.followHead p {
+    float: left;
+    line-height: 60px;
+}
+
+.followHead p span {
+    font-size: 14px;
+    font-weight: bold;
+}

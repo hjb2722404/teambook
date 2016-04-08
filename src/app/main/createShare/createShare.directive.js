@@ -77,30 +77,40 @@
             upBtnId: upBtnId,
             isTranscode: isTranscode,
             isWatermark: isWatermark,
-            after_sha_start_upload: true,
+            //after_sha_start_upload: true,
             transcodeNotifyUrl: transcodeNotifyUrl,
             classId: classId
           },
           {
             //回调 更新文件状态和进度
             onFileUpdate: function (args) {
-
-              console.log(
-                '---文件名：' + args.name +
-                '---大小：' + util.getHStorage(args.size) +
-                '---状态：' + util.getFileStatusName(args.status) +
-                '---进度：' + args.percent + '%'
-              );
+              $("#FileUpdate").html(''
+                            + '文件名：' + args.name
+                            + ' >> 大小：' + util.getHStorage(args.size)
+                            + ' >> 状态：' + util.getFileStatusName(args.status) + ''
+                            + ( args.percent ? ' >> 进度：' + args.percent + '%' : '')
+                            + ( args.speed ? ' >> 速度：' + args.speed + '' : '')
+                            + ( args.errorCode ? '>>错误码:' + args.errorCode + '' :'')
+                            );
 
             },
             //文件状态发生变化
             onFileStatus: function (info) {
-              //$("#share-name").val("=====");
-              console.log(JSON.stringify(info));
+              $("#FileStatus").html(""
+                            + "文件发生变化：-->" + JSON.stringify(info)
+                            + "<br/>"
+                            + "完成数量: -->" + JSON.stringify(info['done'])
+                            + "失败数量: -->" + JSON.stringify(info['fail'])
+                            + "计算SHA或者等待计算SHA中的数量: -->" + JSON.stringify(info['sha'])
+                            + "等待上传数量: -->" + JSON.stringify(info['wait'])
+                            + "上传中的数量: -->" + JSON.stringify(info['uploading'])
+              )
             },
             //上传错误文件过滤提示
             onFileerError: function (args) {
-
+              $("#FileerError").html(
+                  "文件上传失败"
+              )
             }
           }
         );

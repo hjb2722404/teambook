@@ -1,42 +1,23 @@
 <div class="growthList">
-	<div class="listGroup clearfix">
+
+	<div class="listGroup clearfix" ng-repeat="i in vm.GrowthLists">
 		<div class="listHead col-sm-4">
 			<div class="listIco">
 				<a href="javascript:;"></a>
 			</div>
-			<div class="listName">
+			<div class="listName ellipsis">
 				<span></span>
-				视频名称1
+				{{i.title}}
 			</div>
 		</div>
-		<div class="listTags col-sm-3">
-			标签1/标签2/标签3
+		<div class="listTags ellipsis col-sm-3">
+			{{i.trackType}}
 		</div>
-		<div class="listTime col-sm-3">
-			学习于2016年3月27日
+		<div class="listTime ellipsis col-sm-3">
+			{{i.trackTime}}
 		</div>
-		<div class="listScore col-sm-2">
-			<a href="javascript:;">获得50积分</a>
-		</div>
-	</div>
-	<div class="listGroup clearfix">
-		<div class="listHead col-sm-4">
-			<div class="listIco">
-				<a href="javascript:;"></a>
-			</div>
-			<div class="listName">
-				<span></span>
-				视频名称1
-			</div>
-		</div>
-		<div class="listTags col-sm-3">
-			标签1/标签2/标签3
-		</div>
-		<div class="listTime col-sm-3">
-			学习于2016年3月27日
-		</div>
-		<div class="listScore col-sm-2">
-			<a href="javascript:;">获得50积分</a>
+		<div class="listScore ellipsis col-sm-2">
+			<a href="javascript:;">获得{{i.trackId}}积分</a>
 		</div>
 	</div>
 </div>

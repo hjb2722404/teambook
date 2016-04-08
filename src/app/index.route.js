@@ -46,6 +46,14 @@
           controllerAs: 'GrowthPath'
       })
 
+    $stateProvider
+      .state('userFollow', {
+          url: '/userFollow',
+          templateUrl: 'app/userFollow/userFollow.html',
+          controller: 'userFollow',
+          controllerAs: 'UserFollow'
+      })
+
       $stateProvider
           .state('content', {
               url: '/shareContent',

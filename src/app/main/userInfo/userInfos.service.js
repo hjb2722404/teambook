@@ -22,7 +22,7 @@
                 .catch(getUserFailed);
 
             function getUserComplete(response) {
-                console.log(response.data.data);
+                console.log(response.data.data.title);
                 return response.data.data;
 
 

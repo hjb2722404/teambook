@@ -7,7 +7,7 @@
 
 
   /** @ngInject */
-  function growthList() {
+  function growthList(growthLists,user) {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/growthPath/growthList/growthList.html',
@@ -22,7 +22,24 @@
     /** @ngInject */
     function growthController() {
       var vm = this;
-      return vm;
+
+      var userInstance = user.getUser();
+      var userId = userInstance.data.id;
+
+      vm.GrowthLists = [];
+
+      getGrowthList(userId);
+
+      function getGrowthList(userId) {
+
+        return growthLists.getGrowthLists(userId)
+          .then(function(growthLists){
+            vm.GrowthLists = growthLists;
+          })
+          .catch();
+
+      }
+
     }
   }
 
