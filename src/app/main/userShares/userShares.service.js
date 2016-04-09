@@ -77,17 +77,17 @@
                 var tags = [];
                 var un = u.companyName;
 
-                if(title.length >13){
-                    u.shareShotTitle = title.substr(0,13) + '...';
-                }else {
-                    u.shareShotTitle = title;
-                }
+                // if(title.length >13){
+                //     u.shareShotTitle = title.substr(0,13) + '...';
+                // }else {
+                     u.shareShotTitle = title;
+                // }
 
-                if(un.length>8){
-                    u.shareUserCompanyNameShot = un.substr(0,8)+'...'
-                }else{
-                    u.shareUserCompanyNameShot = un;
-                }
+                // if(un.length>8){
+                //     u.shareUserCompanyNameShot = un.substr(0,8)+'...'
+                // }else{
+                     u.shareUserCompanyNameShot = un;
+                // }
 
                 tags = u.tags.split(',');
                 u.shareTagsArr = [];

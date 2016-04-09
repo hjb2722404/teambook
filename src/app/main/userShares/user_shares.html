@@ -13,11 +13,13 @@
                 <ul class="new-ul">
                     <li ng-repeat="shares in vm.recommends | filter: query : 5 | orderBy:'id' | limitTo:'9'">
                         <div class="litpic">
-                            <a ng-href="#/shareContent?id={{shares.id}}"><img ng-src="{{shares.surfaceImgUrl}}" alt=""/></a>
-                            <div class="play-btn" ></div>
+                            <a ng-href="#/shareContent?id={{shares.id}}">
+                                <img ng-src="{{shares.surfaceImgUrl}}" alt=""/>
+                                <div class="play-btn" ></div>
+                            </a>
                         </div>
                         <div class="s-title">
-                            <a ng-href="#/shareContent?id={{shares.id}}"><h5>{{shares.shareShotTitle}}</h5></a>
+                            <a ng-href="#/shareContent?id={{shares.id}}"><h5 class="ellipsis">{{shares.shareShotTitle}}</h5></a>
                         </div>
                         <div class="s-info">
                             <div class="s-tag">
@@ -46,11 +48,13 @@
                 <ul class="hot-ul">
                     <li ng-repeat="shares in vm.userShares | filter: query | orderBy:'shareUserName' | limitTo:9">
                         <div class="litpic">
-                            <a ng-href="#/shareContent?id={{shares.id}}"><img ng-src="{{shares.surfaceImgUrl}}" alt=""/></a>
-                            <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
+                            <a ng-href="#/shareContent?id={{shares.id}}">
+                                <img ng-src="{{shares.surfaceImgUrl}}" alt=""/>
+                                <div class="play-btn" ng-show="shares.shareType == 'video'"></div>
+                            </a>
                         </div>
                         <div class="s-title">
-                            <a ng-href="#/shareContent?id={{shares.id}}"><h5>{{shares.shareShotTitle}}</h5></a>
+                            <a ng-href="#/shareContent?id={{shares.id}}"><h5 class="ellipsis">{{shares.shareShotTitle}}</h5></a>
                         </div>
                         <div class="s-info">
                             <div class="s-tag">
