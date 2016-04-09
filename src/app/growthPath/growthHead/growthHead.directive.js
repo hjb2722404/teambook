@@ -20,9 +20,31 @@
     return directive;
 
     /** @ngInject */
-    function growthController() {
+    function growthController(userinfos,user) {
       var vm = this;
-      return vm;
+      var userInstance = user.getUser();
+      var userId = userInstance.data.id;
+      vm.isShowCard = false;
+
+      vm.female = false;
+
+      vm.userInfos = [];
+      getUserInfo(userId);
+      
+      function getUserInfo(userId) {
+          
+        return userinfos.getUserInfos(userId)
+            .then(function(userInfos){
+                vm.userInfos = userInfos;
+                if(vm.userInfos.gender == "2"){
+                    vm.userInfos.userSex = "女";
+                    vm.female =true;
+                }else{
+                    vm.userInfos.userSex = "男";
+                }
+            })
+            .catch();
+      }
     }
   }
 

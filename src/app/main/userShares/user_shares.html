@@ -10,7 +10,7 @@
         </div>
         <div class="s-cons">
             <div class="new-share" ng-show="isNew" ng-init="isNew =true;">
-                <ul class="new-ul">
+                <ul class="new-ul ellipsis">
                     <li ng-repeat="shares in vm.recommends | filter: query : 5 | orderBy:'id' | limitTo:'9'">
                         <div class="litpic">
                             <a ng-href="#/shareContent?id={{shares.id}}">
@@ -45,7 +45,7 @@
                 <div class="clear-fix"></div>
             </div>
             <div class="hot-share" ng-show="isHot" ng-init="isHot = false">
-                <ul class="hot-ul">
+                <ul class="hot-ul ellipsis">
                     <li ng-repeat="shares in vm.userShares | filter: query | orderBy:'shareUserName' | limitTo:9">
                         <div class="litpic">
                             <a ng-href="#/shareContent?id={{shares.id}}">

@@ -54,6 +54,14 @@
           controllerAs: 'UserFollow'
       })
 
+    $stateProvider
+      .state('shareEdit', {
+          url: '/shareEdit',
+          templateUrl: 'app/shareEdit/shareEdit.html',
+          controller: 'shareEdit',
+          controllerAs: 'ShareEdit'
+      })
+
       $stateProvider
           .state('content', {
               url: '/shareContent',

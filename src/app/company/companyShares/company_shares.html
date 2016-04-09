@@ -12,8 +12,10 @@
             <ul class="new-ul">
                 <li ng-repeat="shares in vm.companyShares | filter: query : 5 | orderBy:'id'">
                     <div class="litpic">
-                        <a ng-href="#/shareContent?id={{shares.id}}"><img ng-src="{{shares.surfaceImgUrl}}" alt=""/></a>
-                        <div class="play-btn"></div>
+                        <a ng-href="#/shareContent?id={{shares.id}}">
+                            <img ng-src="{{shares.surfaceImgUrl}}" alt=""/>
+                             <div class="play-btn"></div>
+                        </a>
                     </div>
                     <div class="s-title">
                         <a ng-href="#/shareContent?id={{shares.id}}"><h5>{{shares.shareShotTitle}}</h5></a>
@@ -45,8 +47,10 @@
             <ul class="hot-ul">
                 <li ng-repeat="shares in vm.companyShares | filter: query | orderBy:'playCount'">
                     <div class="litpic">
-                        <a ng-href="#/shareContent?id={{shares.id}}"><img src="{{shares.surfaceImgUrl}}" alt=""/></a>
-                        <div class="play-btn"></div>
+                        <a ng-href="#/shareContent?id={{shares.id}}">
+                            <img src="{{shares.surfaceImgUrl}}" alt=""/>
+                            <div class="play-btn"></div>
+                        </a>
                     </div>
                     <div class="s-title">
                         <a ng-href="#/shareContent?id={{shares.id}}"><h5>{{shares.shareShotTitle}}</h5></a>

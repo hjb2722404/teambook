@@ -87,9 +87,9 @@
 					<span class="glyphicon glyphicon-plus"></span>
 				</a>
 			</div>
-			<div class="experience-con clearfix" ng-repeat="r in vm.Resume">
+			<div class="experience-con">
 				<ul class="experience-ul">
-					<li class="experience-li">
+					<li class="experience-li clearfix" ng-repeat="r in vm.Resume">
 						<div class="col-sm-10">
 							<a href="javascript:;" class="experience-title ellipsis">
 								<span class="glyphicon glyphicon-record"></span>
@@ -116,19 +116,23 @@
 					<span class="glyphicon glyphicon-plus"></span>
 				</a>
 			</div>
-			<div class="experience-con" ng-repeat="h in vm.Honor">
+			<div class="experience-con">
 				<ul class="experience-ul">
-					<li class="experience-li">
-						<a href="javascript:;" class="experience-title ellipsis">
-							<span class="glyphicon glyphicon-record"></span>
-							{{h.getTime}}
-							&nbsp;&nbsp;&nbsp;&nbsp;
-							{{h.awardBy}}&nbsp;&nbsp;&nbsp;&nbsp;
-							{{h.honer}}&nbsp;&nbsp;&nbsp;&nbsp;
-							{{h.honer}}
-						</a>
-						<a href="javascript:;" class="experience-edit">编辑<span class="glyphicon glyphicon-pencil"></span></a>
-						<p class="exerience-text"></p>
+					<li class="experience-li clearfix" ng-repeat="h in vm.Honor">
+						<div class="col-sm-10">
+							<a href="javascript:;" class="experience-title ellipsis">
+								<span class="glyphicon glyphicon-record"></span>
+								{{h.getTime}}
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								{{h.awardBy}}&nbsp;&nbsp;&nbsp;&nbsp;
+								{{h.honer}}&nbsp;&nbsp;&nbsp;&nbsp;
+								{{h.honer}}
+							</a>
+							<p class="exerience-text"></p>
+						</div>
+						<div class="col-sm-2">
+							<a href="javascript:;" class="experience-edit">编辑<span class="glyphicon glyphicon-pencil"></span></a>
+						</div>
 					</li>
 				</ul>
 			</div>

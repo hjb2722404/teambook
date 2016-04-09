@@ -1,0 +1,11 @@
+<div class="shareList">
+	<div class="listGroup clearfix">
+		<div ng-repeat="s in vm.shareData">
+			<a href="#shareContent?id={{s.id}}" class="shareSon">
+				<img src="{{s.surfaceImgUrl}}">
+				<span></span>
+			</a>
+			<a href="#shareContent?id={{s.id}}" class="ellipsis">{{s.name}}</a>
+		</div>
+	</div>
+</div>

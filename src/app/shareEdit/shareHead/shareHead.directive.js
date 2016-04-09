@@ -3,16 +3,16 @@
 
   angular
     .module('teambookWww')
-    .directive('editUserHead', editUserHead);
+    .directive('shareEditHead', ShareEditHead);
 
 
   /** @ngInject */
-  function editUserHead() {
+  function ShareEditHead() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/editData/editUserHead/editUserHead.html',
+      templateUrl: 'app/shareEdit/shareHead/shareHead.html',
       scope: {},
-      controller: editUserHeadController,
+      controller: shareEditHeadController,
       controllerAs: 'vm',
       bindToController: true
     };
@@ -20,7 +20,7 @@
     return directive;
 
     /** @ngInject */
-    function editUserHeadController(userinfos,user) {
+    function shareEditHeadController(userinfos,user) {
       var vm = this;
       var userInstance = user.getUser();
       var userId = userInstance.data.id;

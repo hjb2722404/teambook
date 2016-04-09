@@ -4,8 +4,8 @@
   padding-right: 0px;
 
   .s-tabs {
-    width: 98%;
-    margin-left: 15px;
+    width: 100%;
+    margin: auto;
     background-color: #fff;
     padding: 10px;
     padding-left: 0;
@@ -46,7 +46,7 @@
 
   .s-cons {
     width: 100%;
-    margin-top: 15px;
+    margin: 15px auto;
 
     .new-share , .hot-share {
 
@@ -66,14 +66,14 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        margin-left: 10px;
 
         li {
-          width: 32%;
-          display: inline-block;
-          margin-left:1%;
+          display: block;
+          float: left;
+          width: calc((100% - 20px) / 3);
           background-color: #ffffff;
           margin-bottom: 10px;
+          margin-left: 10px;
           padding: 15px;
           border: 1px solid #cccccc;
 
@@ -147,6 +147,14 @@
             }
           }
         }
+
+        li:first-child {
+          margin-left: 0px;
+        }
+        li:nth-of-type(3n+1) {
+          margin-left: 0px;
+        }
+
       }
     }
 
