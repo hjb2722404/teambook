@@ -1,7 +1,0 @@
-!dist
-.tmp
-bower_components
-gulp
-node_modules
-test
-.*
